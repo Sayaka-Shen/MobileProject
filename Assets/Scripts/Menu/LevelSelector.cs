@@ -18,20 +18,15 @@ public class LevelSelector : MonoBehaviour
         {
             GameObject levelButton = Instantiate(_levelButtonPrefab, transform);
             levelButton.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = levels[i].ImagePreviewMini;
-            levelButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = levels[i].LevelName;
-            levelButton.transform.GetChild(3).gameObject.SetActive(true);
-            levelButton.transform.GetChild(3).GetChild(2).GetComponentInChildren<TextMeshProUGUI>().text = levels[i].DataToSaves.PercentFinish.ToString() + "%";
-            levelButton.transform.GetChild(3).GetComponent<Slider>().value = levels[i].DataToSaves.PercentFinish;
+            levelButton.transform.GetChild(2).gameObject.SetActive(true);
+            levelButton.transform.GetChild(2).GetChild(2).GetComponentInChildren<TextMeshProUGUI>().text = levels[i].DataToSaves.PercentFinish.ToString() + "%";
+            levelButton.transform.GetChild(2).GetComponent<Slider>().value = levels[i].DataToSaves.PercentFinish;
+            levelButton.transform.GetChild(3).GetChild(0).GetComponent<TextMeshProUGUI>().text = i+1.ToString();
             if(i>0 && !levels[i-1].DataToSaves.IsCompleted)
             {
-                levelButton.transform.GetChild(2).gameObject.SetActive(true);
-                levelButton.transform.GetChild(3).gameObject.SetActive(false);
+                levelButton.transform.GetChild(1).gameObject.SetActive(true);
+                levelButton.transform.GetChild(2).gameObject.SetActive(false);
             }
-            int n = i;
-            levelButton.transform.GetChild(0).GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() =>
-            {
-                Change(n, levels);
-            });
         }
         float fixposition = (int)(levels.Count / 4) * 600;
         this.transform.position += new Vector3(fixposition, 0, 0);
