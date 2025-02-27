@@ -67,8 +67,13 @@ public class Soul : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    public void UnFollow() 
     {
         _movementPlayer.OnStepEnd -= HurtSelf;
+    }
+
+    private void OnDestroy()
+    {
+        UnFollow();
     }
 }

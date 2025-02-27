@@ -16,9 +16,9 @@ public class SoulsInteraction : MonoBehaviour, IInteractable
     {
         if (!_soulPlayer.AsSoul)
         {
-            Destroy(_soulParent.gameObject);    
+            _soulParent.GetComponent<Soul>().UnFollow();
+            Destroy(_soulParent.gameObject);
             _soulPlayer.TakeSoul();
-            
         }
     }
 }
