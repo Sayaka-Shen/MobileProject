@@ -11,7 +11,11 @@ public class MovementButton : MonoBehaviour
         _mouvementPlayer = GameManager.Instance.MovementPlayer;
         
         _mouvementPlayer.OnStartMove += Hide;
-        if(_doShowButton){_mouvementPlayer.OnEndMove += ShowCorrectButton;}
+        if(_doShowButton)
+        {
+            _mouvementPlayer.OnEndMove += ShowCorrectButton;
+            ShowCorrectButton();
+        }
     }
 
     void OnMouseDown()

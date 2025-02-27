@@ -1,7 +1,6 @@
 using System;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public class GameManager : MonoBehaviour
 {
@@ -75,7 +74,34 @@ public class GameManager : MonoBehaviour
             if (!levelData.IsCompleted || levelData.BestStep > MovementPlayer.NbCaseMouv) levelData.BestStep = MovementPlayer.NbCaseMouv;
             if (!levelData.IsCompleted || levelData.BestTime > time) levelData.BestTime = time;
             if (!levelData.IsCompleted || levelData.HighScore > SoulsManager.Instance.CountSoulsPurify) levelData.HighScore = SoulsManager.Instance.CountSoulsPurify;
-            if (scorePercent >= 50) levelData.IsCompleted = true;
+            if (scorePercent >= 50)
+            {
+                levelData.IsCompleted = true;
+                GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAw");
+                switch (_levelContainer.SceneToLoad)
+                {
+                    case (5):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQCg");
+                        break;
+                    case (10):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQCw");
+                        break;
+                    case (15):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQDA");
+                        break;
+                    case (20):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQDQ");
+                        break;
+                    case (25):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQDg");
+                        break;
+                    case (30):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQDw");
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
         SaveManager.Instance.Save(); 
         _endUI.SetActive(true);
@@ -94,6 +120,7 @@ public class GameManager : MonoBehaviour
         _endUI.SetActive(false);
         _failedUI.gameObject.SetActive(false);
         _successUI.gameObject.SetActive(false);
+        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAQ");
     }
 
     public void restartLevel()

@@ -19,7 +19,7 @@ public class MovementPlayer : MonoBehaviour
     public event Action OnEndMove;
     [SerializeField] UnityEvent  _onTP = new UnityEvent();
     public event Action OnStop;
-    public event Action OnStepEnd;
+    public event Action OnCaseMouvEnd;
     private bool _isMoving = false;
     public bool IsMoving { get => _isMoving; set => _isMoving = value; }
     private Vector3 _nextPos;
@@ -73,7 +73,7 @@ public class MovementPlayer : MonoBehaviour
             OnStop?.Invoke();
             if (NbCaseMouvLast <= 0)
             {
-                OnStepEnd?.Invoke();
+                OnCaseMouvEnd?.Invoke();
                 NbCaseMouvLast = SoulsManager.Instance.CountForHurt;
             }
             NbCaseMoveLastChage?.Invoke();

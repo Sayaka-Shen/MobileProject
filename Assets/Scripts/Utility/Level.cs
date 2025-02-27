@@ -24,7 +24,13 @@ public class Level : MonoBehaviour
     public void ChooseAltar() { _choosen = _altar; _choosenHolder = _altarHolder; }
     [SerializeField] GameObject _soul;
     [SerializeField] GameObject _soulHolder;
-    public void ChooseSoul() {_choosen = _soul; _choosenHolder = _soulHolder;}
+    public void ChooseSoul() { _choosen = _soul; _choosenHolder = _soulHolder; }
+    [SerializeField] GameObject _soulSeeker;
+    [SerializeField] GameObject _soulSeekerHolder;
+    public void ChooseSoulSeeker() { _choosen = _soulSeeker; _choosenHolder = _soulSeekerHolder; }
+    [SerializeField] GameObject _soulTrapper;
+    [SerializeField] GameObject _soulTrapperHolder;
+    public void ChooseSoulTrapper() { _choosen = _soulTrapper; _choosenHolder = _soulTrapperHolder; }
     [SerializeField] GameObject _player;
     [SerializeField] GameObject _playerHolder;
     public void ChoosePlayer() {_choosen = _player; _choosenHolder = _playerHolder;}

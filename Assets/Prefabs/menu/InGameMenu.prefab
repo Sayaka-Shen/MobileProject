@@ -701,7 +701,7 @@ MonoBehaviour:
   _nextLvBt: {fileID: 3377546972892590627}
   _restartBt: {fileID: 8950964643551409074}
   _mainMenuBt: {fileID: 1533828098707977448}
-  _speedSlider: 10
+  _speedSlider: 30
 --- !u!1 &2656283440260374984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2385,7 +2385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sliderScore: {fileID: 23678450781474329}
   _sliderText: {fileID: 390605168257529011}
-  _speedSlider: 10
+  _speedSlider: 30
   _restartBt: {fileID: 1490431057616611173}
   _mainMenuBt: {fileID: 7005885672733752846}
 --- !u!1 &8451614355186187003

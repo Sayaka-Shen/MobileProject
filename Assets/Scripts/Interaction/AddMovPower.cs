@@ -15,6 +15,7 @@ public class AddMovPower : MonoBehaviour, IInteractable
     public void Interact()
     {
         _movementPlayer.AddCaseMov(_nbCasePower);
+        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBw");
         Destroy(_parent);
     }
 }
