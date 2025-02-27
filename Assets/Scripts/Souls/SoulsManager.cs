@@ -12,6 +12,7 @@ public class SoulsManager : MonoBehaviour
     public int CountSoulsPurify { get; private set; }
     public bool AllSoulsMeetEnd => CountSouls == CountSoulsCorrupt + CountSoulsPurify;
     public static SoulsManager Instance { get; private set; }
+    public event Action OnSoulChange;
 
     private void Awake()
     {
@@ -33,9 +34,11 @@ public class SoulsManager : MonoBehaviour
     void AddSoulsCorrupt()
     {
         CountSoulsCorrupt++;
+        OnSoulChange?.Invoke();
     }
     public void AddSoulsPurify()
     {
         CountSoulsPurify++;
+        OnSoulChange?.Invoke();
     }
 }

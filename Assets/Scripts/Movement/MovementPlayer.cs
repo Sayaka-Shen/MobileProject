@@ -7,8 +7,8 @@ public class MovementPlayer : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private float _speed = 1;
-    private static int _nbCaseMouv = 0;
-    public static int NbCaseMouv { get => _nbCaseMouv; set => _nbCaseMouv = value; }
+    private int _nbCaseMouv = 0;
+    public int NbCaseMouv { get => _nbCaseMouv; }
     private int NbCaseMouvLast { get; set; }
     [SerializeField] private List<Vector3> _pathList = new List<Vector3>();
     public List<Vector3> PathList { get => _pathList; set => _pathList = value; }

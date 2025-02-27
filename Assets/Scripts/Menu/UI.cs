@@ -25,7 +25,7 @@ public class UI : MonoBehaviour
 
     private void ChangeMoveCaseUI()
     {
-        string nbCaseRemaining = (_soulsManager.CountForHurt - (MovementPlayer.NbCaseMouv % _soulsManager.CountForHurt)).ToString();
+        string nbCaseRemaining = (_soulsManager.CountForHurt - (_movementPlayer.NbCaseMouv % _soulsManager.CountForHurt)).ToString();
         _textMovement.text = $"{nbCaseRemaining}";
     }
 

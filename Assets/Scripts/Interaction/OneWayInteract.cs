@@ -14,7 +14,8 @@ public class OneWayInteract : MonoBehaviour, IInteractable
     {
         // Cancel count of movement
         _movementPlayer.DoCountMove = false;
-        
+
+        _movementPlayer.AddCaseMov(1);
         _movementPlayer.AddPos(transform.position + transform.right);
         _movementPlayer.StartMoving();
 
@@ -23,6 +24,7 @@ public class OneWayInteract : MonoBehaviour, IInteractable
 
     private void RestartCountMove()
     {
+        _movementPlayer.AddCaseMov(-1);
         _movementPlayer.DoCountMove = true;
         _movementPlayer.OnEndMove -= RestartCountMove;
     }
