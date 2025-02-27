@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public MovementPlayer MovementPlayer { get { return _player != null ? _player.GetComponent<MovementPlayer>() : throw new ArgumentNullException("No player movement"); } }
     public Vector3 PlayerPosition { get { return _player != null ? _player.transform.position : throw new ArgumentNullException("No player position"); } }
     public SoulPlayer SoulPlayer { get { return _player != null ? _player.gameObject.GetComponent<SoulPlayer>() : throw new ArgumentNullException("No soul player"); } }
+    public Animator AnimPlayer { get { return _player != null ? _player.gameObject.GetComponent<MovementPlayer>().Animator : throw new ArgumentNullException("No anim player"); } }
 
 
     [Header("Level Settings")]

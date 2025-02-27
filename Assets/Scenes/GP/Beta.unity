@@ -500,10 +500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ced8c3a734cfdb43ac7fae4b754a326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 0}
-  obj2: {fileID: 0}
-  text: {fileID: 0}
-  debugText: {fileID: 0}
 --- !u!1 &573294358
 GameObject:
   m_ObjectHideFlags: 0

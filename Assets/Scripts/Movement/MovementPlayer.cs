@@ -5,7 +5,8 @@ using UnityEngine.Events;
 
 public class MovementPlayer : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] Animator _animator;
+    public Animator Animator {  get { return _animator; } }
     [SerializeField] private float _speed = 1;
     private int _nbCaseMouv = 0;
     public int NbCaseMouv { get => _nbCaseMouv; }
@@ -41,6 +42,8 @@ public class MovementPlayer : MonoBehaviour
     {
         float deltaTime = Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, _nextPos, _speed * deltaTime);
+        _animator.SetFloat("vertical", (_nextPos - transform.position).y);
+        _animator.SetFloat("horizontal", (_nextPos - transform.position).x);
         if (transform.position == _nextPos)
         {
             NextPos(); 
@@ -53,18 +56,11 @@ public class MovementPlayer : MonoBehaviour
         {
             _nextPos = _pathList[0];
             _pathList.RemoveAt(0);
-            if (_nextPos.x > transform.position.x)
-            {
-                _spriteRenderer.flipX = false;
-            }
-            else if (_nextPos.x < transform.position.x)
-            {
-                _spriteRenderer.flipX = true;
-            }
         }
         else
         {
             _isMoving = false;
+            _animator.SetBool("isMoving", false);
             NbCaseMouvLast--;
             _nbCaseMouv++;
             NbCaseMoveLastChage?.Invoke();
@@ -96,6 +92,7 @@ public class MovementPlayer : MonoBehaviour
     public void StartMoving()
     {
         _isMoving = true;
+        _animator.SetBool("isMoving", true);
         _onStartMove?.Invoke();
         OnStartMove?.Invoke();
         NextPos();

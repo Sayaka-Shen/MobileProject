@@ -74,6 +74,7 @@ public class Level : MonoBehaviour
     [SerializeField] private float maxY = 5.5f;
     void OnDrawGizmos()
     {
+        if(!enabled) return;
         Gizmos.color = Color.yellow;
 
         Vector3 pos0 = new Vector3();
