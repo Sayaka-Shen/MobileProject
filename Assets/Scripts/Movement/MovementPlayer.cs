@@ -24,9 +24,11 @@ public class MovementPlayer : MonoBehaviour
     private bool _isMoving = false;
     public bool IsMoving { get => _isMoving; set => _isMoving = value; }
     private Vector3 _nextPos;
+    public bool CountMove { get; set; }
 
     private void Awake()
     {
+        CountMove = true;
         NbCaseMouvLast = SoulsManager.Instance.CountForHurt;
     }
 
@@ -61,8 +63,11 @@ public class MovementPlayer : MonoBehaviour
         {
             _isMoving = false;
             _animator.SetBool("isMoving", false);
-            NbCaseMouvLast--;
-            _nbCaseMouv++;
+            if (CountMove)
+            {
+                NbCaseMouvLast--;
+                _nbCaseMouv++;
+            }
             NbCaseMoveLastChage?.Invoke();
             _onEndMove?.Invoke();
             OnEndMove?.Invoke();
