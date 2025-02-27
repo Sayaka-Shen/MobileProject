@@ -500,6 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ced8c3a734cfdb43ac7fae4b754a326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!1 &573294358
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +639,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573294358}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Authentification
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
