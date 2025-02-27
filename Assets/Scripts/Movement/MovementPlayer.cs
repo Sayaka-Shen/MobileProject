@@ -7,9 +7,10 @@ public class MovementPlayer : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private float _speed = 1;
-    private static int _nbCaseMouv = 0;
-    public static int NbCaseMouv { get => _nbCaseMouv; set => _nbCaseMouv = value; }
-    private int NbCaseMouvLast { get; set; }
+    private int _nbCaseMouv = 0;
+    public int NbCaseMouv { get => _nbCaseMouv; }
+    public int NbCaseMouvLast { get; private set; }
+    public event Action NbCaseMoveLastChage;
     [SerializeField] private List<Vector3> _pathList = new List<Vector3>();
     public List<Vector3> PathList { get => _pathList; set => _pathList = value; }
     [SerializeField] UnityEvent  _onStartMove = new UnityEvent();
@@ -21,11 +22,9 @@ public class MovementPlayer : MonoBehaviour
     public event Action OnStepEnd;
     private bool _isMoving = false;
     public bool IsMoving { get => _isMoving; set => _isMoving = value; }
-    private bool _doCountMove = true;
-    public bool DoCountMove { get => _doCountMove; set => _doCountMove = value; }
     private Vector3 _nextPos;
 
-    private void Start()
+    private void Awake()
     {
         NbCaseMouvLast = SoulsManager.Instance.CountForHurt;
     }
@@ -66,20 +65,19 @@ public class MovementPlayer : MonoBehaviour
         else
         {
             _isMoving = false;
+            NbCaseMouvLast--;
+            _nbCaseMouv++;
+            NbCaseMoveLastChage?.Invoke();
             _onEndMove?.Invoke();
             OnEndMove?.Invoke();
             OnStop?.Invoke();
-            NbCaseMouvLast--;
-            if (NbCaseMouvLast == 0)
+            if (NbCaseMouvLast <= 0)
             {
                 OnStepEnd?.Invoke();
                 NbCaseMouvLast = SoulsManager.Instance.CountForHurt;
             }
+            NbCaseMoveLastChage?.Invoke();
             return;
-        }
-        if (_doCountMove)
-        {
-            _nbCaseMouv++;
         }
     }
 
@@ -106,6 +104,7 @@ public class MovementPlayer : MonoBehaviour
     public void TPAt(Vector3 pos)
     {
         transform.position = pos;
+        OnEndMove?.Invoke();
         _onTP?.Invoke();
     }
 

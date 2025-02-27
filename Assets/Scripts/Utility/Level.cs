@@ -1,6 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
 public class Level : MonoBehaviour
 {
     [SerializeField] GameObject _obstacle;
@@ -96,3 +97,4 @@ public class Level : MonoBehaviour
         }
     }
 }
+#endif

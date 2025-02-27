@@ -17,7 +17,7 @@ public class UI : MonoBehaviour
         _soulsManager = SoulsManager.Instance;
         
         // Add the event
-        _movementPlayer.OnEndMove += ChangeMoveCaseUI;
+        _movementPlayer.NbCaseMoveLastChage += ChangeMoveCaseUI;
         Purify.OnPurify += ChangeScore;
         
         ChangeMoveCaseUI();
@@ -25,8 +25,7 @@ public class UI : MonoBehaviour
 
     private void ChangeMoveCaseUI()
     {
-        string nbCaseRemaining = (_soulsManager.CountForHurt - (MovementPlayer.NbCaseMouv % _soulsManager.CountForHurt)).ToString();
-        _textMovement.text = $"{nbCaseRemaining}";
+        _textMovement.text = $"{_movementPlayer.NbCaseMouvLast.ToString()}";
     }
 
     private void ChangeScore()
