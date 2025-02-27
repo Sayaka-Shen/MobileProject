@@ -3,7 +3,7 @@ using GooglePlayGames.BasicApi;
 using TMPro;
 using UnityEngine;
 
-public class PlayGamesController : MonoBehaviour
+public class GooglePlayAuthentification : MonoBehaviour
 {
     [SerializeField] private GameObject obj;
     [SerializeField] private GameObject obj2;
@@ -44,9 +44,9 @@ public class PlayGamesController : MonoBehaviour
     }
 
     #region Instance
-    private static PlayGamesController _instance;
+    private static GooglePlayAuthentification _instance;
 
-    public static PlayGamesController Instance { get => _instance; }
+    public static GooglePlayAuthentification Instance { get => _instance; }
 
     public void Awake()
     {
