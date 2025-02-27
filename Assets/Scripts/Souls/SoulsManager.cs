@@ -31,7 +31,7 @@ public class SoulsManager : MonoBehaviour
         }
     }
 
-    void AddSoulsCorrupt()
+    public void AddSoulsCorrupt()
     {
         CountSoulsCorrupt++;
         OnSoulChange?.Invoke();
