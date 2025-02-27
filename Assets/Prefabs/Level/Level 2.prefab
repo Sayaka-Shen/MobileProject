@@ -1012,6 +1012,10 @@ MonoBehaviour:
   _addMorePowerHolder: {fileID: 853615556203574540}
   _soul: {fileID: 6943807902125826845, guid: a2b92396d7393764ca817f7563b30cd1, type: 3}
   _soulHolder: {fileID: 4940766218440395066}
+  _soulSeeker: {fileID: 0}
+  _soulSeekerHolder: {fileID: 0}
+  _soulTrapper: {fileID: 0}
+  _soulTrapperHolder: {fileID: 0}
   _player: {fileID: 7977707740525960043, guid: 394a576503a16af43901f2e54bb231ca, type: 3}
   _playerHolder: {fileID: 4271093361196970915}
   ObstacleLayers:
