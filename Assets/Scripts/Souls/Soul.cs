@@ -21,6 +21,7 @@ public class Soul : MonoBehaviour
     private MovementPlayer _movementPlayer;
     public event Action OnCorrupt;
     [SerializeField] UnityEvent _onCorrupt;
+    private Seeker _seeker;
 
     void Start()
     {
@@ -34,10 +35,17 @@ public class Soul : MonoBehaviour
     {
         int newState = (int)_state + 1;
         _state = (State)(newState);
+        if(TryGetComponent<Seeker>(out _seeker) && _state == State.stateThree)
+        {
+            UnFollow();
+            _seeker.Setup();
+            GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQCA");
+        }
         if (_state == State.stateDie)
         {
             OnCorrupt?.Invoke();
             _onCorrupt?.Invoke();
+            GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBA");
             Destroy(gameObject);
         }
         else

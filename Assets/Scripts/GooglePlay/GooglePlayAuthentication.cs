@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class GooglePlayAuthentification : MonoBehaviour
 {
-    [SerializeField] private GameObject obj;
-    [SerializeField] private GameObject obj2;
-    [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private TextMeshProUGUI debugText; // Champ pour afficher les messages de debogage
+    //[SerializeField] private GameObject obj;
+    //[SerializeField] private GameObject obj2;
+    //[SerializeField] private TextMeshProUGUI text;
+    //[SerializeField] private TextMeshProUGUI debugText; // Champ pour afficher les messages de debogage
 
     void Start()
     {
@@ -21,25 +21,25 @@ public class GooglePlayAuthentification : MonoBehaviour
     {
         if (status == SignInStatus.Success)
         {
-            text.text = PlayGamesPlatform.Instance.GetUserId();
-            debugText.text = "Connexion reussie : " + PlayGamesPlatform.Instance.GetUserId();
+            //text.text = PlayGamesPlatform.Instance.GetUserId();
+            //debugText.text = "Connexion reussie : " + PlayGamesPlatform.Instance.GetUserId();
         }
         else
         {
-            text.text = "Non connecte";
-            debugText.text = "Echec de la connexion : " + status.ToString();
-            switch (status)
-            {
-                case SignInStatus.InternalError:
-                    debugText.text += "\nErreur interne lors de la connexion.";
-                    break;
-                case SignInStatus.Canceled:
-                    debugText.text += "\nConnexion annulee par l'utilisateur.";
-                    break;
-                default:
-                    debugText.text += "\nStatut de connexion inconnu.";
-                    break;
-            }
+            //text.text = "Non connecte";
+            //debugText.text = "Echec de la connexion : " + status.ToString();
+            //switch (status)
+            //{
+            //    case SignInStatus.InternalError:
+            //        debugText.text += "\nErreur interne lors de la connexion.";
+            //        break;
+            //    case SignInStatus.Canceled:
+            //        debugText.text += "\nConnexion annulee par l'utilisateur.";
+            //        break;
+            //    default:
+            //        debugText.text += "\nStatut de connexion inconnu.";
+            //        break;
+            //}
         }
     }
 
@@ -65,21 +65,21 @@ public class GooglePlayAuthentification : MonoBehaviour
     // Debloquer un achievement
     public void UnlockAchievement(string achievementID)
     {
-        GameObject objet = Instantiate(obj);
-        objet.transform.position = new Vector3(-8, 0, 0);
+        //GameObject objet = Instantiate(obj);
+        //objet.transform.position = new Vector3(-8, 0, 0);
         PlayGamesPlatform.Instance.ReportProgress(achievementID, 100.0f, success =>
         {
             if (success)
             {
-                debugText.text = "Achievement debloque !";
-                GameObject objet = Instantiate(obj2);
-                objet.transform.position = new Vector3(0, 0, 0);
+                //debugText.text = "Achievement debloque !";
+                //GameObject objet = Instantiate(obj2);
+                //objet.transform.position = new Vector3(0, 0, 0);
             }
             else
             {
-                GameObject objet = Instantiate(obj);
-                objet.transform.position = new Vector3(1, 0, 0);
-                debugText.text = "echec du deblocage";
+                //GameObject objet = Instantiate(obj);
+                //objet.transform.position = new Vector3(1, 0, 0);
+                //debugText.text = "echec du deblocage";
             }
         });
     }

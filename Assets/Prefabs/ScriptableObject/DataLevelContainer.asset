@@ -18,21 +18,21 @@ MonoBehaviour:
     _imagePreviewMini: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     _imagePreview: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     _dataToSaves:
-      _percentFinish: 0
-      _bestStep: 12
-      _highScore: 1
-      _isCompleted: 1
-      _bestTime: 13.475101
-  - _levelName: Petite prairie
-    _prefab: {fileID: 5528948840815735545, guid: 93cfca65799a82449beae1f0ea27c2f4, type: 3}
-    _imagePreviewMini: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    _imagePreview: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-    _dataToSaves:
       _percentFinish: 70
       _bestStep: 0
       _highScore: 0
       _isCompleted: 1
       _bestTime: 0
+  - _levelName: Petite prairie
+    _prefab: {fileID: 5528948840815735545, guid: 93cfca65799a82449beae1f0ea27c2f4, type: 3}
+    _imagePreviewMini: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    _imagePreview: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    _dataToSaves:
+      _percentFinish: 0
+      _bestStep: 32
+      _highScore: 3
+      _isCompleted: 1
+      _bestTime: 26.818192
   - _levelName: Grande prairie
     _prefab: {fileID: 5528948840815735545, guid: 9af81c1be195b174eb0e48fa49b8a802, type: 3}
     _imagePreviewMini: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}

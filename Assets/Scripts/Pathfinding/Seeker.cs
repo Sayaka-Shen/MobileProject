@@ -7,7 +7,7 @@ public class Seeker : MonoBehaviour
     private int _countMove = 0;
     private MovementPlayer _movementPlayer;
 
-    private void Start()
+    public void Setup()
     {
         _countMove = _countDownMove;
 

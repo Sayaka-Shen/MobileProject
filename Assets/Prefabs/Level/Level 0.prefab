@@ -127,6 +127,7 @@ Transform:
   - {fileID: 8414511943116195133}
   - {fileID: 4753267641696967999}
   - {fileID: 8678546763569472467}
+  - {fileID: 4501217287486236777}
   m_Father: {fileID: 6609035191766275809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3035667140119534300
@@ -154,6 +155,37 @@ Transform:
   m_GameObject: {fileID: 3035667140119534300}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8545065917527606505}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3217012598418745037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4501217287486236777}
+  m_Layer: 0
+  m_Name: Trap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4501217287486236777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3217012598418745037}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -372,12 +404,16 @@ MonoBehaviour:
   _addMorePowerHolder: {fileID: 853615556203574540}
   _soul: {fileID: 6943807902125826845, guid: a2b92396d7393764ca817f7563b30cd1, type: 3}
   _soulHolder: {fileID: 4940766218440395066}
+  _soulSeeker: {fileID: 6943807902125826845, guid: a84c4f18fef8c4f4c9f1c9305765af11, type: 3}
+  _soulSeekerHolder: {fileID: 4940766218440395066}
+  _soulTrapper: {fileID: 36342097408993236, guid: 8bf62d7ad8690ca498b84bd52bfe5e15, type: 3}
+  _soulTrapperHolder: {fileID: 3217012598418745037}
   _player: {fileID: 7977707740525960043, guid: 394a576503a16af43901f2e54bb231ca, type: 3}
   _playerHolder: {fileID: 4271093361196970915}
   ObstacleLayers:
     serializedVersion: 2
     m_Bits: 192
-  maxX: 11
+  maxX: 9
   maxY: 5
 --- !u!1 &5923660199477868937
 GameObject:

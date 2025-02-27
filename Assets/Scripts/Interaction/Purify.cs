@@ -23,6 +23,7 @@ public class Purify : MonoBehaviour, IInteractable
             SoulsManager.Instance.AddSoulsPurify();
             _onPurify?.Invoke();
             OnPurify?.Invoke();
+            GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAg");
         }
     }
 }

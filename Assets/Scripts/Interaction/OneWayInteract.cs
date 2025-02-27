@@ -4,6 +4,8 @@ using UnityEngine;
 public class OneWayInteract : MonoBehaviour, IInteractable
 {
     private MovementPlayer _movementPlayer;
+    private enum Type { River, Ledge}
+    [SerializeField] Type _type;
     
     private void Start()
     {
@@ -17,6 +19,8 @@ public class OneWayInteract : MonoBehaviour, IInteractable
         _movementPlayer.StartMoving();
 
         _movementPlayer.OnEndMove += RestartCountMove;
+        if(_type == Type.Ledge) GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBQ");
+        else if (_type == Type.River) GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBg");
     }
 
     private void RestartCountMove()

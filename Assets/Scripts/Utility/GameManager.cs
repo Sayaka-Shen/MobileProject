@@ -78,6 +78,29 @@ public class GameManager : MonoBehaviour
             {
                 levelData.IsCompleted = true;
                 GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAw");
+                switch (_levelContainer.SceneToLoad)
+                {
+                    case (5):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQCg");
+                        break;
+                    case (10):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQCw");
+                        break;
+                    case (15):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQDA");
+                        break;
+                    case (20):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQDQ");
+                        break;
+                    case (25):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQDg");
+                        break;
+                    case (30):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQDw");
+                        break;
+                    default:
+                        break;
+                }
             }
         }
         SaveManager.Instance.Save(); 
@@ -97,6 +120,7 @@ public class GameManager : MonoBehaviour
         _endUI.SetActive(false);
         _failedUI.gameObject.SetActive(false);
         _successUI.gameObject.SetActive(false);
+        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAQ");
     }
 
     public void restartLevel()
