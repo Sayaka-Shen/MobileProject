@@ -21,23 +21,32 @@ public class Soul : MonoBehaviour
     private MovementPlayer _movementPlayer;
     public event Action OnCorrupt;
     [SerializeField] UnityEvent _onCorrupt;
+    private Seeker _seeker;
 
     void Start()
     {
         _movementPlayer = GameManager.Instance.MovementPlayer;
 
-        _movementPlayer.OnStepEnd += HurtSelf;
+        _movementPlayer.OnCaseMouvEnd += HurtSelf;
         UpdateSprite();
+        _seeker = GetComponent<Seeker>();
     }
 
     void HurtSelf()
     {
         int newState = (int)_state + 1;
         _state = (State)(newState);
+        if(_seeker != null && _state == State.stateThree)
+        {
+            UnFollow();
+            _seeker.Setup();
+            GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQCA");
+        }
         if (_state == State.stateDie)
         {
             OnCorrupt?.Invoke();
             _onCorrupt?.Invoke();
+            GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBA");
             Destroy(gameObject);
         }
         else
@@ -67,8 +76,13 @@ public class Soul : MonoBehaviour
         }
     }
 
+    public void UnFollow() 
+    {
+        _movementPlayer.OnCaseMouvEnd -= HurtSelf;
+    }
+
     private void OnDestroy()
     {
-        _movementPlayer.OnStepEnd -= HurtSelf;
+        UnFollow();
     }
 }

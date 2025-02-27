@@ -19,10 +19,12 @@ public class Purify : MonoBehaviour, IInteractable
     {
         if (_soulPlayer.AsSoul)
         {
+            GameManager.Instance.AnimPlayer.SetTrigger("purification");
             _soulPlayer.DeleteSoul();
             SoulsManager.Instance.AddSoulsPurify();
             _onPurify?.Invoke();
             OnPurify?.Invoke();
+            GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAg");
         }
     }
 }

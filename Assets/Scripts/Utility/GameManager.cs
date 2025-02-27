@@ -1,7 +1,6 @@
 using System;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,19 +11,20 @@ public class GameManager : MonoBehaviour
     public MovementPlayer MovementPlayer { get { return _player != null ? _player.GetComponent<MovementPlayer>() : throw new ArgumentNullException("No player movement"); } }
     public Vector3 PlayerPosition { get { return _player != null ? _player.transform.position : throw new ArgumentNullException("No player position"); } }
     public SoulPlayer SoulPlayer { get { return _player != null ? _player.gameObject.GetComponent<SoulPlayer>() : throw new ArgumentNullException("No soul player"); } }
+    public Animator AnimPlayer { get { return _player != null ? _player.gameObject.GetComponent<MovementPlayer>().Animator : throw new ArgumentNullException("No anim player"); } }
 
 
     [Header("Level Settings")]
     private GameObject _level;
     [SerializeField] DataLevelContainer _levelContainer;
 
-    [Header("Score Settings")]
-    [SerializeField] private int _scoreOneStar = 60;
-    [SerializeField] private int _scoreTwoStar = 80;
-    [SerializeField] private int _scoreThreeStar = 100;
-
     [Header("Pathfinding Settings")]
     [SerializeField] private Grid _grid;
+
+    [Header("End Settings")]
+    [SerializeField] private GameObject _endUI;
+    [SerializeField] private EndGameMenu _successUI;
+    [SerializeField] private FailGameMenu _failedUI;
 
     private void Awake()
     {
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
     void Setup()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
-        MovementPlayer.OnStepEnd += EndGame;
+        SoulsManager.Instance.OnSoulChange += EndGame;
         StartTimer();
     }
 
@@ -66,15 +66,48 @@ public class GameManager : MonoBehaviour
     {
         if (!SoulsManager.Instance.AllSoulsMeetEnd) return;
         int score = SoulsManager.Instance.CountSoulsPurify;
-        if (score == 0) return;
+        int scorePercent = 0;
         float time = _timer;
-        int scorePercent = SoulsManager.Instance.CountSouls / score * 100;
         DataToSaves levelData = _levelContainer.GetCurrentLevel().DataToSaves;
-        if(!levelData.IsCompleted || levelData.BestStep > MovementPlayer.NbCaseMouv) levelData.BestStep = MovementPlayer.NbCaseMouv;
-        if(!levelData.IsCompleted || levelData.BestTime > time) levelData.BestTime = time;
-        if (!levelData.IsCompleted || levelData.HighScore > SoulsManager.Instance.CountSoulsPurify) levelData.HighScore = SoulsManager.Instance.CountSoulsPurify;
-        if(scorePercent > 70) levelData.IsCompleted = true;
-        SaveManager.Instance.Save();
+        if (score != 0)
+        {
+            scorePercent = score * 100 / SoulsManager.Instance.CountSouls ;
+            if (!levelData.IsCompleted || levelData.BestStep > MovementPlayer.NbCaseMouv) levelData.BestStep = MovementPlayer.NbCaseMouv;
+            if (!levelData.IsCompleted || levelData.BestTime > time) levelData.BestTime = time;
+            if (!levelData.IsCompleted || levelData.HighScore > SoulsManager.Instance.CountSoulsPurify) levelData.HighScore = SoulsManager.Instance.CountSoulsPurify;
+            if (scorePercent >= 50)
+            {
+                levelData.IsCompleted = true;
+                GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAw");
+                switch (_levelContainer.SceneToLoad)
+                {
+                    case (5):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQCg");
+                        break;
+                    case (10):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQCw");
+                        break;
+                    case (15):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQDA");
+                        break;
+                    case (20):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQDQ");
+                        break;
+                    case (25):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQDg");
+                        break;
+                    case (30):
+                        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQDw");
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        SaveManager.Instance.Save(); 
+        _endUI.SetActive(true);
+        if (scorePercent >= 50) _successUI.SetScore(MovementPlayer.NbCaseMouv, time, scorePercent);
+        else _failedUI.SetScore(scorePercent);
     }
     
     private void loadLevel()
@@ -85,6 +118,10 @@ public class GameManager : MonoBehaviour
         SoulsManager.Instance.Setup();
         Setup();
         _grid.LoadGrid();
+        _endUI.SetActive(false);
+        _failedUI.gameObject.SetActive(false);
+        _successUI.gameObject.SetActive(false);
+        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAQ");
     }
 
     public void restartLevel()

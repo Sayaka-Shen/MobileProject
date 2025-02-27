@@ -62,6 +62,14 @@ public class LevelEditor : Editor
         {
             level.ChooseSoul();
         }
+        if (GUILayout.Button("Select SoulSeeker"))
+        {
+            level.ChooseSoulSeeker();
+        }
+        if (GUILayout.Button("Select SoulTrapper"))
+        {
+            level.ChooseSoulTrapper();
+        }
         if (GUILayout.Button("Select Player"))
         {
             level.ChoosePlayer();

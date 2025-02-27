@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 119773169383526808}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: -0.1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -262,7 +262,7 @@ Transform:
   m_GameObject: {fileID: 3933169591759426802}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: -0.1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -460,7 +460,7 @@ Transform:
   m_GameObject: {fileID: 4501466146956693055}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -0.1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -658,7 +658,7 @@ Transform:
   m_GameObject: {fileID: 4716348737850746049}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: -0.1}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -875,7 +875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5a8c6c1baa2e4b4dbf1fe7f1133fcd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spriteRenderer: {fileID: 0}
+  _animator: {fileID: 1680148989054620372}
   _speed: 2
   _pathList: []
   _onStartMove:
@@ -1011,7 +1011,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: playerDesign
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8415048795854928989, guid: aae7352682bf25849a3fcba32caf095d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1019,5 +1020,10 @@ PrefabInstance:
 --- !u!4 &1067322203357115765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3079573087455949333, guid: aae7352682bf25849a3fcba32caf095d, type: 3}
+  m_PrefabInstance: {fileID: 2626500782351370080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1680148989054620372 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3684544902492050868, guid: aae7352682bf25849a3fcba32caf095d, type: 3}
   m_PrefabInstance: {fileID: 2626500782351370080}
   m_PrefabAsset: {fileID: 0}
