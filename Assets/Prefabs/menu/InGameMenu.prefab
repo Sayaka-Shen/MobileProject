@@ -231,7 +231,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8695513951153073125}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 8c77498519bb64040a8ac6c47fed41a7, type: 2}
+        m_TargetAssemblyTypeName: DataLevelContainer, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Beta
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1970862867424025624
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,16 +694,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a661405f06aa704188aa4e7ed9db98a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stepText: {fileID: 1970862867424025624}
-  _timeText: {fileID: 4788638195718295016}
-  _sliderScore: {fileID: 2656283440260374984}
-  _nextLvBt: {fileID: 1889330647629536972}
-  _restartBt: {fileID: 5847166138987727651}
-  _mainMenuBt: {fileID: 3898655787559156333}
-  _speedSlider: 1
-  _SceneManager: {fileID: 0}
-  _strSceneToLoad: 
-  _dataLevelContainer: {fileID: 11400000, guid: 8c77498519bb64040a8ac6c47fed41a7, type: 2}
+  _stepText: {fileID: 7423881304684870359}
+  _timeText: {fileID: 7949837375957652926}
+  _sliderText: {fileID: 4889251953787531698}
+  _sliderScore: {fileID: 952956841729934332}
+  _nextLvBt: {fileID: 3377546972892590627}
+  _restartBt: {fileID: 8950964643551409074}
+  _mainMenuBt: {fileID: 1533828098707977448}
+  _speedSlider: 10
 --- !u!1 &2656283440260374984
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,7 +787,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1075,7 +1097,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1324932205941687028}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MenuScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4220822484398889587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,7 +1229,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5048480990596634718}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Beta
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4638672056203833971
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,7 +1499,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1577,7 +1623,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3224945255834394827}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MenuScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5847166138987727651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,7 +1755,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5823638456098597670}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Beta
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5936901410922742104
 GameObject:
   m_ObjectHideFlags: 0
@@ -2313,13 +2383,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 289ba69ec75b73e4491f46ffdfd478e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sliderScore: {fileID: 4845133819122787132}
-  _speedSlider: 1
-  _restartBt: {fileID: 4220822484398889587}
-  _mainMenuBt: {fileID: 5706251232565943571}
-  _SceneManager: {fileID: 0}
-  _strSceneToLoad: Beta
-  _dataLevelContainer: {fileID: 11400000, guid: 8c77498519bb64040a8ac6c47fed41a7, type: 2}
+  _sliderScore: {fileID: 23678450781474329}
+  _sliderText: {fileID: 390605168257529011}
+  _speedSlider: 10
+  _restartBt: {fileID: 1490431057616611173}
+  _mainMenuBt: {fileID: 7005885672733752846}
 --- !u!1 &8451614355186187003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,7 +2421,7 @@ RectTransform:
   m_Father: {fileID: 5688181369172275033}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2428,7 +2496,7 @@ RectTransform:
   m_Father: {fileID: 2119327505471579797}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 2.700058, y: 3.8000002}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

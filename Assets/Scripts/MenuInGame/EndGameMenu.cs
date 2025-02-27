@@ -7,6 +7,7 @@ public class EndGameMenu : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _stepText;
     [SerializeField] private TextMeshProUGUI _timeText;
+    [SerializeField] private TextMeshProUGUI _sliderText;
     [SerializeField] private Slider _sliderScore;
     [SerializeField] private Button _nextLvBt;
     [SerializeField] private Button _restartBt;
@@ -31,6 +32,7 @@ public class EndGameMenu : MonoBehaviour
             if(_sliderScore.value < _score)
             {
                 _sliderScore.value += _speedSlider * Time.fixedDeltaTime;
+                _sliderText.text = ((int)_sliderScore.value).ToString() + "%";
             }
             else
             {
