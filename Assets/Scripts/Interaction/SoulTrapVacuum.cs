@@ -14,6 +14,7 @@ public class SoulTrapVacuum : MonoBehaviour, IInteractable
         if(_soulPlayer.AsSoul)
         {
             _soulPlayer.DeleteSoul();
+            SoulsManager.Instance.AddSoulsCorrupt();
             GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQCQ");
         }
     }

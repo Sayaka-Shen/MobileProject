@@ -16,13 +16,28 @@ public class Seeker : MonoBehaviour
         _movementPlayer.OnEndMove += Move;
     }
 
+    public void UnFollow()
+    {
+        _movementPlayer.OnEndMove -= Move;
+    }
+
     private void Move()
     {
         _countMove--;
 
         if (_countMove == 0)
         {
-            transform.position = Pathfinding.Instance.FindPath(transform.position, GameManager.Instance.PlayerPosition);
+            if (Vector3.Distance(transform.position, GameManager.Instance.PlayerPosition) > 1 || !GameManager.Instance.SoulPlayer.AsSoul)
+            {
+                transform.position = Pathfinding.Instance.FindPath(transform.position, GameManager.Instance.PlayerPosition);
+            }
+            if(Vector3.Distance(transform.position, GameManager.Instance.PlayerPosition) == 0)
+            {
+                GetComponent<Soul>().UnFollow();
+                UnFollow();
+                Destroy(gameObject);
+                GameManager.Instance.SoulPlayer.TakeSoul();
+            }
             _countMove = _countDownMove;
         }
     }
