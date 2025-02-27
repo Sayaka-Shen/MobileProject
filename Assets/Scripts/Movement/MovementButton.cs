@@ -20,7 +20,9 @@ public class MovementButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        _mouvementPlayer.AddPos(transform.position);
+        Vector3 newPos = transform.position;
+        newPos.z = 0;
+        _mouvementPlayer.AddPos(newPos);
         _mouvementPlayer.StartMoving();
     }
 

@@ -32,7 +32,7 @@ MonoBehaviour:
       _bestStep: 32
       _highScore: 3
       _isCompleted: 1
-      _bestTime: 26.818192
+      _bestTime: 21.150547
   - _levelName: Grande prairie
     _prefab: {fileID: 5528948840815735545, guid: 9af81c1be195b174eb0e48fa49b8a802, type: 3}
     _imagePreviewMini: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
