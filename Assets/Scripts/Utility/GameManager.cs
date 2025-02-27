@@ -1,7 +1,6 @@
 using System;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public class GameManager : MonoBehaviour
 {
@@ -75,7 +74,11 @@ public class GameManager : MonoBehaviour
             if (!levelData.IsCompleted || levelData.BestStep > MovementPlayer.NbCaseMouv) levelData.BestStep = MovementPlayer.NbCaseMouv;
             if (!levelData.IsCompleted || levelData.BestTime > time) levelData.BestTime = time;
             if (!levelData.IsCompleted || levelData.HighScore > SoulsManager.Instance.CountSoulsPurify) levelData.HighScore = SoulsManager.Instance.CountSoulsPurify;
-            if (scorePercent >= 50) levelData.IsCompleted = true;
+            if (scorePercent >= 50)
+            {
+                levelData.IsCompleted = true;
+                GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAw");
+            }
         }
         SaveManager.Instance.Save(); 
         _endUI.SetActive(true);
