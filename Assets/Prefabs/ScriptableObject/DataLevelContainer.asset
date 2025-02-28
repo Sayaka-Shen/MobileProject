@@ -17,20 +17,20 @@ MonoBehaviour:
     _prefab: {fileID: 5528948840815735545, guid: 9af81c1be195b174eb0e48fa49b8a802, type: 3}
     _imagePreviewMini: {fileID: 0}
     _dataToSaves:
-      _percentFinish: 0
+      _percentFinish: 70
       _bestStep: 0
       _highScore: 0
-      _isCompleted: 0
+      _isCompleted: 1
       _bestTime: 0
   - _levelName: Niveau 10
     _prefab: {fileID: 5528948840815735545, guid: 4a1843e5854519f43a88616407ee06e2, type: 3}
     _imagePreviewMini: {fileID: 0}
     _dataToSaves:
       _percentFinish: 0
-      _bestStep: 0
-      _highScore: 0
-      _isCompleted: 0
-      _bestTime: 0
+      _bestStep: 32
+      _highScore: 3
+      _isCompleted: 1
+      _bestTime: 21.150547
   - _levelName: Niveau 14
     _prefab: {fileID: 5528948840815735545, guid: 2d00bf34cfd5c814db5108404e928ec3, type: 3}
     _imagePreviewMini: {fileID: 0}
@@ -45,10 +45,10 @@ MonoBehaviour:
     _imagePreviewMini: {fileID: 0}
     _dataToSaves:
       _percentFinish: 0
-      _bestStep: 0
-      _highScore: 0
+      _bestStep: 22
+      _highScore: 1
       _isCompleted: 0
-      _bestTime: 0
+      _bestTime: 30.159193
   - _levelName: Niveau 21
     _prefab: {fileID: 5528948840815735545, guid: b2bff331863442b4aab623cfaf9c6efd, type: 3}
     _imagePreviewMini: {fileID: 0}
@@ -184,4 +184,4 @@ MonoBehaviour:
       _highScore: 0
       _isCompleted: 0
       _bestTime: 0
-  _sceneToLoad: 3
+  _sceneToLoad: 2
