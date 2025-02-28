@@ -364,7 +364,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5528948840815735545}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e22055c5af332b40a3959e55d229082, type: 3}
   m_Name: 
@@ -1328,6 +1328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 7439623064834478255, guid: ee8dd97fa9dab47419f5c548d909c0ad, type: 3}
+      propertyPath: _linkPortal
+      value: 
+      objectReference: {fileID: 7900831782312987774}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4856,6 +4860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 7439623064834478255, guid: ee8dd97fa9dab47419f5c548d909c0ad, type: 3}
+      propertyPath: _linkPortal
+      value: 
+      objectReference: {fileID: 2208615376551849793}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
