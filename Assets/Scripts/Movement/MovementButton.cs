@@ -20,10 +20,21 @@ public class MovementButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        Vector3 newPos = transform.position;
-        newPos.z = 0;
-        _mouvementPlayer.AddPos(newPos);
-        _mouvementPlayer.StartMoving();
+        if(isPlaying(GameManager.Instance.AnimPlayer, "anim_idle"))
+        {
+            Vector3 newPos = transform.position;
+            newPos.z = 0;
+            _mouvementPlayer.AddPos(newPos);
+            _mouvementPlayer.StartMoving();
+        }
+    }
+
+    bool isPlaying(Animator anim, string stateName)
+    {
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName(stateName))
+            return true;
+        else
+            return false;
     }
 
     void ShowCorrectButton()
