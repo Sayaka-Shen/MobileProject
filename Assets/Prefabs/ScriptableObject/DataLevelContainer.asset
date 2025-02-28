@@ -19,10 +19,10 @@ MonoBehaviour:
     _imagePreview: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     _dataToSaves:
       _percentFinish: 70
-      _bestStep: 60
+      _bestStep: 85
       _highScore: 0
       _isCompleted: 1
-      _bestTime: 50
+      _bestTime: 60
   - _levelName: Grande prairie
     _prefab: {fileID: 5528948840815735545, guid: cc2f4089a1e95214dad9f447967ad963, type: 3}
     _imagePreviewMini: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
@@ -63,4 +63,4 @@ MonoBehaviour:
       _highScore: 0
       _isCompleted: 0
       _bestTime: 0
-  _sceneToLoad: 0
+  _sceneToLoad: 1
