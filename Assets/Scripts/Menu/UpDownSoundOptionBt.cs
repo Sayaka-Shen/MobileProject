@@ -5,10 +5,12 @@ public class UpDownSoundOptionBt : MonoBehaviour
 {
     public void UpSlider()
     {
-        this.GetComponent<Slider>().value += 0.1f;
+        this.GetComponent<Slider>().value += 5f;
+        Debug.Log("UpSlider");
     }
     public void DownSlider()
     {
-        this.GetComponent<Slider>().value -= 0.1f;
+        this.GetComponent<Slider>().value -= 5f;
+        Debug.Log("DownSlider");
     }
 }

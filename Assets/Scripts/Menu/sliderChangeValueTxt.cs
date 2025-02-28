@@ -1,16 +1,13 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class sliderChangeValueTxt : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private TextMeshProUGUI _txt;
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeValue()
     {
-        
+        _txt.text = this.GetComponent<Slider>().value.ToString() + "%";
     }
 }
