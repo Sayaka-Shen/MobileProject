@@ -10,8 +10,6 @@ public class DataLevel
     public GameObject Prefab => _prefab;
     [SerializeField] private Sprite _imagePreviewMini;
     public Sprite ImagePreviewMini => _imagePreviewMini;
-    [SerializeField] private Sprite _imagePreview;
-    public Sprite ImagePreview => _imagePreview;
     [SerializeField] private DataToSaves _dataToSaves;
     public DataToSaves DataToSaves{ get => _dataToSaves; set => _dataToSaves = value; }
 }

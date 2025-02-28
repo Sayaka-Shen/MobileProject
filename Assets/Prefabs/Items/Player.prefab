@@ -452,7 +452,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textMovement: {fileID: 5224792023830310642}
-  _textScore: {fileID: 0}
 --- !u!1 &2789781838903466499
 GameObject:
   m_ObjectHideFlags: 0
