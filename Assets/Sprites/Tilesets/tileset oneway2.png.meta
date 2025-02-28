@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: c636ec0c9a943934284a7fdf4d7fe5dd
+guid: 9f32e3c4f77bc784ba65a0fddb58ff4e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9018350201936323689
-    second: tileset oneway_0
+      213: -7302042753833179266
+    second: tileset oneway2_0
   - first:
-      213: 2820844681829475749
-    second: tileset oneway_1
+      213: 7062906548607109807
+    second: tileset oneway2_1
   - first:
-      213: -8986163362210937897
-    second: tileset oneway_2
+      213: 2987829436970762911
+    second: tileset oneway2_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,95 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tileset oneway_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 332
-        width: 166
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 79b5389c54268d280800000000000000
-      internalID: -9018350201936323689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tileset oneway_1
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 332
-        width: 166
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a5eefaea47a52720800000000000000
-      internalID: 2820844681829475749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tileset oneway_2
-      rect:
-        serializedVersion: 2
-        x: 332
-        y: 332
-        width: 166
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7d389c5680cba4380800000000000000
-      internalID: -8986163362210937897
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tileset oneway_3
-      rect:
-        serializedVersion: 2
-        x: 498
-        y: 332
-        width: 166
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56c3bd778299790419d6e45214c48704
-      internalID: 1810735573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tileset oneway_4
+      name: tileset oneway2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -220,16 +132,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ca32f37966a0bec48a80e34352bc41f8
-      internalID: 923340375
+      spriteID: e77ee03adcee9aa90800000000000000
+      internalID: -7302042753833179266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset oneway_5
+      name: tileset oneway2_1
       rect:
         serializedVersion: 2
         x: 166
@@ -242,16 +154,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f66d1f8922b0bf54ebbd3354f09419de
-      internalID: 719776024
+      spriteID: faac187c51c740260800000000000000
+      internalID: 7062906548607109807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset oneway_6
+      name: tileset oneway2_2
       rect:
         serializedVersion: 2
         x: 332
@@ -264,16 +176,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c3770361d702e5f48b1b3606ef129f0d
-      internalID: 1165024703
+      spriteID: f920910fa07e67920800000000000000
+      internalID: 2987829436970762911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset oneway_7
+      name: tileset oneway2_3
       rect:
         serializedVersion: 2
         x: 498
@@ -288,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2e26b5f721b98b4ab27b52991d55ff1
-      internalID: -94698001
+      spriteID: 537c199a76798064aa13cbc190a3e2f6
+      internalID: -673615251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset oneway_8
+      name: tileset oneway2_4
       rect:
         serializedVersion: 2
         x: 0
@@ -310,14 +222,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d13af411587675140856f5a1dec91180
-      internalID: 1604384177
+      spriteID: d17e55aaa6935454686e971c53279aed
+      internalID: 1165312008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset oneway_9
+      name: tileset oneway2_5
       rect:
         serializedVersion: 2
         x: 166
@@ -332,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ac72f64ce2d3c5438bed1caa462501b
-      internalID: -1442279050
+      spriteID: 27317e4a26641514db1e72b901143e99
+      internalID: 1177871137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset oneway_10
+      name: tileset oneway2_6
       rect:
         serializedVersion: 2
         x: 332
@@ -354,8 +266,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c08728530e4afb8499db75f4adb8c847
-      internalID: 242029195
+      spriteID: 4d209257003038447b04788d8be4e4fc
+      internalID: 547741023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset oneway2_7
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 0
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8e832547d536a4cbe5c1308eccc6ac
+      internalID: 91145905
       vertices: []
       indices: 
       edges: []
@@ -364,7 +298,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 173e0ac418141ed4ca2aa41fb495e698
+    spriteID: 23458d3b402afc14fb638d03caa97d7b
     internalID: 0
     vertices: []
     indices: 
@@ -374,17 +308,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tileset oneway_0: -9018350201936323689
-      tileset oneway_1: 2820844681829475749
-      tileset oneway_10: 242029195
-      tileset oneway_2: -8986163362210937897
-      tileset oneway_3: 1810735573
-      tileset oneway_4: 923340375
-      tileset oneway_5: 719776024
-      tileset oneway_6: 1165024703
-      tileset oneway_7: -94698001
-      tileset oneway_8: 1604384177
-      tileset oneway_9: -1442279050
+      tileset oneway2_0: -7302042753833179266
+      tileset oneway2_1: 7062906548607109807
+      tileset oneway2_2: 2987829436970762911
+      tileset oneway2_3: -673615251
+      tileset oneway2_4: 1165312008
+      tileset oneway2_5: 1177871137
+      tileset oneway2_6: 547741023
+      tileset oneway2_7: 91145905
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
