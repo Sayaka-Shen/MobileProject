@@ -3,7 +3,6 @@ using UnityEngine;
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject _levelSelector;
-    [SerializeField] private GameObject _levelStarter;
     [SerializeField] private GameObject _btContainer;
     [SerializeField] private GameObject _optionContainer;
     //[SerializeField] private GameObject _introContainer;
@@ -12,7 +11,6 @@ public class MainMenuManager : MonoBehaviour
     public void ReturnSelector()
     {
         _levelSelector.SetActive(true);
-        _levelStarter.SetActive(false);
         _btContainer.SetActive(false);
         _optionContainer.SetActive(false);
     }
