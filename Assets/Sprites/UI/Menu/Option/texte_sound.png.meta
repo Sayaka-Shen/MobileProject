@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: 94803ce7ca57e0349ae8ed8706a29159
+guid: 5a401663d2ef6f442bfb529f23381342
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7413517559346657911
-    second: remplissage_barre_progress_0
+      213: -2940766992587350205
+    second: texte_sound_0
   - first:
-      213: 251393956124132692
-    second: remplissage_barre_progress_1
+      213: 400628302831325939
+    second: texte_sound_1
   - first:
-      213: -5333406644292281791
-    second: remplissage_barre_progress_2
+      213: -3211996285813215026
+    second: texte_sound_2
   - first:
-      213: 1129086990559621985
-    second: remplissage_barre_progress_3
+      213: -5726221417579159140
+    second: texte_sound_3
   - first:
-      213: -4270892726448670829
-    second: remplissage_barre_progress_4
-  - first:
-      213: -5919623445777644840
-    second: remplissage_barre_progress_5
+      213: -3957030105819700842
+    second: texte_sound_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -67,7 +64,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 1, y: 1, z: 1, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -128,133 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: remplissage_barre_progress_0
+      name: texte_sound_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 78
-        width: 1942
-        height: 124
+        x: 0
+        y: 0
+        width: 35
+        height: 67
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 97, y: 50, z: 100, w: 54}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 985850bee05ed1990800000000000000
-      internalID: -7413517559346657911
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: remplissage_barre_progress_1
-      rect:
-        serializedVersion: 2
-        x: 469
-        y: 287
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 455857d98712d7300800000000000000
-      internalID: 251393956124132692
+      spriteID: 34f13a7400c4037d0800000000000000
+      internalID: -2940766992587350205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: remplissage_barre_progress_2
+      name: texte_sound_1
       rect:
         serializedVersion: 2
-        x: 472
-        y: 292
-        width: 7
-        height: 6
+        x: 38
+        y: 0
+        width: 36
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14a10442aeeebf5b0800000000000000
-      internalID: -5333406644292281791
+      spriteID: 3f29a3d91515f8500800000000000000
+      internalID: 400628302831325939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: remplissage_barre_progress_3
+      name: texte_sound_2
       rect:
         serializedVersion: 2
-        x: 473
-        y: 278
-        width: 15
-        height: 14
+        x: 78
+        y: 0
+        width: 37
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16332d0c2a25baf00800000000000000
-      internalID: 1129086990559621985
+      spriteID: ec0ba3c5562bc63d0800000000000000
+      internalID: -3211996285813215026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: remplissage_barre_progress_4
+      name: texte_sound_3
       rect:
         serializedVersion: 2
-        x: 1003
-        y: 285
-        width: 6
-        height: 8
+        x: 121
+        y: 0
+        width: 36
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3973a3681bdbab4c0800000000000000
-      internalID: -4270892726448670829
+      spriteID: c91e5f3a5ff5880b0800000000000000
+      internalID: -5726221417579159140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: remplissage_barre_progress_5
+      name: texte_sound_4
       rect:
         serializedVersion: 2
-        x: 1010
-        y: 286
-        width: 17
-        height: 18
+        x: 161
+        y: 0
+        width: 35
+        height: 67
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d2895ee6d549dda0800000000000000
-      internalID: -5919623445777644840
+      spriteID: 6912711851ec519c0800000000000000
+      internalID: -3957030105819700842
       vertices: []
       indices: 
       edges: []
@@ -263,8 +238,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -272,13 +247,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      remplissage_barre_progress_0: -7413517559346657911
-      remplissage_barre_progress_1: 251393956124132692
-      remplissage_barre_progress_2: -5333406644292281791
-      remplissage_barre_progress_3: 1129086990559621985
-      remplissage_barre_progress_4: -4270892726448670829
-      remplissage_barre_progress_5: -5919623445777644840
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

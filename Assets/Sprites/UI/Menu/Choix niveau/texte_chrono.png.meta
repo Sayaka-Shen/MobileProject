@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 94803ce7ca57e0349ae8ed8706a29159
+guid: f237a93d6d9e96543b0a049bf89e8e93
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7413517559346657911
-    second: remplissage_barre_progress_0
+      213: -2103424262030222776
+    second: texte_chrono_0
   - first:
-      213: 251393956124132692
-    second: remplissage_barre_progress_1
+      213: -5727739610105934472
+    second: texte_chrono_1
   - first:
-      213: -5333406644292281791
-    second: remplissage_barre_progress_2
+      213: -3640034555860017011
+    second: texte_chrono_2
   - first:
-      213: 1129086990559621985
-    second: remplissage_barre_progress_3
+      213: -3255009894715779535
+    second: texte_chrono_3
   - first:
-      213: -4270892726448670829
-    second: remplissage_barre_progress_4
+      213: 1368502945971946197
+    second: texte_chrono_4
   - first:
-      213: -5919623445777644840
-    second: remplissage_barre_progress_5
+      213: 2247435979200394338
+    second: texte_chrono_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -67,7 +67,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 1, y: 1, z: 1, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -128,133 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: remplissage_barre_progress_0
+      name: texte_chrono_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 78
-        width: 1942
-        height: 124
+        x: 0
+        y: 0
+        width: 16
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 97, y: 50, z: 100, w: 54}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 985850bee05ed1990800000000000000
-      internalID: -7413517559346657911
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: remplissage_barre_progress_1
-      rect:
-        serializedVersion: 2
-        x: 469
-        y: 287
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 455857d98712d7300800000000000000
-      internalID: 251393956124132692
+      spriteID: 84a10c137c22fc2e0800000000000000
+      internalID: -2103424262030222776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: remplissage_barre_progress_2
+      name: texte_chrono_1
       rect:
         serializedVersion: 2
-        x: 472
-        y: 292
-        width: 7
-        height: 6
+        x: 16
+        y: 0
+        width: 16
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14a10442aeeebf5b0800000000000000
-      internalID: -5333406644292281791
+      spriteID: 87d83b5eb2bf280b0800000000000000
+      internalID: -5727739610105934472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: remplissage_barre_progress_3
+      name: texte_chrono_2
       rect:
         serializedVersion: 2
-        x: 473
-        y: 278
+        x: 32
+        y: 0
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8021df6bdffb7dc0800000000000000
+      internalID: -3640034555860017011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texte_chrono_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 136951d1fb1e3d2d0800000000000000
+      internalID: -3255009894715779535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texte_chrono_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
         width: 15
-        height: 14
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16332d0c2a25baf00800000000000000
-      internalID: 1129086990559621985
+      spriteID: 5d2cbb0cd26edf210800000000000000
+      internalID: 1368502945971946197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: remplissage_barre_progress_4
+      name: texte_chrono_5
       rect:
         serializedVersion: 2
-        x: 1003
-        y: 285
-        width: 6
-        height: 8
+        x: 81
+        y: 0
+        width: 31
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3973a3681bdbab4c0800000000000000
-      internalID: -4270892726448670829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: remplissage_barre_progress_5
-      rect:
-        serializedVersion: 2
-        x: 1010
-        y: 286
-        width: 17
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8d2895ee6d549dda0800000000000000
-      internalID: -5919623445777644840
+      spriteID: 264fbab9d1f703f10800000000000000
+      internalID: 2247435979200394338
       vertices: []
       indices: 
       edges: []
@@ -263,8 +263,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -272,13 +272,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      remplissage_barre_progress_0: -7413517559346657911
-      remplissage_barre_progress_1: 251393956124132692
-      remplissage_barre_progress_2: -5333406644292281791
-      remplissage_barre_progress_3: 1129086990559621985
-      remplissage_barre_progress_4: -4270892726448670829
-      remplissage_barre_progress_5: -5919623445777644840
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
