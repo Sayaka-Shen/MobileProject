@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: d862c814f354f64419ecfd618bbac257
+guid: c636ec0c9a943934284a7fdf4d7fe5dd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6768704171178862011
-    second: tileset ronces_0
+      213: -9018350201936323689
+    second: tileset oneway_0
   - first:
-      213: -7360160010759616155
-    second: tileset ronces_1
+      213: 2820844681829475749
+    second: tileset oneway_1
   - first:
-      213: 8678421093156317139
-    second: tileset ronces_2
-  - first:
-      213: -471184750682926628
-    second: tileset ronces_3
+      213: -8986163362210937897
+    second: tileset oneway_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,7 +119,95 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tileset ronces_0
+      name: tileset oneway_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 332
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79b5389c54268d280800000000000000
+      internalID: -9018350201936323689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset oneway_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 332
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a5eefaea47a52720800000000000000
+      internalID: 2820844681829475749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset oneway_2
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 332
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d389c5680cba4380800000000000000
+      internalID: -8986163362210937897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset oneway_3
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 332
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c3bd778299790419d6e45214c48704
+      internalID: 1810735573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset oneway_4
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +222,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0511c50de75c2e848aa89f31836d5d73
-      internalID: -205350370
+      spriteID: ca32f37966a0bec48a80e34352bc41f8
+      internalID: 923340375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset ronces_1
+      name: tileset oneway_5
       rect:
         serializedVersion: 2
         x: 166
@@ -159,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4581386c55b3e694ca470abf0b206713
-      internalID: -1437979123
+      spriteID: f66d1f8922b0bf54ebbd3354f09419de
+      internalID: 719776024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset ronces_2
+      name: tileset oneway_6
       rect:
         serializedVersion: 2
         x: 332
@@ -181,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd9208434b9d9fd47a665245a8d319c3
-      internalID: 2050836924
+      spriteID: c3770361d702e5f48b1b3606ef129f0d
+      internalID: 1165024703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset ronces_3
+      name: tileset oneway_7
       rect:
         serializedVersion: 2
         x: 498
@@ -203,58 +288,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 952e06413ab782f44a0af1bdb4abc6a5
-      internalID: -657799415
+      spriteID: f2e26b5f721b98b4ab27b52991d55ff1
+      internalID: -94698001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset ronces_4
-      rect:
-        serializedVersion: 2
-        x: 664
-        y: 166
-        width: 166
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 640848544be4e38428f4ffc875483b8a
-      internalID: -1407820313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tileset ronces_5
-      rect:
-        serializedVersion: 2
-        x: 830
-        y: 166
-        width: 166
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3cd3845078361a24ea2490a26f04568b
-      internalID: 1273071744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tileset ronces_6
+      name: tileset oneway_8
       rect:
         serializedVersion: 2
         x: 0
@@ -269,14 +310,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 103a153f748c2db43b4fd54e7fc8acac
-      internalID: 1369625162
+      spriteID: d13af411587675140856f5a1dec91180
+      internalID: 1604384177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset ronces_7
+      name: tileset oneway_9
       rect:
         serializedVersion: 2
         x: 166
@@ -291,14 +332,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b0c01b3951291c459abab87906861bb
-      internalID: 722903822
+      spriteID: 3ac72f64ce2d3c5438bed1caa462501b
+      internalID: -1442279050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset ronces_8
+      name: tileset oneway_10
       rect:
         serializedVersion: 2
         x: 332
@@ -313,52 +354,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bbea866dbbda8d439e02962d62f3cfc
-      internalID: -468728870
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tileset ronces_9
-      rect:
-        serializedVersion: 2
-        x: 498
-        y: 0
-        width: 166
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 627d2cf8e4a20254ea20a3247e1d5f5b
-      internalID: 1622347985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tileset ronces_10
-      rect:
-        serializedVersion: 2
-        x: 664
-        y: 0
-        width: 166
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 628182eac88918c419ca8f66744fa089
-      internalID: 1293353640
+      spriteID: c08728530e4afb8499db75f4adb8c847
+      internalID: 242029195
       vertices: []
       indices: 
       edges: []
@@ -367,7 +364,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d374d83f02ae6e84aa8d4401f736a6ba
+    spriteID: 173e0ac418141ed4ca2aa41fb495e698
     internalID: 0
     vertices: []
     indices: 
@@ -377,17 +374,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tileset ronces_0: -205350370
-      tileset ronces_1: -1437979123
-      tileset ronces_10: 1293353640
-      tileset ronces_2: 2050836924
-      tileset ronces_3: -657799415
-      tileset ronces_4: -1407820313
-      tileset ronces_5: 1273071744
-      tileset ronces_6: 1369625162
-      tileset ronces_7: 722903822
-      tileset ronces_8: -468728870
-      tileset ronces_9: 1622347985
+      tileset oneway_0: -9018350201936323689
+      tileset oneway_1: 2820844681829475749
+      tileset oneway_10: 242029195
+      tileset oneway_2: -8986163362210937897
+      tileset oneway_3: 1810735573
+      tileset oneway_4: 923340375
+      tileset oneway_5: 719776024
+      tileset oneway_6: 1165024703
+      tileset oneway_7: -94698001
+      tileset oneway_8: 1604384177
+      tileset oneway_9: -1442279050
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
