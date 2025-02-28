@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
         _endUI.SetActive(true);
         if (scorePercent >= 50) _successUI.SetScore(MovementPlayer.NbCaseMouv, time, scorePercent);
         else _failedUI.SetScore(scorePercent);
+        Time.timeScale = 0f;
     }
 
     private void EndGame()
@@ -118,7 +119,8 @@ public class GameManager : MonoBehaviour
     
     private void loadLevel()
     {
-        if(_level != null) Destroy(_level);
+        Time.timeScale = 1f;
+        if (_level != null) Destroy(_level);
         if(_levelContainer.SceneToLoad < 0 || _levelContainer.SceneToLoad >= _levelContainer.Levels.Length) throw new ArgumentNullException("No level selected");
         _level = Instantiate(_levelContainer.GetCurrentLevel().Prefab);
         SoulsManager.Instance.Setup();

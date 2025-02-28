@@ -18,6 +18,7 @@ public class Seeker : MonoBehaviour
 
     public void UnFollow()
     {
+        _movementPlayer = GameManager.Instance.MovementPlayer;
         _movementPlayer.OnEndMove -= Move;
     }
 
