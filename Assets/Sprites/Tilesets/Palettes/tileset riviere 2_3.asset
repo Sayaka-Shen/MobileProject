@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: tileset riviere 2_3
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 6199454, guid: 0db3228b85941674db5f7f1e5a51eed6, type: 3}
+  m_Sprite: {fileID: -768461798, guid: 0db3228b85941674db5f7f1e5a51eed6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
