@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9243079b4a26cfc42b1d4ba1d74db327
+guid: 7fb7e38642c0d8a438f0ed9c06ce5658
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2330550213861827660
-    second: icone_trophee_0
+      213: 1414346311153421963
+    second: trap_ames_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: icone_trophee_0
+      name: trap_ames_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 101
-        height: 101
+        width: 511
+        height: 492
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4bb1e83ade838afd0800000000000000
-      internalID: -2330550213861827660
+      spriteID: b8e0fa9f974c0a310800000000000000
+      internalID: 1414346311153421963
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      icone_trophee_0: -2330550213861827660
+      trap_ames_0: 1414346311153421963
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
