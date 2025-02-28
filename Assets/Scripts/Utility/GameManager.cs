@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEditor;
 using UnityEngine;
 
@@ -61,6 +62,13 @@ public class GameManager : MonoBehaviour
         StartTimer();
     }
 
+    private IEnumerator EndGameVisual(int scorePercent, float time)
+    {
+        yield return new WaitForSeconds(2f);
+        _endUI.SetActive(true);
+        if (scorePercent >= 50) _successUI.SetScore(MovementPlayer.NbCaseMouv, time, scorePercent);
+        else _failedUI.SetScore(scorePercent);
+    }
 
     private void EndGame()
     {
@@ -104,10 +112,8 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        SaveManager.Instance.Save(); 
-        _endUI.SetActive(true);
-        if (scorePercent >= 50) _successUI.SetScore(MovementPlayer.NbCaseMouv, time, scorePercent);
-        else _failedUI.SetScore(scorePercent);
+        SaveManager.Instance.Save();
+        StartCoroutine(EndGameVisual(scorePercent, time));
     }
     
     private void loadLevel()
