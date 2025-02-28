@@ -15,7 +15,9 @@ public class LevelSelector : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _timeText;
     [SerializeField] private TextMeshProUGUI _stepText;
     [SerializeField] private UnityEngine.UI.Button _playButton;
-    [SerializeField] private TextMeshProUGUI _playBtText;
+    [SerializeField] private UnityEngine.UI.Image _playBtImage;
+    [SerializeField] private Sprite _playSprite;
+    [SerializeField] private Sprite _lockedSprite;
     private RectTransform _rectTransform;
     bool _isLevelEven = false;
     private int _levelsCount;
@@ -64,7 +66,7 @@ public class LevelSelector : MonoBehaviour
         _stepText.text = _levels[0].DataToSaves.BestStep.ToString();
         _dataLevelContainer.SceneToLoad = 0;
         _playButton.interactable = true;
-        _playBtText.text = "Play";
+        _playBtImage.sprite = _playSprite;
     }
 
     void OnMouseUp()
@@ -109,17 +111,17 @@ public class LevelSelector : MonoBehaviour
         if(_levelSelected>0 &&_levels[_levelSelected-1].DataToSaves.IsCompleted)
         {
             _playButton.interactable = true;
-            _playBtText.text = "Play";
+            _playBtImage.sprite = _playSprite;
         }
         else if(_levelSelected == 0)
         {
             _playButton.interactable = true;
-            _playBtText.text = "Play";
+            _playBtImage.sprite = _playSprite;
         }
         else
         {
             _playButton.interactable = false;
-            _playBtText.text = "Locked";
+            _playBtImage.sprite = _lockedSprite;
         }
         _dataLevelContainer.SceneToLoad = _levelSelected;
         _isLevelSelected = true;

@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 94803ce7ca57e0349ae8ed8706a29159
+guid: e3f790c1c8c033f4c8de81315bd64cc2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7413517559346657911
-    second: remplissage_barre_progress_0
+      213: -6696119684536051068
+    second: texte_music_0
   - first:
-      213: 251393956124132692
-    second: remplissage_barre_progress_1
+      213: 8913974033499071250
+    second: texte_music_1
   - first:
-      213: -5333406644292281791
-    second: remplissage_barre_progress_2
+      213: 9169982813079131220
+    second: texte_music_2
   - first:
-      213: 1129086990559621985
-    second: remplissage_barre_progress_3
+      213: 313028139167607650
+    second: texte_music_3
   - first:
-      213: -4270892726448670829
-    second: remplissage_barre_progress_4
+      213: -570356322479732845
+    second: texte_music_4
   - first:
-      213: -5919623445777644840
-    second: remplissage_barre_progress_5
+      213: -1348334860299498456
+    second: texte_music_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -67,7 +67,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 1, y: 1, z: 1, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -128,133 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: remplissage_barre_progress_0
+      name: texte_music_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 78
-        width: 1942
-        height: 124
+        x: 0
+        y: 0
+        width: 50
+        height: 68
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 97, y: 50, z: 100, w: 54}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 985850bee05ed1990800000000000000
-      internalID: -7413517559346657911
+      spriteID: 48a5abddf9a9213a0800000000000000
+      internalID: -6696119684536051068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: remplissage_barre_progress_1
+      name: texte_music_1
       rect:
         serializedVersion: 2
-        x: 469
-        y: 287
-        width: 6
+        x: 56
+        y: 0
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 213a4cbb72cc4bb70800000000000000
+      internalID: 8913974033499071250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texte_music_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 454d40aa8c2524f70800000000000000
+      internalID: 9169982813079131220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texte_music_3
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 46
+        width: 9
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 455857d98712d7300800000000000000
-      internalID: 251393956124132692
+      spriteID: 26b69cf1f69185400800000000000000
+      internalID: 313028139167607650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: remplissage_barre_progress_2
+      name: texte_music_4
       rect:
         serializedVersion: 2
-        x: 472
-        y: 292
-        width: 7
-        height: 6
+        x: 138
+        y: 0
+        width: 9
+        height: 46
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14a10442aeeebf5b0800000000000000
-      internalID: -5333406644292281791
+      spriteID: 397823352ffa518f0800000000000000
+      internalID: -570356322479732845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: remplissage_barre_progress_3
+      name: texte_music_5
       rect:
         serializedVersion: 2
-        x: 473
-        y: 278
-        width: 15
-        height: 14
+        x: 151
+        y: 0
+        width: 35
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16332d0c2a25baf00800000000000000
-      internalID: 1129086990559621985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: remplissage_barre_progress_4
-      rect:
-        serializedVersion: 2
-        x: 1003
-        y: 285
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3973a3681bdbab4c0800000000000000
-      internalID: -4270892726448670829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: remplissage_barre_progress_5
-      rect:
-        serializedVersion: 2
-        x: 1010
-        y: 286
-        width: 17
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8d2895ee6d549dda0800000000000000
-      internalID: -5919623445777644840
+      spriteID: 82c829d9690c94de0800000000000000
+      internalID: -1348334860299498456
       vertices: []
       indices: 
       edges: []
@@ -263,8 +263,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -272,13 +272,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      remplissage_barre_progress_0: -7413517559346657911
-      remplissage_barre_progress_1: 251393956124132692
-      remplissage_barre_progress_2: -5333406644292281791
-      remplissage_barre_progress_3: 1129086990559621985
-      remplissage_barre_progress_4: -4270892726448670829
-      remplissage_barre_progress_5: -5919623445777644840
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
