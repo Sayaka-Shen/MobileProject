@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      chaines_de_verouillage_0: -3659711603584326246
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

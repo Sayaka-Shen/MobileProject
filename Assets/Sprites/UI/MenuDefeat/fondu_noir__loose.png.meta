@@ -447,7 +447,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fondu_noir__loose_0: -4042505812230548450
+      fondu_noir__loose_1: -1577601002828838601
+      fondu_noir__loose_10: 6407204951666779147
+      fondu_noir__loose_11: 1163704055187745005
+      fondu_noir__loose_12: 3302089641303627290
+      fondu_noir__loose_2: -8010176826424402005
+      fondu_noir__loose_3: -3484476690185912134
+      fondu_noir__loose_4: 2118371557642812337
+      fondu_noir__loose_5: 813942848381557477
+      fondu_noir__loose_6: -7024317919604206896
+      fondu_noir__loose_7: -1334281727177885198
+      fondu_noir__loose_8: 7770283688198272941
+      fondu_noir__loose_9: 5538682880440079923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

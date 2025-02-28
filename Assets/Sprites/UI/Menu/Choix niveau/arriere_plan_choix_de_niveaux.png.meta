@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      arriere_plan_choix_de_niveaux_0: 7998332461516514370
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      caseAcocher_Mouvement_0: -5589399231298947491
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      texte_steps_score_0: 8222484405519461782
+      texte_steps_score_1: 1696168615178007145
+      texte_steps_score_2: 1334694496949773065
+      texte_steps_score_3: 6534375249750097702
+      texte_steps_score_4: 4199548296225998042
+      texte_steps_score_5: -1506177854136820619
+      texte_steps_score_6: -444979168720125156
+      texte_steps_score_7: 209595877062384349
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

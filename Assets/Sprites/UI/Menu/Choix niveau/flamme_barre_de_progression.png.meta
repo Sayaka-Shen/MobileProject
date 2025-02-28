@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      flamme_barre_de_progression_0: -3426730764757186978
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
