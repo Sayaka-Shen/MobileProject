@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: d72be9e3b84d7214dbac788c03d4e2ff
+guid: 83d4a7ba549426348bb163db4d5fc931
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1047153258595349858
-    second: texte_VFX_0
+      213: -7698706949289966336
+    second: sfx_0
   - first:
-      213: 4859706030301641979
-    second: texte_VFX_1
+      213: -4150204945905651682
+    second: sfx_1
   - first:
-      213: 5515058237759550992
-    second: texte_VFX_2
+      213: 4643336932997538349
+    second: sfx_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -119,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: texte_VFX_0
+      name: sfx_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 43
-        height: 66
+        width: 35
+        height: 68
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9a080cc8a3c771f0800000000000000
-      internalID: -1047153258595349858
+      spriteID: 0058db1b1d2b82590800000000000000
+      internalID: -7698706949289966336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: texte_VFX_1
+      name: sfx_1
       rect:
         serializedVersion: 2
-        x: 47
+        x: 49
         y: 0
         width: 34
-        height: 66
+        height: 68
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bfcf3f003e4217340800000000000000
-      internalID: 4859706030301641979
+      spriteID: e10793627928766c0800000000000000
+      internalID: -4150204945905651682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: texte_VFX_2
+      name: sfx_2
       rect:
         serializedVersion: 2
-        x: 81
+        x: 83
         y: 0
         width: 39
-        height: 66
+        height: 68
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 016ff394f3c698c40800000000000000
-      internalID: 5515058237759550992
+      spriteID: d2225cfc652707040800000000000000
+      internalID: 4643336932997538349
       vertices: []
       indices: 
       edges: []
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sfx_0: -7698706949289966336
+      sfx_1: -4150204945905651682
+      sfx_2: 4643336932997538349
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
