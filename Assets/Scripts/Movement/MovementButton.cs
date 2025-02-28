@@ -20,7 +20,7 @@ public class MovementButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(isPlaying(GameManager.Instance.AnimPlayer, "anim_idle"))
+        if(isPlaying(GameManager.Instance.AnimPlayer, "anim_idle") && Time.timeScale != 0)
         {
             Vector3 newPos = transform.position;
             newPos.z = 0;
