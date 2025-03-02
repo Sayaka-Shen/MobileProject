@@ -6,6 +6,13 @@ public class Seeker : MonoBehaviour
     [SerializeField] private int _countDownMove = 2;
     private int _countMove = 0;
     private MovementPlayer _movementPlayer;
+    private ReverseAction _reverseAction = new ReverseAction();
+
+    private void Awake()
+    {
+        _reverseAction.Holder = gameObject;
+        _reverseAction.Type = ReverseActionType.SeekerMove;
+    }
 
     public void Setup()
     {
@@ -30,16 +37,22 @@ public class Seeker : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, GameManager.Instance.PlayerPosition) > 1 || !GameManager.Instance.SoulPlayer.AsSoul)
             {
-                transform.position = Pathfinding.Instance.FindPath(transform.position, GameManager.Instance.PlayerPosition);
+                _reverseAction.PositionTarget = transform.position;
+                RollbackManager.Instance.AddAction(_reverseAction);
+                MoveTo(Pathfinding.Instance.FindPath(transform.position, GameManager.Instance.PlayerPosition));
             }
             if(Vector3.Distance(transform.position, GameManager.Instance.PlayerPosition) == 0)
             {
-                GetComponent<Soul>().UnFollow();
+                GetComponent<Soul>().Desapere();
                 UnFollow();
-                Destroy(gameObject);
                 GameManager.Instance.SoulPlayer.TakeSoul();
             }
             _countMove = _countDownMove;
         }
+    }
+
+    public void MoveTo(Vector3 position)
+    {
+        transform.position = position;
     }
 }

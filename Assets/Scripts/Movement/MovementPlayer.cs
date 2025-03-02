@@ -26,8 +26,12 @@ public class MovementPlayer : MonoBehaviour
     private Vector3 _nextPos;
     public bool CountMove { get; set; }
 
+    private ReverseAction _reverseAction = new ReverseAction();
+
     private void Awake()
     {
+        _reverseAction.Holder = gameObject;
+        _reverseAction.Type = ReverseActionType.PlayerMove;
         CountMove = true;
         NbCaseMouvLast = SoulsManager.Instance.CountForHurt;
     }
@@ -65,6 +69,8 @@ public class MovementPlayer : MonoBehaviour
             _animator.SetBool("isMoving", false);
             if (CountMove)
             {
+                _reverseAction.ValueTarget = NbCaseMouvLast;
+                RollbackManager.Instance.AddAction(_reverseAction);
                 NbCaseMouvLast--;
                 _nbCaseMouv++;
             }
@@ -113,5 +119,15 @@ public class MovementPlayer : MonoBehaviour
     public void AddCaseMov(int nb)
     {
         NbCaseMouvLast += nb;
+    }
+    public void RemoveCaseMov(int nb)
+    {
+        NbCaseMouvLast -= nb;
+    }
+
+    public void RerollMove(int value)
+    {
+        _nbCaseMouv--;
+        NbCaseMouvLast = value;
     }
 }

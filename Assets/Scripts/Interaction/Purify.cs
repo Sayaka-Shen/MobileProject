@@ -9,7 +9,14 @@ public class Purify : MonoBehaviour, IInteractable
     private SoulPlayer _soulPlayer;
     
     public static event Action OnPurify;
-    
+    private ReverseAction _reverseAction = new ReverseAction();
+
+    private void Awake()
+    {
+        _reverseAction.Holder = gameObject;
+        _reverseAction.Type = ReverseActionType.Purify;
+    }
+
     private void Start()
     {
         _soulPlayer = GameManager.Instance.SoulPlayer;
@@ -19,6 +26,7 @@ public class Purify : MonoBehaviour, IInteractable
     {
         if (_soulPlayer.AsSoul)
         {
+            RollbackManager.Instance.AddAction(_reverseAction);
             GameManager.Instance.AnimPlayer.SetTrigger("purification");
             _soulPlayer.DeleteSoul();
             SoulsManager.Instance.AddSoulsPurify();

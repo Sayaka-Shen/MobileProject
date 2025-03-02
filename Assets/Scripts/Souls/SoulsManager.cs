@@ -36,9 +36,20 @@ public class SoulsManager : MonoBehaviour
         CountSoulsCorrupt++;
         OnSoulChange?.Invoke();
     }
+
+    public void RemoveSoulsCorrupt()
+    {
+        CountSoulsCorrupt--;
+    }
+
     public void AddSoulsPurify()
     {
         CountSoulsPurify++;
         OnSoulChange?.Invoke();
+    }
+
+    public void RemoveSoulsPurify()
+    {
+        CountSoulsPurify--;
     }
 }
