@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -21,13 +22,22 @@ public class MovementButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(isPlaying(GameManager.Instance.AnimPlayer, "anim_idle") && Time.timeScale != 0)
+        if(!IsPointerOverUIObject() && isPlaying(GameManager.Instance.AnimPlayer, "anim_idle") && Time.timeScale != 0)
         {
             Vector3 newPos = transform.position;
             newPos.z = 0;
             _mouvementPlayer.AddPos(newPos);
             _mouvementPlayer.StartMoving();
         }
+    }
+
+    private bool IsPointerOverUIObject()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
     }
 
     bool isPlaying(Animator anim, string stateName)
