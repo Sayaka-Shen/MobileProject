@@ -1,0 +1,1274 @@
+fileFormatVersion: 2
+guid: f4dd26bd7c712254b8c139dba53ef8be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8218860286287506090
+    second: ui_in_game_propi_propou_0
+  - first:
+      213: -5478136529806332025
+    second: ui_in_game_propi_propou_1
+  - first:
+      213: 6887217907451599781
+    second: ui_in_game_propi_propou_2
+  - first:
+      213: -6558854503297424892
+    second: ui_in_game_propi_propou_3
+  - first:
+      213: -2497916926911853772
+    second: ui_in_game_propi_propou_4
+  - first:
+      213: -7021163830810326869
+    second: ui_in_game_propi_propou_5
+  - first:
+      213: 6158006527471015411
+    second: ui_in_game_propi_propou_6
+  - first:
+      213: 4411070824736750102
+    second: ui_in_game_propi_propou_7
+  - first:
+      213: -3089463533173953331
+    second: ui_in_game_propi_propou_8
+  - first:
+      213: 9212977905211369852
+    second: ui_in_game_propi_propou_9
+  - first:
+      213: 7807295915142363058
+    second: ui_in_game_propi_propou_10
+  - first:
+      213: 4759722603991464097
+    second: ui_in_game_propi_propou_11
+  - first:
+      213: -6517591028259809603
+    second: ui_in_game_propi_propou_12
+  - first:
+      213: 4168388521510606164
+    second: ui_in_game_propi_propou_13
+  - first:
+      213: -4539364756992980784
+    second: ui_in_game_propi_propou_14
+  - first:
+      213: -6825583535765274036
+    second: ui_in_game_propi_propou_15
+  - first:
+      213: -1019931279528023174
+    second: ui_in_game_propi_propou_16
+  - first:
+      213: -2981994754921406887
+    second: ui_in_game_propi_propou_17
+  - first:
+      213: -1312559907042895886
+    second: ui_in_game_propi_propou_18
+  - first:
+      213: -5281923912313341888
+    second: ui_in_game_propi_propou_19
+  - first:
+      213: -2003527616271999236
+    second: ui_in_game_propi_propou_20
+  - first:
+      213: -7878381020859094234
+    second: ui_in_game_propi_propou_21
+  - first:
+      213: -2263992771792514657
+    second: ui_in_game_propi_propou_22
+  - first:
+      213: -699303312277881235
+    second: ui_in_game_propi_propou_23
+  - first:
+      213: 3447491086828116127
+    second: ui_in_game_propi_propou_24
+  - first:
+      213: -3898213808584375458
+    second: ui_in_game_propi_propou_25
+  - first:
+      213: -5324874573179353328
+    second: ui_in_game_propi_propou_26
+  - first:
+      213: 3512598259960409318
+    second: ui_in_game_propi_propou_27
+  - first:
+      213: 7866531215346766882
+    second: ui_in_game_propi_propou_28
+  - first:
+      213: -3496208255208718848
+    second: ui_in_game_propi_propou_29
+  - first:
+      213: -709800641860662120
+    second: ui_in_game_propi_propou_30
+  - first:
+      213: -3390812212623987969
+    second: ui_in_game_propi_propou_31
+  - first:
+      213: 1916941502018786904
+    second: ui_in_game_propi_propou_32
+  - first:
+      213: -7980462698555540253
+    second: ui_in_game_propi_propou_33
+  - first:
+      213: 5677272049694138735
+    second: ui_in_game_propi_propou_34
+  - first:
+      213: 8912742092217194237
+    second: ui_in_game_propi_propou_35
+  - first:
+      213: -2222410866335470584
+    second: ui_in_game_propi_propou_36
+  - first:
+      213: -5743142850879598318
+    second: ui_in_game_propi_propou_37
+  - first:
+      213: 8054374314462028446
+    second: ui_in_game_propi_propou_38
+  - first:
+      213: -5515999464259561995
+    second: ui_in_game_propi_propou_39
+  - first:
+      213: 7260989684075234003
+    second: ui_in_game_propi_propou_40
+  - first:
+      213: 40488585950257638
+    second: ui_in_game_propi_propou_41
+  - first:
+      213: 7378646852744806950
+    second: ui_in_game_propi_propou_42
+  - first:
+      213: 7640960266928400073
+    second: ui_in_game_propi_propou_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 687
+        height: 1062
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65594417d1eb0fd80800000000000000
+      internalID: -8218860286287506090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_1
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 969
+        width: 229
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f6dcdb9dfb9f3b0800000000000000
+      internalID: -5478136529806332025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_2
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 867
+        width: 501
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ab9c506230549f50800000000000000
+      internalID: 6887217907451599781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_3
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 770
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4026c7d54944af4a0800000000000000
+      internalID: -6558854503297424892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_4
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 791
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43bcbfc1acd955dd0800000000000000
+      internalID: -2497916926911853772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_5
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 788
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8cab212b0df8e90800000000000000
+      internalID: -7021163830810326869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_6
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 786
+        width: 14
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5527a6f42a57550800000000000000
+      internalID: 6158006527471015411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_7
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 779
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61af5835b85473d30800000000000000
+      internalID: 4411070824736750102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_8
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 762
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcca4a609450025d0800000000000000
+      internalID: -3089463533173953331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_9
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 751
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7965a3a7921bdf70800000000000000
+      internalID: 9212977905211369852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_10
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 763
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b73b6e1546195c60800000000000000
+      internalID: 7807295915142363058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_11
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 774
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a8fe408d7eed0240800000000000000
+      internalID: 4759722603991464097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_12
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 755
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db61d41dd7ddc85a0800000000000000
+      internalID: -6517591028259809603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_13
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 761
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4559476764719d930800000000000000
+      internalID: 4168388521510606164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_14
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 762
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d88189ddcfe001c0800000000000000
+      internalID: -4539364756992980784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_15
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 763
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42c4fd00f7a641a0800000000000000
+      internalID: -6825583535765274036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_16
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 723
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7b2c64b7e978d1f0800000000000000
+      internalID: -1019931279528023174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_17
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 752
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ed4d6d193dd96d0800000000000000
+      internalID: -2981994754921406887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_18
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 747
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f7d94208b9d8cde0800000000000000
+      internalID: -1312559907042895886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_19
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 692
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 048fbe3cf26d2b6b0800000000000000
+      internalID: -5281923912313341888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_20
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 723
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe1c668f3a0234e0800000000000000
+      internalID: -2003527616271999236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_21
+      rect:
+        serializedVersion: 2
+        x: 1831
+        y: 722
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ba386f33e5aa290800000000000000
+      internalID: -7878381020859094234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_22
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 734
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f915147b19ea490e0800000000000000
+      internalID: -2263992771792514657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_23
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 723
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6e3c61b7539b46f0800000000000000
+      internalID: -699303312277881235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_24
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 720
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9817bcb0e2f7df20800000000000000
+      internalID: 3447491086828116127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_25
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 684
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e534ec8d133c6e9c0800000000000000
+      internalID: -3898213808584375458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_26
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 719
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0178220c9ce3a16b0800000000000000
+      internalID: -5324874573179353328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_27
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 713
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ec6893c1814fb030800000000000000
+      internalID: 3512598259960409318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_28
+      rect:
+        serializedVersion: 2
+        x: 1844
+        y: 722
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224144136788b2d60800000000000000
+      internalID: 7866531215346766882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_29
+      rect:
+        serializedVersion: 2
+        x: 1853
+        y: 713
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00efe779d19fa7fc0800000000000000
+      internalID: -3496208255208718848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_30
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 717
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89c0d80b3184626f0800000000000000
+      internalID: -709800641860662120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_31
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 713
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffaad76024a61f0d0800000000000000
+      internalID: -3390812212623987969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_32
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 707
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8569803c3285a9a10800000000000000
+      internalID: 1916941502018786904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_33
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 59
+        width: 201
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec775d3573bf3190800000000000000
+      internalID: -7980462698555540253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_34
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 91
+        width: 43
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f61e54789d8b9ce40800000000000000
+      internalID: 5677272049694138735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_35
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 22
+        width: 149
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6174d06bb60bb70800000000000000
+      internalID: 8912742092217194237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_36
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 0
+        width: 286
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c2b1787196821e0800000000000000
+      internalID: -2222410866335470584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_37
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 565
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2115ffe61024c40b0800000000000000
+      internalID: -5743142850879598318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_38
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e922a8dd3c2e6cf60800000000000000
+      internalID: 8054374314462028446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_39
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 0
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5509756bb3373b0800000000000000
+      internalID: -5515999464259561995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_40
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 20
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d28415b5a734c460800000000000000
+      internalID: 7260989684075234003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_41
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 13
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e1e5078728df8000800000000000000
+      internalID: 40488585950257638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_42
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 11
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62288e40838366660800000000000000
+      internalID: 7378646852744806950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_in_game_propi_propou_43
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 0
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c6242511e42a0a60800000000000000
+      internalID: 7640960266928400073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ui_in_game_propi_propou_0: -8218860286287506090
+      ui_in_game_propi_propou_1: -5478136529806332025
+      ui_in_game_propi_propou_10: 7807295915142363058
+      ui_in_game_propi_propou_11: 4759722603991464097
+      ui_in_game_propi_propou_12: -6517591028259809603
+      ui_in_game_propi_propou_13: 4168388521510606164
+      ui_in_game_propi_propou_14: -4539364756992980784
+      ui_in_game_propi_propou_15: -6825583535765274036
+      ui_in_game_propi_propou_16: -1019931279528023174
+      ui_in_game_propi_propou_17: -2981994754921406887
+      ui_in_game_propi_propou_18: -1312559907042895886
+      ui_in_game_propi_propou_19: -5281923912313341888
+      ui_in_game_propi_propou_2: 6887217907451599781
+      ui_in_game_propi_propou_20: -2003527616271999236
+      ui_in_game_propi_propou_21: -7878381020859094234
+      ui_in_game_propi_propou_22: -2263992771792514657
+      ui_in_game_propi_propou_23: -699303312277881235
+      ui_in_game_propi_propou_24: 3447491086828116127
+      ui_in_game_propi_propou_25: -3898213808584375458
+      ui_in_game_propi_propou_26: -5324874573179353328
+      ui_in_game_propi_propou_27: 3512598259960409318
+      ui_in_game_propi_propou_28: 7866531215346766882
+      ui_in_game_propi_propou_29: -3496208255208718848
+      ui_in_game_propi_propou_3: -6558854503297424892
+      ui_in_game_propi_propou_30: -709800641860662120
+      ui_in_game_propi_propou_31: -3390812212623987969
+      ui_in_game_propi_propou_32: 1916941502018786904
+      ui_in_game_propi_propou_33: -7980462698555540253
+      ui_in_game_propi_propou_34: 5677272049694138735
+      ui_in_game_propi_propou_35: 8912742092217194237
+      ui_in_game_propi_propou_36: -2222410866335470584
+      ui_in_game_propi_propou_37: -5743142850879598318
+      ui_in_game_propi_propou_38: 8054374314462028446
+      ui_in_game_propi_propou_39: -5515999464259561995
+      ui_in_game_propi_propou_4: -2497916926911853772
+      ui_in_game_propi_propou_40: 7260989684075234003
+      ui_in_game_propi_propou_41: 40488585950257638
+      ui_in_game_propi_propou_42: 7378646852744806950
+      ui_in_game_propi_propou_43: 7640960266928400073
+      ui_in_game_propi_propou_5: -7021163830810326869
+      ui_in_game_propi_propou_6: 6158006527471015411
+      ui_in_game_propi_propou_7: 4411070824736750102
+      ui_in_game_propi_propou_8: -3089463533173953331
+      ui_in_game_propi_propou_9: 9212977905211369852
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

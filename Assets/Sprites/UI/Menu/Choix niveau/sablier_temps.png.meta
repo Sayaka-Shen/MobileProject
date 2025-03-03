@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sablier_temps_0: 8741478829627255368
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      parchemin_menu_options_0: -1235748610520787511
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

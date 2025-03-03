@@ -1,45 +1,36 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class FailGameMenu : MonoBehaviour
 {
-    private GameObject _sliderScore;
-    [SerializeField] private float _speedSlider = 1f;
+    [SerializeField] private Slider _sliderScore;
+    [SerializeField] private TextMeshProUGUI _sliderText;
+    [SerializeField] private float _speedSlider = 50f;
     private int _score = 0;
-    private GameObject _restartBt;
-    private GameObject _mainMenuBt;
+    [SerializeField] private Button _restartBt;
+    [SerializeField] private Button _mainMenuBt;
     private bool _isSliderAnim = false;
-    [SerializeField] private GameObject _SceneManager;
-    [SerializeField] private string _strSceneToLoad;
-    [SerializeField] private DataLevelContainer _dataLevelContainer;
-
-    void Start()
-    {
-        _sliderScore = this.transform.GetChild(1).gameObject;
-        _restartBt = this.transform.GetChild(2).gameObject;
-        _mainMenuBt = this.transform.GetChild(3).gameObject;
-        _restartBt.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            _SceneManager.GetComponent<SceneManager>().LoadScene(_strSceneToLoad);
-        });
-    }
 
     public void SetScore(int Score)
     {
+        gameObject.SetActive(true);
         _score = Score;
         _isSliderAnim = true;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(_isSliderAnim)
         {
-            if(_sliderScore.GetComponent<Slider>().value < _score)
+            if(_sliderScore.value < _score)
             {
-                _sliderScore.GetComponent<Slider>().value += _speedSlider * Time.deltaTime;
+                _sliderScore.value += _speedSlider * Time.fixedDeltaTime;
+                _sliderText.text = ((int)_sliderScore.value).ToString() + "%";
             }
             else
             {
+                _sliderScore.value = _score;
                 _isSliderAnim = false;
             }
         }

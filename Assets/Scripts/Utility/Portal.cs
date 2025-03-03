@@ -7,9 +7,18 @@ public class Portal : MonoBehaviour, IInteractable
    [SerializeField] private Transform _linkPortal;
    [SerializeField] private UnityEvent _onTeleport;
 
-   public void Interact()
+    private ReverseAction _reverseAction = new ReverseAction();
+
+    private void Awake()
+    {
+        _reverseAction.Holder = gameObject;
+        _reverseAction.Type = ReverseActionType.PlayerTp;
+        _reverseAction.PositionTarget = transform.position;
+    }
+    public void Interact()
    {
-      GameManager.Instance.MovementPlayer.TPAt(_linkPortal.position);
-      _onTeleport?.Invoke();
+        RollbackManager.Instance.AddAction( _reverseAction );
+        GameManager.Instance.MovementPlayer.TPAt(_linkPortal.position);
+        _onTeleport?.Invoke();
    }
 }
