@@ -123,7 +123,6 @@ public class Grid : MonoBehaviour
         return neighbors;
     }
 
-
     // This function calculates using a world position, the position of an element in Node
     public Node GetNodeFromWorldPoint(Vector2 worldPos)
     {

@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     void Setup()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
-        SoulsManager.Instance.OnSoulChange += EndGame;
+        SoulsManager.Instance.OnSoulChange += TestEndGame;
         StartTimer();
     }
 
@@ -66,25 +66,38 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(4f);
         _endUI.SetActive(true);
-        if (scorePercent >= 50) _successUI.SetScore(MovementPlayer.NbCaseMouv, time, scorePercent);
-        else _failedUI.SetScore(scorePercent);
+        if (scorePercent == 100)
+        {
+            _successUI.SetScore(MovementPlayer.NbCaseMouv, time, scorePercent);
+        }
+        else
+        {
+            _failedUI.SetScore(scorePercent);
+        }
         Time.timeScale = 0f;
     }
 
-    private void EndGame()
+    public void TestEndGame()
     {
-        if (!SoulsManager.Instance.AllSoulsMeetEnd) return;
+        EndGame();
+    }
+
+    public void EndGame(bool killed = false)
+    {
+        if (!SoulsManager.Instance.AllSoulsMeetEnd && !killed) return;
         int score = SoulsManager.Instance.CountSoulsPurify;
         int scorePercent = 0;
         float time = _timer;
         DataToSaves levelData = _levelContainer.GetCurrentLevel().DataToSaves;
         if (score != 0)
         {
-            scorePercent = score * 100 / SoulsManager.Instance.CountSouls ;
+            scorePercent = score * 100 / SoulsManager.Instance.CountSouls;
             if (!levelData.IsCompleted || levelData.BestStep > MovementPlayer.NbCaseMouv) levelData.BestStep = MovementPlayer.NbCaseMouv;
             if (!levelData.IsCompleted || levelData.BestTime > time) levelData.BestTime = time;
             if (!levelData.IsCompleted || levelData.HighScore > SoulsManager.Instance.CountSoulsPurify) levelData.HighScore = SoulsManager.Instance.CountSoulsPurify;
-            if (scorePercent >= 50)
+            if(scorePercent > levelData.PercentFinish) { levelData.PercentFinish = scorePercent; }
+
+            if (scorePercent == 100)
             {
                 levelData.IsCompleted = true;
                 GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAw");
@@ -136,6 +149,7 @@ public class GameManager : MonoBehaviour
     {
         loadLevel();
     }
+
     public void nextLevel()
     {
         _levelContainer.NextLevel();
