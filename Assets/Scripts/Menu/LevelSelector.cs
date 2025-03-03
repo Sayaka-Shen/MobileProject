@@ -129,7 +129,7 @@ public class LevelSelector : MonoBehaviour
 
     void Update()
     {
-        if(_isEndDragging && (_scrollRect.velocity.x <= 1000 && _scrollRect.velocity.x >= -1000))
+        if(_isEndDragging && _scrollRect.velocity.x <= 500 && _scrollRect.velocity.x >= -500)
         {
             CenterPrefab();
             _isEndDragging = false;
