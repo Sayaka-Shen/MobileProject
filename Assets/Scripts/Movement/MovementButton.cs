@@ -8,6 +8,14 @@ public class MovementButton : MonoBehaviour
     private bool _doShowButton = true;
     public bool DoShowButton { get => _doShowButton; set => _doShowButton = value; }
 
+    private ReverseAction _reverseAction = new ReverseAction();
+
+    private void Awake()
+    {
+        _reverseAction.Holder = gameObject;
+        _reverseAction.Type = ReverseActionType.PlayerMove;
+    }
+
     private void Start()
     {
         _mouvementPlayer = GameManager.Instance.MovementPlayer;
@@ -26,6 +34,8 @@ public class MovementButton : MonoBehaviour
         {
             Vector3 newPos = transform.position;
             newPos.z = 0;
+            _reverseAction.PositionTarget = _mouvementPlayer.transform.position;
+            RollbackManager.Instance.AddPlayerAction(_reverseAction);
             _mouvementPlayer.AddPos(newPos);
             _mouvementPlayer.StartMoving();
         }

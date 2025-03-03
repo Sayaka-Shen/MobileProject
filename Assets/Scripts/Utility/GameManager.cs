@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator EndGameVisual(int scorePercent, float time)
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
         _endUI.SetActive(true);
         if (scorePercent >= 50) _successUI.SetScore(MovementPlayer.NbCaseMouv, time, scorePercent);
         else _failedUI.SetScore(scorePercent);

@@ -22,10 +22,13 @@ public class Soul : MonoBehaviour
     public event Action OnCorrupt;
     [SerializeField] UnityEvent _onCorrupt;
     private Seeker _seeker;
+    private ReverseAction _reverseAction = new ReverseAction();
 
     void Start()
     {
         _movementPlayer = GameManager.Instance.MovementPlayer;
+        _reverseAction.Holder = gameObject;
+        _reverseAction.Type = ReverseActionType.SoulDamage;
 
         _movementPlayer.OnCaseMouvEnd += HurtSelf;
         UpdateSprite();
@@ -38,7 +41,7 @@ public class Soul : MonoBehaviour
         _state = (State)(newState);
         if(_seeker != null && _state == State.stateThree)
         {
-            UnFollow();
+            Desapere();
             _seeker.Setup();
             GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQCA");
         }
@@ -47,13 +50,27 @@ public class Soul : MonoBehaviour
             OnCorrupt?.Invoke();
             _onCorrupt?.Invoke();
             GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBA");
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else
         {
             _onHurt?.Invoke();
             UpdateSprite();
         }
+        RollbackManager.Instance.AddAction(_reverseAction);
+    }
+
+    public void Heal()
+    {
+        if (_state == State.stateDie)
+        {
+            gameObject.SetActive(true);
+            _movementPlayer.OnCaseMouvEnd += HurtSelf;
+            SoulsManager.Instance.RemoveSoulsCorrupt();
+        }
+        int newState = (int)_state - 1;
+        _state = (State)(newState);
+        UpdateSprite();
     }
 
     private void UpdateSprite()
@@ -76,13 +93,20 @@ public class Soul : MonoBehaviour
         }
     }
 
-    public void UnFollow() 
+    public void Desapere()
     {
+        gameObject.SetActive(false);
         _movementPlayer.OnCaseMouvEnd -= HurtSelf;
+    }
+
+    public void Reapere()
+    {
+        gameObject.SetActive(true);
+        _movementPlayer.OnCaseMouvEnd += HurtSelf;
     }
 
     private void OnDestroy()
     {
-        UnFollow();
+        _movementPlayer.OnCaseMouvEnd -= HurtSelf;
     }
 }

@@ -14,7 +14,7 @@ public class UI : MonoBehaviour
         _movementPlayer = GameManager.Instance.MovementPlayer;
         
         // Add the event
-        _movementPlayer.NbCaseMoveLastChage += ChangeMoveCaseUI;
+        _movementPlayer.NbCaseMoveLastChange += ChangeMoveCaseUI;
         
         ChangeMoveCaseUI();
     }
