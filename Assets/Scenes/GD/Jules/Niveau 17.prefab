@@ -364,7 +364,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5528948840815735545}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e22055c5af332b40a3959e55d229082, type: 3}
   m_Name: 
@@ -392,8 +392,8 @@ MonoBehaviour:
   ObstacleLayers:
     serializedVersion: 2
     m_Bits: 192
-  maxX: 9
-  maxY: 5
+  maxX: 8
+  maxY: 4
 --- !u!1 &5923660199477868937
 GameObject:
   m_ObjectHideFlags: 0
