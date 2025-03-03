@@ -413,8 +413,8 @@ MonoBehaviour:
   ObstacleLayers:
     serializedVersion: 2
     m_Bits: 192
-  maxX: 9
-  maxY: 5
+  maxX: 8
+  maxY: 4
 --- !u!1 &5923660199477868937
 GameObject:
   m_ObjectHideFlags: 0
