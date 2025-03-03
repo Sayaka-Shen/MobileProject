@@ -21,7 +21,6 @@ public class Soul : MonoBehaviour
     private MovementPlayer _movementPlayer;
     public event Action OnCorrupt;
     [SerializeField] UnityEvent _onCorrupt;
-    private Seeker _seeker;
     private ReverseAction _reverseAction = new ReverseAction();
 
     void Start()
@@ -32,19 +31,13 @@ public class Soul : MonoBehaviour
 
         _movementPlayer.OnCaseMouvEnd += HurtSelf;
         UpdateSprite();
-        _seeker = GetComponent<Seeker>();
     }
 
     void HurtSelf()
     {
         int newState = (int)_state + 1;
         _state = (State)(newState);
-        if(_seeker != null && _state == State.stateThree)
-        {
-            Desapere();
-            _seeker.Setup();
-            GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQCA");
-        }
+
         if (_state == State.stateDie)
         {
             OnCorrupt?.Invoke();

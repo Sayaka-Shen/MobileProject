@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class Pathfinding : MonoBehaviour
@@ -146,5 +147,21 @@ public class Pathfinding : MonoBehaviour
         }
 
         return 10 * (distanceY - distanceX);
+    }
+
+    public Vector3 GetRandomNeighbor(Vector3 position)
+    {
+        List<Node> neighborList = _grid.GetNeighbors(_grid.GetNodeFromWorldPoint(position));
+        List<Node> walkableNeighbor = new List<Node>();
+
+        foreach (Node node in neighborList)
+        {
+            if(node.isWalkable)
+            {
+                walkableNeighbor.Add(node);
+            }
+        }
+
+        return walkableNeighbor[Random.Range(0, walkableNeighbor.Count)].worldPosition;
     }
 }

@@ -129,7 +129,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1514196145481546590}
   - component: {fileID: 6146078353250201183}
-  - component: {fileID: 7364022692073815948}
   m_Layer: 7
   m_Name: DefaultCollision
   m_TagString: Untagged
@@ -198,19 +197,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7364022692073815948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4006290113317348978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f6dfe3dbc435ef45b006bf98432d3fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _soulParent: {fileID: 6943807902125826845}
 --- !u!1 &4796113287223375677
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,11 +380,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7522678104169236030}
-  - component: {fileID: 8406464816748977397}
   - component: {fileID: 8341257952560568357}
   m_Layer: 7
-  m_Name: SoulSeeker
-  m_TagString: Soul
+  m_Name: Seeker
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -420,38 +405,6 @@ Transform:
   - {fileID: 3391414111201582293}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8406464816748977397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6943807902125826845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a0e118a4343ae5409deb8c7ab57572d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _state: 0
-  _onHurt:
-    m_PersistentCalls:
-      m_Calls: []
-  _spriteRenderer: {fileID: 5569305881056075072}
-  _sprites:
-  - {fileID: -2505898049342805091, guid: 4d4f2d634146eb842a755bf74abc9f79, type: 3}
-  - {fileID: -3181449370903983499, guid: 5ec27bbd8f60ed44f8fa37a0dfafc076, type: 3}
-  - {fileID: 3276858727864417942, guid: 261c39e5cf473724d98d06dd9efc15ef, type: 3}
-  _spriteLifeRenderers:
-  - {fileID: 7928876309280638749}
-  - {fileID: 7297738677946488650}
-  - {fileID: 2158754306794499002}
-  _spritesLife:
-  - {fileID: 4660691954914772956, guid: 6fb7c1592ef037047af8eb449ca4eea8, type: 3}
-  - {fileID: -3734946182192104306, guid: 62b1fb8374769e24d8ed6fcfd0863359, type: 3}
-  - {fileID: -2373993195428553982, guid: 460a14aebe0fb684c89907ab1a00fcee, type: 3}
-  _onCorrupt:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &8341257952560568357
 MonoBehaviour:
   m_ObjectHideFlags: 0

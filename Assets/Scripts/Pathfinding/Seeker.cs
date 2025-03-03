@@ -13,20 +13,15 @@ public class Seeker : MonoBehaviour
         _reverseAction.Holder = gameObject;
         _reverseAction.Type = ReverseActionType.SeekerMove;
     }
-
-    public void Setup()
+    private void Start()
     {
         _countMove = _countDownMove;
 
         _movementPlayer = GameManager.Instance.MovementPlayer;
 
         _movementPlayer.OnStop += Move;
-    }
 
-    public void UnFollow()
-    {
-        _movementPlayer = GameManager.Instance.MovementPlayer;
-        _movementPlayer.OnStop -= Move;
+        GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQCA");
     }
 
     private void Move()
@@ -35,18 +30,26 @@ public class Seeker : MonoBehaviour
 
         if (_countMove == 0)
         {
-            //A MODIFIER
-            if (Vector3.Distance(transform.position, GameManager.Instance.PlayerPosition) > 1 || !GameManager.Instance.SoulPlayer.AsSoul)
+            if (Vector3.Distance(transform.position, GameManager.Instance.PlayerPosition) > 0)
             {
                 _reverseAction.PositionTarget = transform.position;
                 RollbackManager.Instance.AddAction(_reverseAction);
-                MoveTo(Pathfinding.Instance.FindPath(transform.position, GameManager.Instance.PlayerPosition));
+
+                Vector3 destination = Pathfinding.Instance.FindPath(transform.position, GameManager.Instance.PlayerPosition);
+
+                if(destination == transform.position)
+                {
+                    MoveTo(Pathfinding.Instance.GetRandomNeighbor(transform.position));
+                }
+                else
+                {
+                    MoveTo(destination);
+                }
             }
+
             if(Vector3.Distance(transform.position, GameManager.Instance.PlayerPosition) == 0)
             {
-                GetComponent<Soul>().Desapere();
-                UnFollow();
-                GameManager.Instance.SoulPlayer.TakeSoul();
+                GameManager.Instance.EndGame(true);
             }
             _countMove = _countDownMove;
         }
