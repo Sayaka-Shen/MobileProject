@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum ReverseActionType { PlayerMove, PlayerTp, SeekerMove, SoulDamage, SoulTake, SoulTaken, Purify, MorePower }
+[Serializable]
 public struct ReverseAction
 {
     public ReverseActionType Type;
@@ -13,7 +14,10 @@ public struct ReverseAction
 
 public class RollbackManager : MonoBehaviour
 {
-    [SerializeField] List<List<ReverseAction>> _reverseActions = new List<List<ReverseAction>>(0);
+    private List<List<ReverseAction>> _reverseActions = new List<List<ReverseAction>>(0);
+    public List<List<ReverseAction>> ReverseActions { get { return _reverseActions; } }
+    private int LastIndex => Instance._reverseActions.Count - 1;
+    private int CountAction => Instance._reverseActions.Count;
 
     public static RollbackManager Instance;
 
@@ -36,7 +40,7 @@ public class RollbackManager : MonoBehaviour
 
     public void AddAction(ReverseAction action)
     {
-        Instance._reverseActions[-1].Add(action);
+        Instance._reverseActions[LastIndex].Add(action);
     }
 
     public void AddPlayerAction(ReverseAction playerAction)
@@ -46,7 +50,8 @@ public class RollbackManager : MonoBehaviour
 
     public void Reroll()
     {
-        List<ReverseAction> Actions = Instance._reverseActions[-1];
+        if (CountAction == 0) return;
+        List<ReverseAction> Actions = Instance._reverseActions[LastIndex];
         Actions.Reverse();
         foreach (ReverseAction action in Actions)
         {
@@ -54,7 +59,9 @@ public class RollbackManager : MonoBehaviour
             {
                 case ReverseActionType.PlayerMove: // FAIT ?
                     if(action.ValueTarget != 0) GameManager.Instance.MovementPlayer.RerollMove(action.ValueTarget);
-                    if(action.PositionTarget != null) GameManager.Instance.MovementPlayer.AddPos(action.PositionTarget); ;
+                    else{
+                        GameManager.Instance.MovementPlayer.AddPosRollBack(action.PositionTarget);
+                    }
                     break;
                 case ReverseActionType.PlayerTp: //FAIT
                     GameManager.Instance.MovementPlayer.TPAt(action.PositionTarget);
@@ -73,7 +80,7 @@ public class RollbackManager : MonoBehaviour
                     SoulsManager.Instance.RemoveSoulsCorrupt();
                     break;
                 case ReverseActionType.SoulTake: //FAIT
-                    action.Holder.SetActive(true);
+                    action.Holder.GetComponent<Soul>().Reapere();
                     GameManager.Instance.SoulPlayer.DeleteSoul();
                     break;
                 case ReverseActionType.Purify: //FAIT
@@ -82,6 +89,6 @@ public class RollbackManager : MonoBehaviour
                     break;
             }
         }
-        Instance._reverseActions.RemoveAt(-1);
+        Instance._reverseActions.RemoveAt(LastIndex);
     }
 }

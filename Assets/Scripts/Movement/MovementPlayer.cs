@@ -11,7 +11,7 @@ public class MovementPlayer : MonoBehaviour
     private int _nbCaseMouv = 0;
     public int NbCaseMouv { get => _nbCaseMouv; }
     public int NbCaseMouvLast { get; private set; }
-    public event Action NbCaseMoveLastChage;
+    public event Action NbCaseMoveLastChange;
     [SerializeField] private List<Vector3> _pathList = new List<Vector3>();
     public List<Vector3> PathList { get => _pathList; set => _pathList = value; }
     [SerializeField] UnityEvent  _onStartMove = new UnityEvent();
@@ -25,6 +25,7 @@ public class MovementPlayer : MonoBehaviour
     public bool IsMoving { get => _isMoving; set => _isMoving = value; }
     private Vector3 _nextPos;
     public bool CountMove { get; set; }
+    private bool RollBack { get; set; }
 
     private ReverseAction _reverseAction = new ReverseAction();
 
@@ -67,6 +68,13 @@ public class MovementPlayer : MonoBehaviour
         {
             _isMoving = false;
             _animator.SetBool("isMoving", false);
+            if (RollBack)
+            {
+                NbCaseMoveLastChange?.Invoke();
+                OnEndMove?.Invoke();
+                RollBack = false;
+                return;
+            }
             if (CountMove)
             {
                 _reverseAction.ValueTarget = NbCaseMouvLast;
@@ -74,7 +82,7 @@ public class MovementPlayer : MonoBehaviour
                 NbCaseMouvLast--;
                 _nbCaseMouv++;
             }
-            NbCaseMoveLastChage?.Invoke();
+            NbCaseMoveLastChange?.Invoke();
             _onEndMove?.Invoke();
             OnEndMove?.Invoke();
             OnStop?.Invoke();
@@ -83,7 +91,7 @@ public class MovementPlayer : MonoBehaviour
                 OnCaseMouvEnd?.Invoke();
                 NbCaseMouvLast = SoulsManager.Instance.CountForHurt;
             }
-            NbCaseMoveLastChage?.Invoke();
+            NbCaseMoveLastChange?.Invoke();
             return;
         }
     }
@@ -91,6 +99,15 @@ public class MovementPlayer : MonoBehaviour
     public void AddPos(Vector3 pos)
     {
         _pathList.Add(pos);
+    }
+    public void AddPosRollBack(Vector3 pos)
+    {
+        _isMoving = true;
+        _animator.SetBool("isMoving", true);
+        RollBack = true;
+        _pathList.Add(pos);
+        OnStartMove?.Invoke();
+        if (_pathList.Count == 0) NextPos();
     }
     public void AddPos(List<Vector3> pos)
     {
@@ -112,6 +129,7 @@ public class MovementPlayer : MonoBehaviour
     public void TPAt(Vector3 pos)
     {
         transform.position = pos;
+        _nextPos = pos;
         OnEndMove?.Invoke();
         _onTP?.Invoke();
     }

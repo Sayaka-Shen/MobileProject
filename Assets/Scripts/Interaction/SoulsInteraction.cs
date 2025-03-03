@@ -12,7 +12,7 @@ public class SoulsInteraction : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-        _reverseAction.Holder = gameObject;
+        _reverseAction.Holder = _soulParent;
         _reverseAction.Type = ReverseActionType.SoulTake;
     }
 

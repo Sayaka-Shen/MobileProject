@@ -10,7 +10,7 @@ public class AddMovPower : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-        _reverseAction.Holder = gameObject;
+        _reverseAction.Holder = _parent;
         _reverseAction.Type = ReverseActionType.MorePower;
     }
 
@@ -24,6 +24,6 @@ public class AddMovPower : MonoBehaviour, IInteractable
         RollbackManager.Instance.AddAction(_reverseAction);
         _movementPlayer.AddCaseMov(_nbCasePower);
         GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBw");
-        Destroy(_parent);
+        _parent.SetActive(false);
     }
 }

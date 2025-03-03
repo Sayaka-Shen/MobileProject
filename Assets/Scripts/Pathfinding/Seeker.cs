@@ -20,13 +20,13 @@ public class Seeker : MonoBehaviour
 
         _movementPlayer = GameManager.Instance.MovementPlayer;
 
-        _movementPlayer.OnEndMove += Move;
+        _movementPlayer.OnStop += Move;
     }
 
     public void UnFollow()
     {
         _movementPlayer = GameManager.Instance.MovementPlayer;
-        _movementPlayer.OnEndMove -= Move;
+        _movementPlayer.OnStop -= Move;
     }
 
     private void Move()
@@ -35,6 +35,7 @@ public class Seeker : MonoBehaviour
 
         if (_countMove == 0)
         {
+            //A MODIFIER
             if (Vector3.Distance(transform.position, GameManager.Instance.PlayerPosition) > 1 || !GameManager.Instance.SoulPlayer.AsSoul)
             {
                 _reverseAction.PositionTarget = transform.position;

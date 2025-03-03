@@ -35,7 +35,7 @@ public class MovementButton : MonoBehaviour
             Vector3 newPos = transform.position;
             newPos.z = 0;
             _reverseAction.PositionTarget = _mouvementPlayer.transform.position;
-            RollbackManager.Instance.AddAction(_reverseAction);
+            RollbackManager.Instance.AddPlayerAction(_reverseAction);
             _mouvementPlayer.AddPos(newPos);
             _mouvementPlayer.StartMoving();
         }
