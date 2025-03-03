@@ -5,7 +5,6 @@ public class UIPlayManager : MonoBehaviour
     [SerializeField] GameObject _pause;
     [SerializeField] GameObject _play;
     [SerializeField] GameObject _option;
-    [SerializeField] GameObject _rollback;
 
 
     public void Rollback()
