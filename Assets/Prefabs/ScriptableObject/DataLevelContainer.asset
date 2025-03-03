@@ -17,7 +17,7 @@ MonoBehaviour:
     _prefab: {fileID: 5528948840815735545, guid: 9af81c1be195b174eb0e48fa49b8a802, type: 3}
     _imagePreviewMini: {fileID: 0}
     _dataToSaves:
-      _percentFinish: 70
+      _percentFinish: 100
       _bestStep: 0
       _highScore: 0
       _isCompleted: 1
@@ -27,8 +27,8 @@ MonoBehaviour:
     _imagePreviewMini: {fileID: 0}
     _dataToSaves:
       _percentFinish: 0
-      _bestStep: 32
-      _highScore: 3
+      _bestStep: 15
+      _highScore: 1
       _isCompleted: 1
       _bestTime: 21.150547
   - _levelName: Niveau 14

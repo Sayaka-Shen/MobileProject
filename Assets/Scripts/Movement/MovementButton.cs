@@ -30,7 +30,7 @@ public class MovementButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(!IsPointerOverUIObject() && isPlaying(GameManager.Instance.AnimPlayer, "anim_idle") && Time.timeScale != 0)
+        if(!IsPointerOverUIObject() && isPlaying(GameManager.Instance.AnimPlayer, "anim_idle") && !GameManager.Instance.Pause)
         {
             Vector3 newPos = transform.position;
             newPos.z = 0;

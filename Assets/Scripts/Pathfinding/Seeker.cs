@@ -26,11 +26,14 @@ public class Seeker : MonoBehaviour
 
     private void Move()
     {
+        _reverseAction.ValueTarget = _countMove;
+        RollbackManager.Instance.AddAction(_reverseAction);
+        _reverseAction.ValueTarget = 0;
         _countMove--;
 
         if (_countMove == 0)
         {
-            if (Vector3.Distance(transform.position, GameManager.Instance.PlayerPosition) > 0)
+            if (Vector3.Distance(transform.position, GameManager.Instance.PlayerPosition) != 0)
             {
                 _reverseAction.PositionTarget = transform.position;
                 RollbackManager.Instance.AddAction(_reverseAction);
@@ -53,6 +56,11 @@ public class Seeker : MonoBehaviour
             }
             _countMove = _countDownMove;
         }
+    }
+
+    public void RerollMove(int value)
+    {
+        _countMove = value;
     }
 
     public void MoveTo(Vector3 position)
