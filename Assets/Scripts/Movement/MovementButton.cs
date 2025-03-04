@@ -10,6 +10,14 @@ public class MovementButton : MonoBehaviour
 
     private ReverseAction _reverseAction = new ReverseAction();
 
+    // Swipe Movement
+    private Vector3 _firstPosition;
+    private Vector3 _lastPosition;
+    private float _dragDistance;
+
+    [Header("Collision")]
+    [SerializeField] private Collider2D[] _colliders;
+
     private void Awake()
     {
         _reverseAction.Holder = gameObject;
@@ -26,19 +34,100 @@ public class MovementButton : MonoBehaviour
             _mouvementPlayer.OnEndMove += ShowCorrectButton;
             ShowCorrectButton();
         }
+
+        // Calculate Drag Distance
+        _dragDistance = Screen.height * 15 / 100;
     }
 
-    void OnMouseDown()
+    private void Update()
     {
+        if (Input.touchCount == 1) // user is touching the screen with a single touch
+        {
+            Touch touch = Input.GetTouch(0); // get the touch
+            if (touch.phase == TouchPhase.Began) //check for the first touch
+            {
+                _firstPosition = touch.position;
+                _lastPosition = touch.position;
+            }
+            else if (touch.phase == TouchPhase.Moved) // update the last position based on where they moved
+            {
+                _lastPosition = touch.position;
+            }
+            else if (touch.phase == TouchPhase.Ended) //check if the finger is removed from the screen
+            {
+                _lastPosition = touch.position;  //last touch position. Ommitted if you use list
+
+                //Check if drag distance is greater than 20% of the screen height
+                if (Mathf.Abs(_lastPosition.x - _firstPosition.x) > _dragDistance || Mathf.Abs(_lastPosition.y - _firstPosition.y) > _dragDistance)
+                {//It's a drag
+                 //check if the drag is vertical or horizontal
+                    if (Mathf.Abs(_lastPosition.x - _firstPosition.x) > Mathf.Abs(_lastPosition.y - _firstPosition.y))
+                    {   //If the horizontal movement is greater than the vertical movement...
+                        if ((_lastPosition.x > _firstPosition.x))  //If the movement was to the right)
+                        {   //Right swipe
+                            Debug.Log("Right Swipe");
+                            TryMove(Vector3.right);
+                        }
+                        else
+                        {   //Left swipe
+                            Debug.Log("Left Swipe");
+                            TryMove(Vector3.left);
+                        }
+                    }
+                    else
+                    {   //the vertical movement is greater than the horizontal movement
+                        if (_lastPosition.y > _firstPosition.y)  //If the movement was up
+                        {   //Up swipe
+                            Debug.Log("Up Swipe");
+                            TryMove(Vector3.up);
+                        }
+                        else
+                        {   //Down swipe
+                            Debug.Log("Down Swipe");
+                            TryMove(Vector3.down);
+                        }
+                    }
+                }
+                else if(CheckCollider(_firstPosition))
+                {   //It's a tap as the drag distance is less than 20% of the screen height
+                    Debug.Log("Tap");
+                    TryMove(Vector3.zero);
+                }
+            }
+        }
+
+    }
+
+    private void TryMove(Vector3 position)
+    {
+        Vector3 newPos = transform.position;
+        newPos.z = 0;
+
+        if (position != Vector3.zero)
+        {
+            newPos = _mouvementPlayer.transform.position + position;
+        }
+
         if(!IsPointerOverUIObject() && isPlaying(GameManager.Instance.AnimPlayer, "anim_idle") && !GameManager.Instance.Pause)
         {
-            Vector3 newPos = transform.position;
-            newPos.z = 0;
             _reverseAction.PositionTarget = _mouvementPlayer.transform.position;
             RollbackManager.Instance.AddPlayerAction(_reverseAction);
             _mouvementPlayer.AddPos(newPos);
             _mouvementPlayer.StartMoving();
         }
+    }
+
+    private bool CheckCollider(Vector3 position)
+    {
+        foreach (Collider2D collider in _colliders)
+        {
+            if(collider.OverlapPoint(Camera.main.ScreenToWorldPoint(position)))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private bool IsPointerOverUIObject()
