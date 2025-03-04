@@ -35,7 +35,8 @@ public class RollbackEditor : Editor
                         GUILayout.Label("Player got more power");
                         break;
                     case ReverseActionType.SeekerMove: //FAIT
-                        GUILayout.Label("The seeker moved " + action.PositionTarget);
+                        if (action.ValueTarget != 0) GUILayout.Label("The seeker as " + action.ValueTarget + " Power.");
+                        else GUILayout.Label("The seeker moved " + action.PositionTarget);
                         break;
                     case ReverseActionType.SoulDamage: //FAIT
                         GUILayout.Label("A soul as taken damage");

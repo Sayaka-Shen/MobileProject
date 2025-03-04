@@ -70,7 +70,8 @@ public class RollbackManager : MonoBehaviour
                     action.Holder.SetActive(true);
                     break;
                 case ReverseActionType.SeekerMove: //FAIT
-                    action.Holder.GetComponent<Seeker>().MoveTo(action.PositionTarget);
+                    if (action.ValueTarget != 0) action.Holder.GetComponent<Seeker>().RerollMove(action.ValueTarget);
+                    else action.Holder.GetComponent<Seeker>().MoveTo(action.PositionTarget);
                     break;
                 case ReverseActionType.SoulDamage: //FAIT
                     action.Holder.GetComponent<Soul>().Heal();
