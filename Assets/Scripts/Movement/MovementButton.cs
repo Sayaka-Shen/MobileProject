@@ -5,8 +5,7 @@ using UnityEngine.EventSystems;
 public class MovementButton : MonoBehaviour
 {
     private MovementPlayer _mouvementPlayer;
-    private bool _doShowButton = true;
-    public bool DoShowButton { get => _doShowButton; set => _doShowButton = value; }
+    public static bool ShowAllButton = true;
 
     private ReverseAction _reverseAction = new ReverseAction();
 
@@ -15,8 +14,9 @@ public class MovementButton : MonoBehaviour
     private Vector3 _lastPosition;
     private float _dragDistance;
 
-    [Header("Collision")]
+    [Header("Components")]
     [SerializeField] private Collider2D[] _colliders;
+    [SerializeField] private SpriteRenderer _sprite;
 
     private void Awake()
     {
@@ -29,11 +29,9 @@ public class MovementButton : MonoBehaviour
         _mouvementPlayer = GameManager.Instance.MovementPlayer;
         
         _mouvementPlayer.OnStartMove += Hide;
-        if(_doShowButton)
-        {
-            _mouvementPlayer.OnEndMove += ShowCorrectButton;
-            ShowCorrectButton();
-        }
+
+        _mouvementPlayer.OnEndMove += ShowCorrectButton;
+        ShowCorrectButton();
 
         // Calculate Drag Distance
         _dragDistance = Screen.height * 15 / 100;
@@ -41,6 +39,8 @@ public class MovementButton : MonoBehaviour
 
     private void Update()
     {
+        if(ShowAllButton != _sprite.enabled) _sprite.enabled = ShowAllButton;
+
         if (IsPointerOverUIObject() || !isPlaying(GameManager.Instance.AnimPlayer, "anim_idle") || GameManager.Instance.Pause) return;
 
         if (Input.touchCount == 1) // user is touching the screen with a single touch
@@ -109,6 +109,7 @@ public class MovementButton : MonoBehaviour
         {
             newPos = _mouvementPlayer.transform.position + position;
         }
+        if (CollisionManager.Instance.GetObstacleAt(newPos)) return;
 
         _reverseAction.PositionTarget = _mouvementPlayer.transform.position;
         RollbackManager.Instance.AddPlayerAction(_reverseAction);
