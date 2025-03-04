@@ -73,6 +73,7 @@ public class MovementPlayer : MonoBehaviour
                 NbCaseMoveLastChange?.Invoke();
                 OnEndMove?.Invoke();
                 RollBack = false;
+                RollbackManager.Instance.TryUseRollback();
                 return;
             }
             if (CountMove)
