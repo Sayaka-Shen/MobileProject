@@ -9,7 +9,7 @@ public class UIPlayManager : MonoBehaviour
 
     public void Rollback()
     {
-        RollbackManager.Instance.Reroll();
+        RollbackManager.Instance.AddRollback();
     }
     public void Pause()
     {

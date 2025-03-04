@@ -48,7 +48,24 @@ public class RollbackManager : MonoBehaviour
         Instance._reverseActions.Add(new List<ReverseAction>() { playerAction });
     }
 
-    public void Reroll()
+    private List<Action> _rollback = new List<Action>();
+
+    public void AddRollback()
+    {
+        _rollback.Add(Instance.RollBack);
+        if (_rollback.Count == 1) RollBack();
+    }
+
+    public void TryUseRollback()
+    {
+        _rollback.RemoveAt(_rollback.Count - 1);
+        if (Instance._rollback.Count != 0)
+        {
+            RollBack();
+        }
+    }
+
+    private void RollBack()
     {
         if (CountAction == 0) return;
         List<ReverseAction> Actions = Instance._reverseActions[LastIndex];
