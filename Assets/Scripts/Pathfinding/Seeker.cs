@@ -42,7 +42,7 @@ public class Seeker : MonoBehaviour
 
                 if(destination == transform.position)
                 {
-                    MoveTo(Pathfinding.Instance.GetRandomNeighbor(transform.position));
+                    // MoveTo(Pathfinding.Instance.GetRandomNeighbor(transform.position));
                 }
                 else
                 {
