@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7fb7e38642c0d8a438f0ed9c06ce5658
+guid: bb3aa1aa3f764e04383f2f46e395e7c6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1414346311153421963
-    second: trap_ames_0
+      213: 8179081859548210868
+    second: portail_orange_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: trap_ames_0
+      name: portail_orange_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 511
-        height: 492
+        y: 23
+        width: 756
+        height: 829
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b8e0fa9f974c0a310800000000000000
-      internalID: 1414346311153421963
+      spriteID: 4b6663bdd9fe18170800000000000000
+      internalID: 8179081859548210868
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      trap_ames_0: 1414346311153421963
+      portail_orange_0: 8179081859548210868
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

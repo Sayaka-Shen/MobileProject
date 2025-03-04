@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 14763034156d4624cb14fc786b6d1f85
+guid: 2485408eac990974a839dd61afdb5ec2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7501114181141262336
-    second: bouton_exit_0
+      213: -6610566689843495250
+    second: portail_rose_0
+  - first:
+      213: -5865207067271565774
+    second: portail_rose_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bouton_exit_0
+      name: portail_rose_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 712
-        height: 174
+        width: 756
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0001e651560b6e790800000000000000
-      internalID: -7501114181141262336
+      spriteID: eae39dfae9c8244a0800000000000000
+      internalID: -6610566689843495250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portail_rose_1
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 0
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23eea2d5f399a9ea0800000000000000
+      internalID: -5865207067271565774
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bouton_exit_0: -7501114181141262336
+      portail_rose_0: -6610566689843495250
+      portail_rose_1: -5865207067271565774
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

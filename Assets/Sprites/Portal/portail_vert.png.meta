@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9ca3cb3a4f8e23b4481b897bf786c8cf
+guid: 7135ca9cf5e6df34b894fae8e6dfebed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3938909525349869230
-    second: portail_2_Blanc_0
+      213: -7889111447846075885
+    second: portail_vert_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: portail_2_Blanc_0
+      name: portail_vert_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 0
-        width: 762
-        height: 798
+        x: 0
+        y: 32
+        width: 756
+        height: 820
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea6a1e41851d9a630800000000000000
-      internalID: 3938909525349869230
+      spriteID: 312caadbfee348290800000000000000
+      internalID: -7889111447846075885
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      portail_2_Blanc_0: 3938909525349869230
+      portail_vert_0: -7889111447846075885
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 23cfb07abd0971a4e8437e2c7d5ae6e6
+guid: fa9cfd85a37470f4d8f7fe7b5c2e9418
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2673615250497666516
-    second: portail_3_Blanc_0
+      213: 1865287777335297598
+    second: portail_bleu_clair_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: portail_3_Blanc_0
+      name: portail_bleu_clair_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 824
-        height: 815
+        y: 32
+        width: 756
+        height: 820
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c220508581965ead0800000000000000
-      internalID: -2673615250497666516
+      spriteID: e36c2fbc955d2e910800000000000000
+      internalID: 1865287777335297598
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      portail_3_Blanc_0: -2673615250497666516
+      portail_bleu_clair_0: 1865287777335297598
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
