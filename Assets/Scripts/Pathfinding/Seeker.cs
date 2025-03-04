@@ -26,6 +26,7 @@ public class Seeker : MonoBehaviour
 
     private void Move()
     {
+        if(!GameManager.Instance.MovementPlayer.CountMove) return;
         _reverseAction.ValueTarget = _countMove;
         RollbackManager.Instance.AddAction(_reverseAction);
         _reverseAction.ValueTarget = 0;

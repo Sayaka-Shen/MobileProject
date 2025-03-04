@@ -704,8 +704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a0f384d6acff044be7afde1b074568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _atmosphereSource: {fileID: 0}
-  _atmosphereLibrary: {fileID: 0}
+  _atmosphereSource: {fileID: 794321680}
+  _atmosphereLibrary: {fileID: 793138841}
 --- !u!4 &793138843
 Transform:
   m_ObjectHideFlags: 0

@@ -241,7 +241,7 @@ RectTransform:
   m_Father: {fileID: 6734337404318042384}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 6.200001}
   m_SizeDelta: {x: 56, y: 42.4}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 8775494572201951842}
   - component: {fileID: 7523735525564458975}
   - component: {fileID: 2754157327283554696}
+  - component: {fileID: 5702055679436414473}
   m_Layer: 5
   m_Name: SliderSFX
   m_TagString: Untagged
@@ -373,7 +374,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5702055679436414473}
+        m_TargetAssemblyTypeName: sliderChangeValueTxt, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2754157327283554696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +399,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af79df651f1dfc1469e7d55e7500bd18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5702055679436414473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132916819307918869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9133dee3fd73f164684f93d327ef1322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _txt: {fileID: 4200785793842326171}
 --- !u!1 &1830323748109597594
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,6 +423,7 @@ GameObject:
   - component: {fileID: 7931564511983606994}
   - component: {fileID: 3190124908219347914}
   - component: {fileID: 5619660549185734687}
+  - component: {fileID: 8326304776798612684}
   m_Layer: 5
   m_Name: SliderMusic
   m_TagString: Untagged
@@ -476,7 +503,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8326304776798612684}
+        m_TargetAssemblyTypeName: sliderChangeValueTxt, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5619660549185734687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,6 +528,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af79df651f1dfc1469e7d55e7500bd18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8326304776798612684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830323748109597594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9133dee3fd73f164684f93d327ef1322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _txt: {fileID: 7138480419111978251}
 --- !u!1 &1830413064890862928
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +759,7 @@ RectTransform:
   m_Father: {fileID: 5682264770819021587}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 6.200001}
   m_SizeDelta: {x: 56, y: 42.4}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1395,13 +1447,14 @@ GameObject:
   - component: {fileID: 3735228170031401666}
   - component: {fileID: 8291766238655085942}
   - component: {fileID: 6726507938292419879}
+  - component: {fileID: 371369189715290743}
   m_Layer: 5
   m_Name: OptionContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3735228170031401666
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1476,6 +1529,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &371369189715290743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4969258635156108518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04082f2336360fb4e88ee24984dd5198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sliderMusic: {fileID: 3190124908219347914}
+  _sliderSound: {fileID: 7889272551868842709}
+  _sliderVFX: {fileID: 7523735525564458975}
+  _toggleMoveUI: {fileID: 59045449766317641}
 --- !u!1 &5201852727209263717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,7 +1578,7 @@ RectTransform:
   m_Father: {fileID: 7930114150453195341}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2074,7 +2143,7 @@ RectTransform:
   m_Father: {fileID: 830824315757879759}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2150,7 +2219,7 @@ RectTransform:
   m_Father: {fileID: 6498797487979175036}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 6.200001}
   m_SizeDelta: {x: 56, y: 42.4}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2225,7 +2294,7 @@ RectTransform:
   m_Father: {fileID: 3246068646622829505}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2617,6 +2686,7 @@ GameObject:
   - component: {fileID: 8653336541845677727}
   - component: {fileID: 7889272551868842709}
   - component: {fileID: 8657181370649892755}
+  - component: {fileID: 3287255201230735438}
   m_Layer: 5
   m_Name: SliderAtmosphere
   m_TagString: Untagged
@@ -2696,7 +2766,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3287255201230735438}
+        m_TargetAssemblyTypeName: sliderChangeValueTxt, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8657181370649892755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2709,6 +2791,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af79df651f1dfc1469e7d55e7500bd18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3287255201230735438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7226150616804063910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9133dee3fd73f164684f93d327ef1322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _txt: {fileID: 4599958362102797349}
 --- !u!1 &7872136520207371702
 GameObject:
   m_ObjectHideFlags: 0
@@ -3282,7 +3377,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6044444198545564443}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GooglePlayAuthentification, Assembly-CSharp
+        m_MethodName: ShowAchievements
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9178278853252182009
 GameObject:
   m_ObjectHideFlags: 0

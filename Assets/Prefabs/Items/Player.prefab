@@ -286,6 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac78c6befba638342b14aabb048a5999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sprite: {fileID: 7890050249812750701}
 --- !u!60 &3338659449782888512
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -711,6 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac78c6befba638342b14aabb048a5999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sprite: {fileID: 669827831620926447}
 --- !u!60 &8393998258734989259
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -909,6 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac78c6befba638342b14aabb048a5999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sprite: {fileID: 8293090910011122296}
 --- !u!60 &5678931243308484767
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1107,6 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac78c6befba638342b14aabb048a5999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sprite: {fileID: 6310398348333903983}
 --- !u!60 &9068043069183408126
 PolygonCollider2D:
   m_ObjectHideFlags: 0

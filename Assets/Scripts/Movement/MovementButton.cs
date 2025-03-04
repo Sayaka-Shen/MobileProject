@@ -6,7 +6,8 @@ public class MovementButton : MonoBehaviour
 {
     private MovementPlayer _mouvementPlayer;
     private bool _doShowButton = true;
-    public bool DoShowButton { get => _doShowButton; set => _doShowButton = value; }
+    public static bool ShowAllButton = true;
+    public SpriteRenderer _sprite;
 
     private ReverseAction _reverseAction = new ReverseAction();
 
@@ -21,11 +22,13 @@ public class MovementButton : MonoBehaviour
         _mouvementPlayer = GameManager.Instance.MovementPlayer;
         
         _mouvementPlayer.OnStartMove += Hide;
-        if(_doShowButton)
-        {
-            _mouvementPlayer.OnEndMove += ShowCorrectButton;
-            ShowCorrectButton();
-        }
+        _mouvementPlayer.OnEndMove += ShowCorrectButton;
+        ShowCorrectButton();
+    }
+
+    private void Update()
+    {
+        if(_sprite.enabled != ShowAllButton) _sprite.enabled = ShowAllButton;
     }
 
     void OnMouseDown()
