@@ -41,6 +41,8 @@ public class MovementButton : MonoBehaviour
 
     private void Update()
     {
+        if (IsPointerOverUIObject() || !isPlaying(GameManager.Instance.AnimPlayer, "anim_idle") || GameManager.Instance.Pause) return;
+
         if (Input.touchCount == 1) // user is touching the screen with a single touch
         {
             Touch touch = Input.GetTouch(0); // get the touch
@@ -108,13 +110,10 @@ public class MovementButton : MonoBehaviour
             newPos = _mouvementPlayer.transform.position + position;
         }
 
-        if(!IsPointerOverUIObject() && isPlaying(GameManager.Instance.AnimPlayer, "anim_idle") && !GameManager.Instance.Pause)
-        {
-            _reverseAction.PositionTarget = _mouvementPlayer.transform.position;
-            RollbackManager.Instance.AddPlayerAction(_reverseAction);
-            _mouvementPlayer.AddPos(newPos);
-            _mouvementPlayer.StartMoving();
-        }
+        _reverseAction.PositionTarget = _mouvementPlayer.transform.position;
+        RollbackManager.Instance.AddPlayerAction(_reverseAction);
+        _mouvementPlayer.AddPos(newPos);
+        _mouvementPlayer.StartMoving();
     }
 
     private bool CheckCollider(Vector3 position)
