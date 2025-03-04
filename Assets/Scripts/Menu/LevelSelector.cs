@@ -28,6 +28,7 @@ public class LevelSelector : MonoBehaviour
     private Vector2 _tempPos;
     private int _levelSelected = 0;
     private List<DataLevel> _levels;
+    private List<GameObject> _levelButtons = new List<GameObject>();
 
     void Start()
     {
@@ -38,7 +39,12 @@ public class LevelSelector : MonoBehaviour
         for (int i = 0; i< _levelsCount; i++)
         {
             GameObject levelButton = Instantiate(_levelButtonPrefab, transform);
+            _levelButtons.Add(levelButton);
             levelButton.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = _levels[i].ImagePreviewMini;
+            levelButton.transform.GetChild(0).GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() =>
+            {
+                SceneManager.LoadScene("Beta");
+            });
             levelButton.transform.GetChild(2).gameObject.SetActive(true);
             levelButton.transform.GetChild(2).GetChild(2).GetComponentInChildren<TextMeshProUGUI>().text = _levels[i].DataToSaves.PercentFinish.ToString() + "%";
             levelButton.transform.GetChild(2).GetComponent<UnityEngine.UI.Slider>().value = _levels[i].DataToSaves.PercentFinish;
@@ -91,7 +97,7 @@ public class LevelSelector : MonoBehaviour
             {
                 nextPos = -_levelWidth*(int)((_levelsCount / 2) -1)+(_levelWidth/2);
             }
-            _levelSelected = (int)-((nextPos-600)/_levelWidth) + (_levelsCount / 2)+1;
+            _levelSelected = (int)-((nextPos-600)/_levelWidth) + (_levelsCount / 2);
             break;
             case false:
             nextPos = _levelWidth * Mathf.Round(tempX / _levelWidth);
@@ -110,10 +116,12 @@ public class LevelSelector : MonoBehaviour
         int time = (int)_levels[_levelSelected].DataToSaves.BestTime;
         _timeText.text = (time / 60).ToString() + "min" + (time % 60).ToString() + "s";
         _stepText.text = _levels[_levelSelected].DataToSaves.BestStep.ToString();
+        _levelButtons[_levelSelected].transform.GetChild(0).GetComponent<UnityEngine.UI.Button>().enabled = true;
         if(_levelSelected>0 &&_levels[_levelSelected-1].DataToSaves.IsCompleted)
         {
             _playButton.interactable = true;
             _playBtImage.sprite = _playSprite;
+            _levelButtons[_levelSelected-1].transform.GetChild(0).GetComponent<UnityEngine.UI.Button>().enabled = false;
         }
         else if(_levelSelected == 0)
         {
@@ -122,8 +130,14 @@ public class LevelSelector : MonoBehaviour
         }
         else
         {
+            _levelButtons[_levelSelected-1].transform.GetChild(0).GetComponent<UnityEngine.UI.Button>().enabled = false;
+            Debug.Log(_levelSelected);
             _playButton.interactable = false;
             _playBtImage.sprite = _lockedSprite;
+        }
+        if(_levelSelected != _levelsCount)
+        {
+            _levelButtons[_levelSelected+1].transform.GetChild(0).GetComponent<UnityEngine.UI.Button>().enabled = false;
         }
         _dataLevelContainer.SceneToLoad = _levelSelected;
         _isLevelSelected = true;
