@@ -6,6 +6,7 @@ public class SceneManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        SfxManager.Instance.PlaySound2D("ClickMenuSound");
     }
 
     public void QuitGame()

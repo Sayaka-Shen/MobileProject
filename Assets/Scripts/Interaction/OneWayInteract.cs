@@ -29,8 +29,12 @@ public class OneWayInteract : MonoBehaviour, IInteractable
         
         _movementPlayer.CountMove = false;
         _movementPlayer.OnEndMove += RestartCountMove;
-        if(_type == Type.Ledge) GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBQ");
-        else if (_type == Type.River) GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBg");
+        if (_type == Type.Ledge) { GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBQ"); }
+        else if (_type == Type.River)
+        {
+            GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBg");
+            SfxManager.Instance.PlaySound2D("RiverSound");
+        }
     }
 
     private void RestartCountMove()
