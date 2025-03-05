@@ -14,7 +14,7 @@ public class MainMenuManager : MonoBehaviour
         _levelSelector.SetActive(true);
         _optionContainer.SetActive(false);
         _TransitionContainer.SetActive(false);
-        SfxManager.Instance.PlaySound2D("ClickMenuSound");
+        // SfxManager.Instance.PlaySound2D("ClickMenuSound");
     }
     public void StartTransition()
     {
