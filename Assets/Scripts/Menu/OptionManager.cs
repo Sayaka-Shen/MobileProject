@@ -1,7 +1,8 @@
-using Unity.VisualScripting;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
-using UnityEngine.VFX;
 
 public class OptionManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class OptionManager : MonoBehaviour
     [SerializeField] private Slider _sliderSound;
     [SerializeField] private Slider _sliderVFX;
     [SerializeField] private Toggle _toggleMoveUI;
+
+    public static event Action OptionChange;
 
     private void Start()
     {
@@ -34,6 +37,7 @@ public class OptionManager : MonoBehaviour
         _toggleMoveUI.onValueChanged.AddListener(UpdateMoveUI);
         _toggleMoveUI.isOn = (PlayerPrefs.GetInt("MoveUI", 1) == 1);
         MovementSprite.ShowAllButton = _toggleMoveUI.isOn;
+        OptionChange?.Invoke();
     }
 
     private void UpdateMusic(float value)
@@ -56,6 +60,7 @@ public class OptionManager : MonoBehaviour
         MovementSprite.ShowAllButton = value;
         if (value) PlayerPrefs.SetInt("MoveUI", 1);
         else PlayerPrefs.SetInt("MoveUI", 0);
+        OptionChange?.Invoke();
     }
 
 }

@@ -14,18 +14,15 @@ public class MovementSprite : MonoBehaviour
         _mouvementPlayer = GameManager.Instance.MovementPlayer;
         _mouvementPlayer.OnStartMove += Hide;
 
+        OptionManager.OptionChange += ShowCorrectButton;
         _mouvementPlayer.OnEndMove += ShowCorrectButton;
         ShowCorrectButton();
     }
 
-    private void Update()
+    public void ShowCorrectButton()
     {
-        if (ShowAllButton != _sprite.enabled) _sprite.enabled = ShowAllButton;
-    }
-
-    private void ShowCorrectButton()
-    {
-        _sprite.enabled = !CollisionManager.Instance.GetObstacleAt(transform.position);
+        if(ShowAllButton) _sprite.enabled = !CollisionManager.Instance.GetObstacleAt(transform.position);
+        else _sprite.enabled = false;
     }
 
     private void Hide()
