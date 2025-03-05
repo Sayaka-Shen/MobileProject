@@ -16,5 +16,9 @@ public class DataLevelEditor : Editor
         {
             dataContainer.ResetData();
         }
+        if (GUILayout.Button("Complete levels data"))
+        {
+            dataContainer.Complete();
+        }
     }
 }

@@ -29,4 +29,12 @@ public class DataLevelContainer : ScriptableObject
             level.DataToSaves = new DataToSaves();
         }
     }
+    public void Complete()
+    {
+        foreach (DataLevel level in Levels)
+        {
+            level.DataToSaves = new DataToSaves();
+            level.DataToSaves.IsCompleted = true;
+        }
+    }
 }
