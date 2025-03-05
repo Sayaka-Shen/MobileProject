@@ -156,6 +156,7 @@ public class LevelSelector : MonoBehaviour
             _rectTransform.anchoredPosition = Vector2.Lerp(_rectTransform.anchoredPosition, _tempPos, 0.05f);
             if(Vector2.Distance(_rectTransform.anchoredPosition, _tempPos) < 10f)
             {
+                _rectTransform.anchoredPosition = _tempPos;
                 _isLevelSelected = false;
             }
         }
