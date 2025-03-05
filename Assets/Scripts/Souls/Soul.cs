@@ -44,6 +44,7 @@ public class Soul : MonoBehaviour
             _onCorrupt?.Invoke();
             GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBA");
             gameObject.SetActive(false);
+            GameManager.Instance.EndGame(true);
         }
         else
         {
@@ -84,6 +85,11 @@ public class Soul : MonoBehaviour
             }
             count++;
         }
+    }
+
+    public int GetCurrentColor()
+    {
+        return (int)_state;
     }
 
     public void Desapere()

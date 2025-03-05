@@ -43,7 +43,7 @@ public class MovementButton : MonoBehaviour
         _timer += Time.deltaTime;
         if (_timer < _maxTimer) { return; }
 
-        if (!isPlaying(GameManager.Instance.AnimPlayer, "anim_idle") || GameManager.Instance.Pause) return;
+        if (isPlaying(GameManager.Instance.AnimPlayer, "anim_purification") || GameManager.Instance.Pause) return;
 
         if (Input.touchCount == 1) // user is touching the screen with a single touch
         {

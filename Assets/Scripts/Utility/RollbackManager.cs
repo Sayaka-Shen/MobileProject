@@ -94,7 +94,7 @@ public class RollbackManager : MonoBehaviour
                     action.Holder.GetComponent<Soul>().Heal();
                     break;
                 case ReverseActionType.SoulTaken: //FAIT
-                    GameManager.Instance.SoulPlayer.TakeSoul();
+                    GameManager.Instance.SoulPlayer.TakeSoul(action.ValueTarget);
                     SoulsManager.Instance.RemoveSoulsCorrupt();
                     break;
                 case ReverseActionType.SoulTake: //FAIT
@@ -102,7 +102,7 @@ public class RollbackManager : MonoBehaviour
                     GameManager.Instance.SoulPlayer.DeleteSoul();
                     break;
                 case ReverseActionType.Purify: //FAIT
-                    GameManager.Instance.SoulPlayer.TakeSoul();
+                    GameManager.Instance.SoulPlayer.TakeSoul(action.ValueTarget);
                     SoulsManager.Instance.RemoveSoulsPurify();
                     break;
             }
