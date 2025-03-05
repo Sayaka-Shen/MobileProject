@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem.LowLevel;
 
 public class Soul : MonoBehaviour
 {
@@ -14,9 +13,8 @@ public class Soul : MonoBehaviour
     [SerializeField] State _state = State.stateOne;
     [SerializeField] UnityEvent _onHurt;
     [Header("Visual")]
-    [SerializeField] SpriteRenderer _spriteRenderer;
-    [SerializeField] Sprite[] _sprites;
-    [SerializeField] SpriteRenderer[] _spriteLifeRenderers;
+    [SerializeField] Animator _animationRenderer;
+    [SerializeField] SpriteRenderer[] _spritesLifeRenderers;
     [SerializeField] Sprite[] _spritesLife;
     private MovementPlayer _movementPlayer;
     public event Action OnCorrupt;
@@ -30,7 +28,7 @@ public class Soul : MonoBehaviour
         _reverseAction.Type = ReverseActionType.SoulDamage;
 
         _movementPlayer.OnCaseMouvEnd += HurtSelf;
-        UpdateSprite();
+        UpdateAnimator();
     }
 
     private void HurtSelf()
@@ -43,13 +41,13 @@ public class Soul : MonoBehaviour
             OnCorrupt?.Invoke();
             _onCorrupt?.Invoke();
             GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBA");
-            gameObject.SetActive(false);
+            UpdateAnimator();
             GameManager.Instance.EndGame(true);
         }
         else
         {
             _onHurt?.Invoke();
-            UpdateSprite();
+            UpdateAnimator();
             SfxManager.Instance.PlaySound2D("SoulCorrupt");
         }
         RollbackManager.Instance.AddAction(_reverseAction);
@@ -65,15 +63,15 @@ public class Soul : MonoBehaviour
         }
         int newState = (int)_state - 1;
         _state = (State)(newState);
-        UpdateSprite();
+        UpdateAnimator();
     }
 
-    private void UpdateSprite()
+    private void UpdateAnimator()
     {
         int nbState = (int)_state;
-        _spriteRenderer.sprite = _sprites[nbState];
+        _animationRenderer.SetInteger("Life",nbState);
         int count = 0;
-        foreach (SpriteRenderer spriteLifeRenderer in _spriteLifeRenderers)
+        foreach (SpriteRenderer spriteLifeRenderer in _spritesLifeRenderers)
         {
             if (count <= 2 - nbState)
             {

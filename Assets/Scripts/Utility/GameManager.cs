@@ -65,8 +65,9 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator EndGameVisual(int scorePercent, float time, bool wait)
     {
+        Pause = true;
         if(!wait) yield return new WaitForSeconds(4f);
-        else yield return new WaitForSeconds(.5f);
+        else yield return new WaitForSeconds(3f);
         _endUI.SetActive(true);
         if (scorePercent == 100)
         {
@@ -76,7 +77,6 @@ public class GameManager : MonoBehaviour
         {
             _failedUI.SetScore(scorePercent);
         }
-        Pause = true;
     }
 
     public void TestEndGame()

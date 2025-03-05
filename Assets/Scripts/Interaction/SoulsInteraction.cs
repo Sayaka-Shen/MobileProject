@@ -27,7 +27,7 @@ public class SoulsInteraction : MonoBehaviour, IInteractable
             _reverseAction.ValueTarget = _soulParent.GetCurrentColor();
             RollbackManager.Instance.AddAction(_reverseAction);
             _soulParent.Desapere();
-            _soulPlayer.TakeSoul(_soulParent.GetCurrentColor());
+            _soulPlayer.TakeSoul(_reverseAction.ValueTarget);
         }
     }
 }

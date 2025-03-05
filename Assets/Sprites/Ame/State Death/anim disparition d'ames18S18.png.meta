@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 044341945176aec43a5a0e1af18dc8f7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3280230339929836524
+    second: anim disparition d'ames18S18_0
+  - first:
+      213: -7263646611446118879
+    second: anim disparition d'ames18S18_1
+  - first:
+      213: -5287992478052709045
+    second: anim disparition d'ames18S18_2
+  - first:
+      213: 4657171975112983869
+    second: anim disparition d'ames18S18_3
+  - first:
+      213: -6285033565708440681
+    second: anim disparition d'ames18S18_4
+  - first:
+      213: -6276730121209882071
+    second: anim disparition d'ames18S18_5
+  - first:
+      213: -8832214073499475137
+    second: anim disparition d'ames18S18_6
+  - first:
+      213: 8110916533394380321
+    second: anim disparition d'ames18S18_7
+  - first:
+      213: 2264179103160717962
+    second: anim disparition d'ames18S18_8
+  - first:
+      213: -7957851434344796499
+    second: anim disparition d'ames18S18_9
+  - first:
+      213: -366942956373221914
+    second: anim disparition d'ames18S18_10
+  - first:
+      213: 4692007903342258993
+    second: anim disparition d'ames18S18_11
+  - first:
+      213: -5953205527831979861
+    second: anim disparition d'ames18S18_12
+  - first:
+      213: 7431270425646761025
+    second: anim disparition d'ames18S18_13
+  - first:
+      213: -6957337034909968457
+    second: anim disparition d'ames18S18_14
+  - first:
+      213: 6921841500852451552
+    second: anim disparition d'ames18S18_15
+  - first:
+      213: -7918169799067313068
+    second: anim disparition d'ames18S18_16
+  - first:
+      213: -6815595935138338536
+    second: anim disparition d'ames18S18_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.49, y: 0.25}
+  spritePixelsToUnits: 80
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_0
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 677
+        width: 49
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceb0af06d18b58d20800000000000000
+      internalID: 3280230339929836524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_1
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 676
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126c8ce24e7523b90800000000000000
+      internalID: -7263646611446118879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_2
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 697
+        width: 62
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4d0bb2bbd64d96b0800000000000000
+      internalID: -5287992478052709045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_3
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 683
+        width: 42
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3583829c3991a040800000000000000
+      internalID: 4657171975112983869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_4
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 677
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79baa82854317c8a0800000000000000
+      internalID: -6285033565708440681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_5
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 674
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92a5a46d53394e8a0800000000000000
+      internalID: -6276730121209882071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_6
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 631
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f33abd0681cad6580800000000000000
+      internalID: -8832214073499475137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_7
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 591
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12690d71d93cf8070800000000000000
+      internalID: 8110916533394380321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_8
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 580
+        width: 36
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a82d1cfe5eafb6f10800000000000000
+      internalID: 2264179103160717962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_9
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 506
+        width: 226
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daeab807848009190800000000000000
+      internalID: -7957851434344796499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_10
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 489
+        width: 236
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6edda88435b58eaf0800000000000000
+      internalID: -366942956373221914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_11
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 482
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b6a0a245c5d1140800000000000000
+      internalID: 4692007903342258993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_12
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 475
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8dea62d17f16da0800000000000000
+      internalID: -5953205527831979861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_13
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 378
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1448a8e541d212760800000000000000
+      internalID: 7431270425646761025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_14
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 402
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b7958b04d2927f90800000000000000
+      internalID: -6957337034909968457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_15
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 410
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e8fdd9eb225f0060800000000000000
+      internalID: 6921841500852451552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_16
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 385
+        width: 39
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45cdd5f15820d1290800000000000000
+      internalID: -7918169799067313068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim disparition d'ames18S18_17
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 222
+        width: 75
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819ab798b932a61a0800000000000000
+      internalID: -6815595935138338536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      anim disparition d'ames18S18_0: 3280230339929836524
+      anim disparition d'ames18S18_1: -7263646611446118879
+      anim disparition d'ames18S18_10: -366942956373221914
+      anim disparition d'ames18S18_11: 4692007903342258993
+      anim disparition d'ames18S18_12: -5953205527831979861
+      anim disparition d'ames18S18_13: 7431270425646761025
+      anim disparition d'ames18S18_14: -6957337034909968457
+      anim disparition d'ames18S18_15: 6921841500852451552
+      anim disparition d'ames18S18_16: -7918169799067313068
+      anim disparition d'ames18S18_17: -6815595935138338536
+      anim disparition d'ames18S18_2: -5287992478052709045
+      anim disparition d'ames18S18_3: 4657171975112983869
+      anim disparition d'ames18S18_4: -6285033565708440681
+      anim disparition d'ames18S18_5: -6276730121209882071
+      anim disparition d'ames18S18_6: -8832214073499475137
+      anim disparition d'ames18S18_7: 8110916533394380321
+      anim disparition d'ames18S18_8: 2264179103160717962
+      anim disparition d'ames18S18_9: -7957851434344796499
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
