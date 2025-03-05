@@ -16,23 +16,23 @@ public class OptionManager : MonoBehaviour
         if (MusicManager.Instance != null)
         {
             _sliderMusic.onValueChanged.AddListener(UpdateMusic);
-            _sliderMusic.value = PlayerPrefs.GetFloat("Music");
+            _sliderMusic.value = PlayerPrefs.GetFloat("Music", 100);
             MusicManager.Instance.GetComponentInChildren<AudioSource>().volume = _sliderMusic.value;
         }
         if (AtmosphereManager.Instance != null)
         {
             _sliderSound.onValueChanged.AddListener(UpdateSound);
-            _sliderSound.value = PlayerPrefs.GetFloat("Sound");
+            _sliderSound.value = PlayerPrefs.GetFloat("Sound", 100);
             AtmosphereManager.Instance.GetComponentInChildren<AudioSource>().volume = _sliderSound.value;
         }
         if (SfxManager.Instance != null)
         {
             _sliderVFX.onValueChanged.AddListener(UpdateVFX);
-            _sliderVFX.value = PlayerPrefs.GetFloat("VFX");
+            _sliderVFX.value = PlayerPrefs.GetFloat("VFX", 100);
             SfxManager.Instance.GetComponentInChildren<AudioSource>().volume = _sliderVFX.value;
         }
         _toggleMoveUI.onValueChanged.AddListener(UpdateMoveUI);
-        _toggleMoveUI.isOn = (PlayerPrefs.GetInt("MoveUI") == 1);
+        _toggleMoveUI.isOn = (PlayerPrefs.GetInt("MoveUI", 1) == 1);
         MovementButton.ShowAllButton = _toggleMoveUI.isOn;
     }
 
