@@ -48,7 +48,24 @@ public class RollbackManager : MonoBehaviour
         Instance._reverseActions.Add(new List<ReverseAction>() { playerAction });
     }
 
-    public void Reroll()
+    private List<Action> _rollback = new List<Action>();
+
+    public void AddRollback()
+    {
+        _rollback.Add(Instance.RollBack);
+        if (_rollback.Count == 1) RollBack();
+    }
+
+    public void TryUseRollback()
+    {
+        _rollback.RemoveAt(_rollback.Count - 1);
+        if (Instance._rollback.Count != 0)
+        {
+            RollBack();
+        }
+    }
+
+    private void RollBack()
     {
         if (CountAction == 0) return;
         List<ReverseAction> Actions = Instance._reverseActions[LastIndex];
@@ -70,7 +87,8 @@ public class RollbackManager : MonoBehaviour
                     action.Holder.SetActive(true);
                     break;
                 case ReverseActionType.SeekerMove: //FAIT
-                    action.Holder.GetComponent<Seeker>().MoveTo(action.PositionTarget);
+                    if (action.ValueTarget != 0) action.Holder.GetComponent<Seeker>().RerollMove(action.ValueTarget);
+                    else action.Holder.GetComponent<Seeker>().MoveTo(action.PositionTarget);
                     break;
                 case ReverseActionType.SoulDamage: //FAIT
                     action.Holder.GetComponent<Soul>().Heal();

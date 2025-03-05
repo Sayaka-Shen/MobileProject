@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _endUI;
     [SerializeField] private EndGameMenu _successUI;
     [SerializeField] private FailGameMenu _failedUI;
+    public bool Pause = false;
 
     private void Awake()
     {
@@ -74,7 +75,7 @@ public class GameManager : MonoBehaviour
         {
             _failedUI.SetScore(scorePercent);
         }
-        Time.timeScale = 0f;
+        Pause = true;
     }
 
     public void TestEndGame()
