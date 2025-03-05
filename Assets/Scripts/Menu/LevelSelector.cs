@@ -74,6 +74,7 @@ public class LevelSelector : MonoBehaviour
         _dataLevelContainer.SceneToLoad = 0;
         _playButton.interactable = true;
         _playBtImage.sprite = _playSprite;
+        CenterPrefab();
     }
 
     void OnMouseUp()
