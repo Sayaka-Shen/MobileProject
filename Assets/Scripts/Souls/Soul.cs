@@ -23,7 +23,7 @@ public class Soul : MonoBehaviour
     [SerializeField] UnityEvent _onCorrupt;
     private ReverseAction _reverseAction = new ReverseAction();
 
-    void Start()
+    private void Start()
     {
         _movementPlayer = GameManager.Instance.MovementPlayer;
         _reverseAction.Holder = gameObject;
@@ -33,7 +33,7 @@ public class Soul : MonoBehaviour
         UpdateSprite();
     }
 
-    void HurtSelf()
+    private void HurtSelf()
     {
         int newState = (int)_state + 1;
         _state = (State)(newState);
@@ -44,11 +44,13 @@ public class Soul : MonoBehaviour
             _onCorrupt?.Invoke();
             GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBA");
             gameObject.SetActive(false);
+            GameManager.Instance.EndGame(true);
         }
         else
         {
             _onHurt?.Invoke();
             UpdateSprite();
+            SfxManager.Instance.PlaySound2D("SoulCorrupt");
         }
         RollbackManager.Instance.AddAction(_reverseAction);
     }
@@ -84,6 +86,11 @@ public class Soul : MonoBehaviour
             }
             count++;
         }
+    }
+
+    public int GetCurrentColor()
+    {
+        return (int)_state;
     }
 
     public void Desapere()

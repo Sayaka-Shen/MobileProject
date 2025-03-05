@@ -4,14 +4,14 @@ using UnityEngine;
 public class SoulsInteraction : MonoBehaviour, IInteractable
 {
     [Header("Soul Settings")]
-    [SerializeField] private GameObject _soulParent;
+    [SerializeField] private Soul _soulParent;
     private SoulPlayer _soulPlayer;
 
     private ReverseAction _reverseAction = new ReverseAction();
 
     private void Awake()
     {
-        _reverseAction.Holder = _soulParent;
+        _reverseAction.Holder = _soulParent.gameObject;
         _reverseAction.Type = ReverseActionType.SoulTake;
     }
 
@@ -24,9 +24,10 @@ public class SoulsInteraction : MonoBehaviour, IInteractable
     {
         if (!_soulPlayer.AsSoul)
         {
+            _reverseAction.ValueTarget = _soulParent.GetCurrentColor();
             RollbackManager.Instance.AddAction(_reverseAction);
-            _soulParent.GetComponent<Soul>().Desapere();
-            _soulPlayer.TakeSoul();
+            _soulParent.Desapere();
+            _soulPlayer.TakeSoul(_soulParent.GetCurrentColor());
         }
     }
 }

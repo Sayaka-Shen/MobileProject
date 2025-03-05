@@ -63,9 +63,10 @@ public class GameManager : MonoBehaviour
         StartTimer();
     }
 
-    private IEnumerator EndGameVisual(int scorePercent, float time)
+    private IEnumerator EndGameVisual(int scorePercent, float time, bool wait)
     {
-        yield return new WaitForSeconds(4f);
+        if(!wait) yield return new WaitForSeconds(4f);
+        else yield return new WaitForSeconds(.5f);
         _endUI.SetActive(true);
         if (scorePercent == 100)
         {
@@ -128,7 +129,7 @@ public class GameManager : MonoBehaviour
             }
         }
         SaveManager.Instance.Save();
-        StartCoroutine(EndGameVisual(scorePercent, time));
+        StartCoroutine(EndGameVisual(scorePercent, time, killed));
     }
     
     private void loadLevel()

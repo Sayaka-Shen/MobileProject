@@ -51,8 +51,9 @@ public class MovementPlayer : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, _nextPos, _speed * deltaTime);
         _animator.SetFloat("vertical", (_nextPos - transform.position).y);
         _animator.SetFloat("horizontal", (_nextPos - transform.position).x);
-        if (transform.position == _nextPos)
+        if (Vector3.Distance(transform.position, _nextPos) < 0.05f)
         {
+            transform.position = _nextPos;
             NextPos(); 
         }
     }
@@ -91,6 +92,7 @@ public class MovementPlayer : MonoBehaviour
             {
                 OnCaseMouvEnd?.Invoke();
                 NbCaseMouvLast = SoulsManager.Instance.CountForHurt;
+                SfxManager.Instance.PlaySound2D("SoundSoulNextStep");
             }
             NbCaseMoveLastChange?.Invoke();
             return;
