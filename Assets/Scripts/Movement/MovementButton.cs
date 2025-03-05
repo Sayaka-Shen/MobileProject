@@ -165,7 +165,7 @@ public class MovementButton : MonoBehaviour
         return results.Count > 0;
     }
 
-    bool isPlaying(Animator anim, string stateName)
+    private bool isPlaying(Animator anim, string stateName)
     {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName(stateName))
             return true;
