@@ -31,6 +31,7 @@ public class DataLevelContainer : ScriptableObject
         {
             level.DataToSaves = new DataToSaves();
         }
+        Save();
     }
     public void Complete()
     {
@@ -38,9 +39,12 @@ public class DataLevelContainer : ScriptableObject
         {
             level.DataToSaves = new DataToSaves();
             level.DataToSaves.IsCompleted = true;
-            SaveManager.Instance.Save();
         }
+        Save();
+    }
 
+    private void Save()
+    {
         string _filePath = Application.persistentDataPath + "/GameData.save";
         List<DataToSaves> _gameData = new List<DataToSaves>();
 
