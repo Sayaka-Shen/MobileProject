@@ -60,7 +60,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc768bc8fce2a114d98d14bb556efdd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sfxs: []
+  _sfxs:
+  - sfxName: ClickMenuSound
+    sfxClip: {fileID: 8300000, guid: 9a72ba36e7c02cd4c95cf8591d0355f6, type: 3}
+  - sfxName: FailSound
+    sfxClip: {fileID: 8300000, guid: c8cb9ee84e8ea1942a95b972652750bb, type: 3}
+  - sfxName: PurifySound
+    sfxClip: {fileID: 8300000, guid: 4ea6a4689933f634f97a968bde93f016, type: 3}
+  - sfxName: SoulCorrupt
+    sfxClip: {fileID: 8300000, guid: 982fb36998a281d4ea1032ca1391b794, type: 3}
+  - sfxName: TrapSoulSound
+    sfxClip: {fileID: 8300000, guid: a8efd424c595e4446bc4dc9f3e6a6b60, type: 3}
+  - sfxName: RiverSound
+    sfxClip: {fileID: 8300000, guid: 1e583327b7dc4f74ca54e85b2b5a65f1, type: 3}
+  - sfxName: SoundSoulNextStep
+    sfxClip: {fileID: 8300000, guid: 6f06c46cc4f73904fa8e4b0c4928445f, type: 3}
 --- !u!1 &5930790539630926094
 GameObject:
   m_ObjectHideFlags: 0
