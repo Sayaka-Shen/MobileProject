@@ -23,6 +23,7 @@ public class EndGameMenu : MonoBehaviour
         _timeText.text = ((int)(Time / 60)).ToString() + "min" + ((int)(Time % 60)).ToString() + "s";
         _score = Score;
         _isSliderAnim = true;
+        SfxManager.Instance.PlaySound2D("VictorySound");
     }
 
     void FixedUpdate()

@@ -130,6 +130,7 @@ public class GameManager : MonoBehaviour
         }
         SaveManager.Instance.Save();
         StartCoroutine(EndGameVisual(scorePercent, time, killed));
+        MusicManager.Instance.StopMusic();
     }
     
     private void loadLevel()
@@ -145,6 +146,7 @@ public class GameManager : MonoBehaviour
         _failedUI.gameObject.SetActive(false);
         _successUI.gameObject.SetActive(false);
         GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAQ");
+        MusicManager.Instance.PlayMusic("MusicInGame");
     }
 
     public void restartLevel()

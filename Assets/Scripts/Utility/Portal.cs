@@ -20,5 +20,6 @@ public class Portal : MonoBehaviour, IInteractable
         RollbackManager.Instance.AddAction( _reverseAction );
         GameManager.Instance.MovementPlayer.TPAt(_linkPortal.position);
         _onTeleport?.Invoke();
+        SfxManager.Instance.PlaySound2D("PortalSound");
    }
 }
