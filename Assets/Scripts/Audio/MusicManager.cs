@@ -8,6 +8,7 @@ public class MusicManager : MonoBehaviour
     [Header("Music Manager Settings")]
     [SerializeField] private AudioSource _musicSource;
     [SerializeField] private MusicLibrary _musicLibrary;
+    private float _musicLastCurrentTime;
 
     private void Awake()
     {
@@ -27,6 +28,18 @@ public class MusicManager : MonoBehaviour
         StartCoroutine(AnimateMusicCrossFade(_musicLibrary.GetMusicFromName(musicName), fadeDuration));
     }
 
+    public void ReplayMusic(string musicName)
+    {
+        _musicSource.clip = _musicLibrary.GetMusicFromName(musicName);
+        _musicSource.time = _musicLastCurrentTime;
+    }
+
+    public void StopMusic()
+    {
+        _musicLastCurrentTime = _musicSource.time;
+        _musicSource.Stop();
+    }
+
     IEnumerator AnimateMusicCrossFade(AudioClip nextMusic, float fadeDuration = 0.1f)
     {
         float percent = 0;
@@ -34,7 +47,7 @@ public class MusicManager : MonoBehaviour
         while (percent < 1)
         {
             percent += Time.deltaTime * 1 / fadeDuration;
-            _musicSource.volume = Mathf.Lerp(_musicSource.volume, 0, percent);
+            _musicSource.volume = Mathf.Lerp(1f, 0, percent);
             yield return null;
         }
         
@@ -46,7 +59,7 @@ public class MusicManager : MonoBehaviour
         while (percent < 1)
         {
             percent += Time.deltaTime * 1 / fadeDuration;
-            _musicSource.volume = Mathf.Lerp(0, _musicSource.volume, percent);
+            _musicSource.volume = Mathf.Lerp(0, 1f, percent);
             yield return null;
         }
     }

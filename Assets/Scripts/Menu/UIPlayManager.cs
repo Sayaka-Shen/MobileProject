@@ -18,6 +18,7 @@ public class UIPlayManager : MonoBehaviour
         _play.SetActive(false);
         _pause.SetActive(true);
         SfxManager.Instance.PlaySound2D("ClickMenuSound");
+        MusicManager.Instance.StopMusic();
     }
 
     public void Play()
@@ -26,6 +27,7 @@ public class UIPlayManager : MonoBehaviour
         _play.SetActive(true);
         _pause.SetActive(false);
         SfxManager.Instance.PlaySound2D("ClickMenuSound");
+        MusicManager.Instance.ReplayMusic("MusicInGame");
     }
     public void Option()
     {
