@@ -31,6 +31,7 @@ public class MusicManager : MonoBehaviour
     public void ReplayMusic(string musicName)
     {
         _musicSource.clip = _musicLibrary.GetMusicFromName(musicName);
+        _musicSource.Play();
         _musicSource.time = _musicLastCurrentTime;
     }
 
