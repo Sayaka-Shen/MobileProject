@@ -52,6 +52,7 @@ public class RollbackManager : MonoBehaviour
 
     public void AddRollback()
     {
+        if (_rollback.Count == _reverseActions.Count) return;
         _rollback.Add(Instance.RollBack);
         if (_rollback.Count == 1) RollBack();
     }
