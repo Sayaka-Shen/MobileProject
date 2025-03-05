@@ -91,6 +91,7 @@ public class MovementPlayer : MonoBehaviour
             {
                 OnCaseMouvEnd?.Invoke();
                 NbCaseMouvLast = SoulsManager.Instance.CountForHurt;
+                SfxManager.Instance.PlaySound2D("SoundSoulNextStep");
             }
             NbCaseMoveLastChange?.Invoke();
             return;

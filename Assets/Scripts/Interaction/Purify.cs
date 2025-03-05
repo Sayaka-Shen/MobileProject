@@ -32,6 +32,7 @@ public class Purify : MonoBehaviour, IInteractable
             SoulsManager.Instance.AddSoulsPurify();
             _onPurify?.Invoke();
             OnPurify?.Invoke();
+            SfxManager.Instance.PlaySound2D("PurifySound");
             GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAg");
         }
     }
