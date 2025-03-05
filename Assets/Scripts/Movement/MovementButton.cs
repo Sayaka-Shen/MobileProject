@@ -160,8 +160,16 @@ public class MovementButton : MonoBehaviour
     {
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
         eventDataCurrentPosition.position = new Vector2(position.x, position.y);
+        List<RaycastResult> testResults = new List<RaycastResult>();
         List<RaycastResult> results = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, testResults);
+        foreach (RaycastResult result in testResults)
+        {
+            if (result.gameObject.layer != 2)
+            {
+                results.Add(result);
+            }
+        }
         return results.Count > 0;
     }
 
