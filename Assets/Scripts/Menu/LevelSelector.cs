@@ -114,7 +114,7 @@ public class LevelSelector : MonoBehaviour
         }
         _tempPos = new Vector2(nextPos, -873);
         int time = (int)_levels[_levelSelected].DataToSaves.BestTime;
-        _timeText.text = (time / 60).ToString() + "min" + (time % 60).ToString() + "s";
+        _timeText.text = (time / 60).ToString() + "min " + (time % 60).ToString() + "s";
         _stepText.text = _levels[_levelSelected].DataToSaves.BestStep.ToString();
         _levelButtons[_levelSelected].transform.GetChild(0).GetComponent<UnityEngine.UI.Button>().enabled = true;
         if(_levelSelected>0 &&_levels[_levelSelected-1].DataToSaves.IsCompleted)
