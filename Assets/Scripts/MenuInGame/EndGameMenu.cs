@@ -20,7 +20,7 @@ public class EndGameMenu : MonoBehaviour
     {
         gameObject.SetActive(true);
         _stepText.text = NbStep.ToString();
-        _timeText.text = (Time / 60).ToString() + "min" + (Time % 60).ToString() + "s";
+        _timeText.text = ((int)(Time / 60)).ToString() + "min" + ((int)(Time % 60)).ToString() + "s";
         _score = Score;
         _isSliderAnim = true;
     }
