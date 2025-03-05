@@ -74,6 +74,7 @@ public class LevelSelector : MonoBehaviour
         _dataLevelContainer.SceneToLoad = 0;
         _playButton.interactable = true;
         _playBtImage.sprite = _playSprite;
+        CenterPrefab();
     }
 
     void OnMouseUp()
@@ -114,7 +115,7 @@ public class LevelSelector : MonoBehaviour
         }
         _tempPos = new Vector2(nextPos, -873);
         int time = (int)_levels[_levelSelected].DataToSaves.BestTime;
-        _timeText.text = (time / 60).ToString() + "min" + (time % 60).ToString() + "s";
+        _timeText.text = (time / 60).ToString() + "min " + (time % 60).ToString() + "s";
         _stepText.text = _levels[_levelSelected].DataToSaves.BestStep.ToString();
         _levelButtons[_levelSelected].transform.GetChild(0).GetComponent<UnityEngine.UI.Button>().enabled = true;
         if(_levelSelected>0 &&_levels[_levelSelected-1].DataToSaves.IsCompleted)
@@ -154,8 +155,9 @@ public class LevelSelector : MonoBehaviour
         {
             _scrollRect.velocity = Vector2.zero;
             _rectTransform.anchoredPosition = Vector2.Lerp(_rectTransform.anchoredPosition, _tempPos, 0.05f);
-            if(Vector2.Distance(_rectTransform.anchoredPosition, _tempPos) < 0.5f)
+            if(Vector2.Distance(_rectTransform.anchoredPosition, _tempPos) < 10f)
             {
+                _rectTransform.anchoredPosition = _tempPos;
                 _isLevelSelected = false;
             }
         }
