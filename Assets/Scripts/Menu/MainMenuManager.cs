@@ -39,7 +39,7 @@ public class MainMenuManager : MonoBehaviour
     {
         _levelSelector.SetActive(true);
         time = Time.realtimeSinceStartup;
-        if(time<10)
+        if(time<30)
         {
             _levelSelector.SetActive(false);
             _startcontainer.SetActive(true);
