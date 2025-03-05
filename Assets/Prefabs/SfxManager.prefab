@@ -75,6 +75,10 @@ MonoBehaviour:
     sfxClip: {fileID: 8300000, guid: 1e583327b7dc4f74ca54e85b2b5a65f1, type: 3}
   - sfxName: SoundSoulNextStep
     sfxClip: {fileID: 8300000, guid: 6f06c46cc4f73904fa8e4b0c4928445f, type: 3}
+  - sfxName: VictorySound
+    sfxClip: {fileID: 8300000, guid: e649bf203d9a33c4096e878867d766ad, type: 3}
+  - sfxName: PortalSound
+    sfxClip: {fileID: 8300000, guid: 845a575cc678cc247a8eaf05c49189e0, type: 3}
 --- !u!1 &5930790539630926094
 GameObject:
   m_ObjectHideFlags: 0
