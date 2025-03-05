@@ -149,8 +149,8 @@ GameObject:
   - component: {fileID: 1295470393773064456}
   - component: {fileID: 7890050249812750701}
   - component: {fileID: 6882612501715406094}
-  - component: {fileID: 7162899224325581713}
   - component: {fileID: 3338659449782888512}
+  - component: {fileID: 6952497117935179629}
   m_Layer: 0
   m_Name: Bottom
   m_TagString: Untagged
@@ -274,22 +274,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7162899224325581713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119773169383526808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac78c6befba638342b14aabb048a5999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _colliders:
-  - {fileID: 6882612501715406094}
-  - {fileID: 3338659449782888512}
-  _sprite: {fileID: 7890050249812750701}
 --- !u!60 &3338659449782888512
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -340,6 +324,19 @@ PolygonCollider2D:
       - {x: -20, y: -10}
       - {x: 0, y: 0}
   m_UseDelaunayMesh: 0
+--- !u!114 &6952497117935179629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119773169383526808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5b5f534d3b5dd4ca3f2f3cc7dac84f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 7890050249812750701}
 --- !u!1 &812015967840988766
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,6 +462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 324688290322002654}
+  - component: {fileID: 7721382463393788372}
   m_Layer: 0
   m_Name: ColliderContaineur
   m_TagString: Untagged
@@ -491,6 +489,31 @@ Transform:
   - {fileID: 2868643953743664919}
   m_Father: {fileID: 8644386347326875767}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7721382463393788372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2789781838903466499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac78c6befba638342b14aabb048a5999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxTimer: 0.5
+  _collidersUp:
+  - {fileID: 3949581760299273965}
+  - {fileID: 5678931243308484767}
+  _collidersDown:
+  - {fileID: 6882612501715406094}
+  - {fileID: 3338659449782888512}
+  _collidersLeft:
+  - {fileID: 580799817585476499}
+  - {fileID: 9068043069183408126}
+  _collidersRight:
+  - {fileID: 5579215533794504527}
+  - {fileID: 8393998258734989259}
 --- !u!1 &3630215243194491230
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,8 +601,8 @@ GameObject:
   - component: {fileID: 2868643953743664919}
   - component: {fileID: 669827831620926447}
   - component: {fileID: 5579215533794504527}
-  - component: {fileID: 4053948490704924005}
   - component: {fileID: 8393998258734989259}
+  - component: {fileID: 9016656455892983658}
   m_Layer: 0
   m_Name: Right
   m_TagString: Untagged
@@ -703,22 +726,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4053948490704924005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3933169591759426802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac78c6befba638342b14aabb048a5999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _colliders:
-  - {fileID: 5579215533794504527}
-  - {fileID: 8393998258734989259}
-  _sprite: {fileID: 669827831620926447}
 --- !u!60 &8393998258734989259
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -769,6 +776,19 @@ PolygonCollider2D:
       - {x: 20, y: -10}
       - {x: 0, y: 0}
   m_UseDelaunayMesh: 0
+--- !u!114 &9016656455892983658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3933169591759426802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5b5f534d3b5dd4ca3f2f3cc7dac84f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 669827831620926447}
 --- !u!1 &4501466146956693055
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,8 +800,8 @@ GameObject:
   - component: {fileID: 6063340125874410253}
   - component: {fileID: 8293090910011122296}
   - component: {fileID: 3949581760299273965}
-  - component: {fileID: 1428009275342773203}
   - component: {fileID: 5678931243308484767}
+  - component: {fileID: 5804945865109225741}
   m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
@@ -905,22 +925,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1428009275342773203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4501466146956693055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac78c6befba638342b14aabb048a5999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _colliders:
-  - {fileID: 3949581760299273965}
-  - {fileID: 5678931243308484767}
-  _sprite: {fileID: 8293090910011122296}
 --- !u!60 &5678931243308484767
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -971,6 +975,19 @@ PolygonCollider2D:
       - {x: -20, y: 10}
       - {x: 0, y: 0}
   m_UseDelaunayMesh: 0
+--- !u!114 &5804945865109225741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4501466146956693055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5b5f534d3b5dd4ca3f2f3cc7dac84f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 8293090910011122296}
 --- !u!1 &4716348737850746049
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,8 +999,8 @@ GameObject:
   - component: {fileID: 7863283788495457111}
   - component: {fileID: 6310398348333903983}
   - component: {fileID: 580799817585476499}
-  - component: {fileID: 3354043116681449706}
   - component: {fileID: 9068043069183408126}
+  - component: {fileID: 921064584607604243}
   m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
@@ -1107,22 +1124,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3354043116681449706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4716348737850746049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac78c6befba638342b14aabb048a5999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _colliders:
-  - {fileID: 580799817585476499}
-  - {fileID: 9068043069183408126}
-  _sprite: {fileID: 6310398348333903983}
 --- !u!60 &9068043069183408126
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1173,6 +1174,19 @@ PolygonCollider2D:
       - {x: -20, y: -10}
       - {x: 0, y: 0}
   m_UseDelaunayMesh: 0
+--- !u!114 &921064584607604243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4716348737850746049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5b5f534d3b5dd4ca3f2f3cc7dac84f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 6310398348333903983}
 --- !u!1 &5255967710520657360
 GameObject:
   m_ObjectHideFlags: 0

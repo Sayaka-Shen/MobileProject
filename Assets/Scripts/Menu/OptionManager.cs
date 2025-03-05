@@ -33,7 +33,7 @@ public class OptionManager : MonoBehaviour
         }
         _toggleMoveUI.onValueChanged.AddListener(UpdateMoveUI);
         _toggleMoveUI.isOn = (PlayerPrefs.GetInt("MoveUI", 1) == 1);
-        MovementButton.ShowAllButton = _toggleMoveUI.isOn;
+        MovementSprite.ShowAllButton = _toggleMoveUI.isOn;
     }
 
     private void UpdateMusic(float value)
@@ -53,7 +53,7 @@ public class OptionManager : MonoBehaviour
     }
     private void UpdateMoveUI(bool value)
     {
-        MovementButton.ShowAllButton = value;
+        MovementSprite.ShowAllButton = value;
         if (value) PlayerPrefs.SetInt("MoveUI", 1);
         else PlayerPrefs.SetInt("MoveUI", 0);
     }

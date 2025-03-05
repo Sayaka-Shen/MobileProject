@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 public class MovementButton : MonoBehaviour
 {
     private MovementPlayer _mouvementPlayer;
-    public static bool ShowAllButton = true;
 
     private ReverseAction _reverseAction = new ReverseAction();
 
@@ -14,9 +13,16 @@ public class MovementButton : MonoBehaviour
     private Vector3 _lastPosition;
     private float _dragDistance;
 
+    // Timer 
+    [SerializeField] private float _maxTimer = 0.5f;
+    private float _timer = 0;
+    private bool _isClicking = false;
+
     [Header("Components")]
-    [SerializeField] private Collider2D[] _colliders;
-    [SerializeField] private SpriteRenderer _sprite;
+    [SerializeField] private Collider2D[] _collidersUp;
+    [SerializeField] private Collider2D[] _collidersDown;
+    [SerializeField] private Collider2D[] _collidersLeft;
+    [SerializeField] private Collider2D[] _collidersRight;
 
     private void Awake()
     {
@@ -28,72 +34,96 @@ public class MovementButton : MonoBehaviour
     {
         _mouvementPlayer = GameManager.Instance.MovementPlayer;
         
-        _mouvementPlayer.OnStartMove += Hide;
-
-        _mouvementPlayer.OnEndMove += ShowCorrectButton;
-        ShowCorrectButton();
-
         // Calculate Drag Distance
         _dragDistance = Screen.height * 15 / 100;
     }
 
     private void Update()
     {
-        if(ShowAllButton != _sprite.enabled) _sprite.enabled = ShowAllButton;
+        _timer += Time.deltaTime;
+        if (_timer < _maxTimer) { return; }
 
-        if (IsPointerOverUIObject() || !isPlaying(GameManager.Instance.AnimPlayer, "anim_idle") || GameManager.Instance.Pause) return;
+        if (!isPlaying(GameManager.Instance.AnimPlayer, "anim_idle") || GameManager.Instance.Pause) return;
 
         if (Input.touchCount == 1) // user is touching the screen with a single touch
         {
             Touch touch = Input.GetTouch(0); // get the touch
-            if (touch.phase == TouchPhase.Began) //check for the first touch
+            if (IsPositionOverUIObject(touch.position))
             {
-                _firstPosition = touch.position;
-                _lastPosition = touch.position;
+                Debug.Log("Hover Gameobject");
+                _isClicking = false;
+                return;
             }
-            else if (touch.phase == TouchPhase.Moved) // update the last position based on where they moved
+            else
             {
-                _lastPosition = touch.position;
-            }
-            else if (touch.phase == TouchPhase.Ended) //check if the finger is removed from the screen
-            {
-                _lastPosition = touch.position;  //last touch position. Ommitted if you use list
-
-                //Check if drag distance is greater than 20% of the screen height
-                if (Mathf.Abs(_lastPosition.x - _firstPosition.x) > _dragDistance || Mathf.Abs(_lastPosition.y - _firstPosition.y) > _dragDistance)
-                {//It's a drag
-                 //check if the drag is vertical or horizontal
-                    if (Mathf.Abs(_lastPosition.x - _firstPosition.x) > Mathf.Abs(_lastPosition.y - _firstPosition.y))
-                    {   //If the horizontal movement is greater than the vertical movement...
-                        if ((_lastPosition.x > _firstPosition.x))  //If the movement was to the right)
-                        {   //Right swipe
-                            Debug.Log("Right Swipe");
-                            TryMove(Vector3.right);
-                        }
-                        else
-                        {   //Left swipe
-                            Debug.Log("Left Swipe");
-                            TryMove(Vector3.left);
-                        }
-                    }
-                    else
-                    {   //the vertical movement is greater than the horizontal movement
-                        if (_lastPosition.y > _firstPosition.y)  //If the movement was up
-                        {   //Up swipe
-                            Debug.Log("Up Swipe");
-                            TryMove(Vector3.up);
-                        }
-                        else
-                        {   //Down swipe
-                            Debug.Log("Down Swipe");
-                            TryMove(Vector3.down);
-                        }
-                    }
+                if (touch.phase == TouchPhase.Began) //check for the first touch
+                {
+                    _isClicking = true;
+                    _firstPosition = touch.position;
+                    _lastPosition = touch.position;
                 }
-                else if(CheckCollider(_firstPosition))
-                {   //It's a tap as the drag distance is less than 20% of the screen height
-                    Debug.Log("Tap");
-                    TryMove(Vector3.zero);
+                else if (touch.phase == TouchPhase.Moved && _isClicking) // update the last position based on where they moved
+                {
+                    _lastPosition = touch.position;
+                }
+                else if (touch.phase == TouchPhase.Ended && _isClicking) //check if the finger is removed from the screen
+                {
+                    _lastPosition = touch.position;  //last touch position. Ommitted if you use list
+
+                    //Check if drag distance is greater than 20% of the screen height
+                    if (Mathf.Abs(_lastPosition.x - _firstPosition.x) > _dragDistance || Mathf.Abs(_lastPosition.y - _firstPosition.y) > _dragDistance)
+                    {//It's a drag
+                     //check if the drag is vertical or horizontal
+                        if (Mathf.Abs(_lastPosition.x - _firstPosition.x) > Mathf.Abs(_lastPosition.y - _firstPosition.y))
+                        {   //If the horizontal movement is greater than the vertical movement...
+                            if ((_lastPosition.x > _firstPosition.x))  //If the movement was to the right)
+                            {   //Right swipe
+                                Debug.Log("Right Swipe");
+                                TryMove(Vector3.right);
+                            }
+                            else
+                            {   //Left swipe
+                                Debug.Log("Left Swipe");
+                                TryMove(Vector3.left);
+                            }
+                        }
+                        else
+                        {   //the vertical movement is greater than the horizontal movement
+                            if (_lastPosition.y > _firstPosition.y)  //If the movement was up
+                            {   //Up swipe
+                                Debug.Log("Up Swipe");
+                                TryMove(Vector3.up);
+                            }
+                            else
+                            {   //Down swipe
+                                Debug.Log("Down Swipe");
+                                TryMove(Vector3.down);
+                            }
+                        }
+                    }
+                    else if (CheckCollider(_collidersUp, _firstPosition))
+                    {   //It's a tap as the drag distance is less than 20% of the screen height
+                        Debug.Log("Tap");
+                        TryMove(Vector3.up);
+                    }
+                    else if (CheckCollider(_collidersDown, _firstPosition))
+                    {   //It's a tap as the drag distance is less than 20% of the screen height
+                        Debug.Log("Tap");
+                        TryMove(Vector3.down);
+                    }
+                    else if (CheckCollider(_collidersLeft, _firstPosition))
+                    {   //It's a tap as the drag distance is less than 20% of the screen height
+                        Debug.Log("Tap");
+                        TryMove(Vector3.left);
+                    }
+                    else if (CheckCollider(_collidersRight, _firstPosition))
+                    {   //It's a tap as the drag distance is less than 20% of the screen height
+                        Debug.Log("Tap");
+                        TryMove(Vector3.right);
+                    }
+
+                    _timer = 0;
+                    _isClicking = false;
                 }
             }
         }
@@ -102,13 +132,9 @@ public class MovementButton : MonoBehaviour
 
     private void TryMove(Vector3 position)
     {
-        Vector3 newPos = transform.position;
+        Vector3 newPos = _mouvementPlayer.transform.position + position;
         newPos.z = 0;
 
-        if (position != Vector3.zero)
-        {
-            newPos = _mouvementPlayer.transform.position + position;
-        }
         if (CollisionManager.Instance.GetObstacleAt(newPos)) return;
 
         _reverseAction.PositionTarget = _mouvementPlayer.transform.position;
@@ -117,7 +143,7 @@ public class MovementButton : MonoBehaviour
         _mouvementPlayer.StartMoving();
     }
 
-    private bool CheckCollider(Vector3 position)
+    private bool CheckCollider(Collider2D[] _colliders, Vector3 position)
     {
         foreach (Collider2D collider in _colliders)
         {
@@ -130,10 +156,10 @@ public class MovementButton : MonoBehaviour
         return false;
     }
 
-    private bool IsPointerOverUIObject()
+    private bool IsPositionOverUIObject(Vector3 position)
     {
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        eventDataCurrentPosition.position = new Vector2(position.x, position.y);
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
         return results.Count > 0;
@@ -147,19 +173,4 @@ public class MovementButton : MonoBehaviour
             return false;
     }
 
-    void ShowCorrectButton()
-    {
-        gameObject.SetActive(!CollisionManager.Instance.GetObstacleAt(transform.position));
-    }
-
-    void Hide()
-    {
-        gameObject.SetActive(false);
-    }
-
-    private void OnDestroy()
-    {
-        _mouvementPlayer.OnStartMove -= Hide;
-        _mouvementPlayer.OnEndMove -= ShowCorrectButton;
-    }
 }
