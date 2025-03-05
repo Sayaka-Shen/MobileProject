@@ -25,6 +25,7 @@ public class SoulTrapVacuum : MonoBehaviour, IInteractable
             _soulPlayer.DeleteSoul();
             SoulsManager.Instance.AddSoulsCorrupt();
             GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQCQ");
+            SfxManager.Instance.PlaySound2D("TrapSoulSound");
         }
     }
 }

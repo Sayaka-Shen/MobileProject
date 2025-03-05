@@ -10,12 +10,14 @@ public class UIPlayManager : MonoBehaviour
     public void Rollback()
     {
         RollbackManager.Instance.AddRollback();
+        SfxManager.Instance.PlaySound2D("ClickMenuSound");
     }
     public void Pause()
     {
         Time.timeScale = 0f;
         _play.SetActive(false);
         _pause.SetActive(true);
+        SfxManager.Instance.PlaySound2D("ClickMenuSound");
     }
 
     public void Play()
@@ -23,15 +25,18 @@ public class UIPlayManager : MonoBehaviour
         Time.timeScale = 1.0f;
         _play.SetActive(true);
         _pause.SetActive(false);
+        SfxManager.Instance.PlaySound2D("ClickMenuSound");
     }
     public void Option()
     {
         _option.SetActive(true);
         _pause.SetActive(false);
+        SfxManager.Instance.PlaySound2D("ClickMenuSound");
     }
     public void Return()
     {
         _option.SetActive(false);
         _pause.SetActive(true);
+        SfxManager.Instance.PlaySound2D("ClickMenuSound");
     }
 }
