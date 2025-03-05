@@ -154,7 +154,7 @@ public class LevelSelector : MonoBehaviour
         {
             _scrollRect.velocity = Vector2.zero;
             _rectTransform.anchoredPosition = Vector2.Lerp(_rectTransform.anchoredPosition, _tempPos, 0.05f);
-            if(Vector2.Distance(_rectTransform.anchoredPosition, _tempPos) < 0.5f)
+            if(Vector2.Distance(_rectTransform.anchoredPosition, _tempPos) < 10f)
             {
                 _isLevelSelected = false;
             }
