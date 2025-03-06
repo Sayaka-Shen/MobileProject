@@ -1781,6 +1781,10 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[0].second.m_AllTileFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3727879405990179334, guid: fc4f76868cdee75449a24cda5b321901, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
+      value: 6.0000005
+      objectReference: {fileID: 0}
     - target: {fileID: 4556276747289125472, guid: fc4f76868cdee75449a24cda5b321901, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5

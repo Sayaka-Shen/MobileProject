@@ -1799,6 +1799,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1179009051}
+    - target: {fileID: 4317952457621030746, guid: 24e19d3f4999e58469d7acc8aa5ba735, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317952457621030746, guid: 24e19d3f4999e58469d7acc8aa5ba735, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317952457621030746, guid: 24e19d3f4999e58469d7acc8aa5ba735, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 3088
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317952457621030746, guid: 24e19d3f4999e58469d7acc8aa5ba735, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1440
+      objectReference: {fileID: 0}
     - target: {fileID: 5780706670005519739, guid: 24e19d3f4999e58469d7acc8aa5ba735, type: 3}
       propertyPath: m_SizeDelta.x
       value: 937
@@ -2725,7 +2741,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 3088, y: 1440}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.52
+  m_MatchWidthOrHeight: 0.3
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

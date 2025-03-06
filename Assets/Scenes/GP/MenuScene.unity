@@ -161,7 +161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0015869141, y: -0.0028686523}
+  m_AnchoredPosition: {x: -0.0017089844, y: -0.0029296875}
   m_SizeDelta: {x: 2434.7998, y: 1135.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &22798260
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 3088, y: 1440}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.52
+  m_MatchWidthOrHeight: 0.3
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1644,6 +1644,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775785138}
   m_CullTransparentMesh: 1
+--- !u!1 &869795962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 869795963}
+  m_Layer: 5
+  m_Name: ref
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &869795963
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869795962}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1797750440}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1200, y: -873}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &912341000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,7 +2090,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dataLevelContainer: {fileID: 11400000, guid: 8c77498519bb64040a8ac6c47fed41a7, type: 2}
   _levelButtonPrefab: {fileID: 610468456882878620, guid: 79d39a3181255f24f8ba1eb1b9660949, type: 3}
-  _levelStarter: {fileID: 0}
   SceneManager: {fileID: 1318061274}
   _scrollRect: {fileID: 498169512}
   _timeText: {fileID: 775785140}
@@ -2064,6 +2098,7 @@ MonoBehaviour:
   _playBtImage: {fileID: 912341003}
   _playSprite: {fileID: 4588142183839164675, guid: 75f871cd98147d4419db5e22b489c488, type: 3}
   _lockedSprite: {fileID: -5627950351766133748, guid: 5dbffcbeb69a1134b8da6fafe613f908, type: 3}
+  _refPos: {fileID: 869795962}
 --- !u!61 &999823357
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2732,15 +2767,15 @@ RectTransform:
   m_GameObject: {fileID: 1480808254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 32.786, y: 15.846, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 110278744}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: -8, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480808256
 MonoBehaviour:
@@ -2955,7 +2990,7 @@ RectTransform:
   m_GameObject: {fileID: 1610453687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 106.42153, y: 106.42153, z: 106.42153}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 760972258}
@@ -3488,6 +3523,7 @@ RectTransform:
   - {fileID: 912341001}
   - {fileID: 1635437339}
   - {fileID: 605439288}
+  - {fileID: 869795963}
   m_Father: {fileID: 498169511}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4242,6 +4278,10 @@ PrefabInstance:
     - target: {fileID: 5303062932254868164, guid: aff5730e5fd0514479e74a14e69889b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357545074342535988, guid: aff5730e5fd0514479e74a14e69889b1, type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
