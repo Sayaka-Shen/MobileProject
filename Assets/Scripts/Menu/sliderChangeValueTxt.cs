@@ -8,6 +8,6 @@ public class sliderChangeValueTxt : MonoBehaviour
 
     public void ChangeValue()
     {
-        _txt.text = this.GetComponent<Slider>().value.ToString() + "%";
+        _txt.text = ((int)(this.GetComponent<Slider>().value * 100)).ToString() + "%";
     }
 }
