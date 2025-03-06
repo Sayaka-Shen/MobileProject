@@ -160,5 +160,14 @@ public class LevelSelector : MonoBehaviour
                 _isLevelSelected = false;
             }
         }
+        for (int i = 0; i < _levelsCount; i++)
+        {
+            float tempScale= 1-Mathf.Abs((_levelButtons[i].transform.position.x - 1585) /1200)/2;
+            if(tempScale < 0.5f)
+            {
+                tempScale = 0.5f;
+            }
+            _levelButtons[i].transform.localScale = new Vector3(tempScale, tempScale, 1);
+        }
     }
 }
