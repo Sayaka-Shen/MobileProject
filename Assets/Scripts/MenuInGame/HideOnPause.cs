@@ -1,16 +1,26 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class HideOnPause : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField]private List<GameObject> _gameObject = new List<GameObject>();
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if (GameManager.Instance.Pause && _gameObject[0].activeSelf)
+        {
+            foreach(GameObject go in _gameObject)
+            {
+                go.SetActive(false);
+            }
+        }
+        else if (!GameManager.Instance.Pause && !_gameObject[0].activeSelf)
+        {
+            foreach (GameObject go in _gameObject)
+            {
+                go.SetActive(true);
+            }
+        }
     }
 }

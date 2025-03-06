@@ -290,6 +290,7 @@ GameObject:
   - component: {fileID: 5267602613766481458}
   - component: {fileID: 1155183494720829278}
   - component: {fileID: 468070081451476041}
+  - component: {fileID: 5966614654503086605}
   m_Layer: 5
   m_Name: Tips
   m_TagString: Untagged
@@ -381,3 +382,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5966614654503086605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7995739463718348597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3d893becab07a479405794f3d18173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameObject:
+  - {fileID: 465319887053386287}
+  - {fileID: 2400932711990543775}

@@ -6985,6 +6985,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5966614654503086605, guid: 3fcb10624f2b7b14c95508ea452b14c5, type: 3}
+      propertyPath: _gameObject.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7995739463718348597, guid: 3fcb10624f2b7b14c95508ea452b14c5, type: 3}
       propertyPath: m_Name
       value: Tips
