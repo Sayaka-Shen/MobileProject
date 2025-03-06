@@ -20,6 +20,7 @@ public class UIPlayManager : MonoBehaviour
         _pause.SetActive(true);
         SfxManager.Instance.PlaySound2D("ClickMenuSound");
         MusicManager.Instance.StopMusic();
+        MusicManager.Instance.ReplayMusic("MusicTitleScreen");
     }
 
     public void Play()
