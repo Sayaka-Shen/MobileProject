@@ -18,6 +18,7 @@ public class LevelSelector : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image _playBtImage;
     [SerializeField] private Sprite _playSprite;
     [SerializeField] private Sprite _lockedSprite;
+    [SerializeField] private GameObject _refPos;
     private RectTransform _rectTransform;
     bool _isLevelEven = false;
     private int _levelsCount;
@@ -162,7 +163,17 @@ public class LevelSelector : MonoBehaviour
         }
         for (int i = 0; i < _levelsCount; i++)
         {
-            float tempScale= 1-Mathf.Abs((_levelButtons[i].transform.position.x - 1585) /1200)/2;
+            float tempScale =0f;
+            switch (_isLevelEven)
+            {
+                case true:
+                tempScale= 1-Mathf.Abs((_levelButtons[i].transform.position.x - _refPos.transform.position.x) /1200)/2;
+                break;
+                case false:
+                tempScale= 1-Mathf.Abs((_levelButtons[i].transform.position.x - _refPos.transform.position.x) /1200)/2;
+                break;
+            }
+            
             if(tempScale < 0.5f)
             {
                 tempScale = 0.5f;
