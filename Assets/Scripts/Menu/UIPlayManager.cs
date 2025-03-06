@@ -14,6 +14,7 @@ public class UIPlayManager : MonoBehaviour
     }
     public void Pause()
     {
+        GameManager.Instance.Pause = true;
         Time.timeScale = 0f;
         _play.SetActive(false);
         _pause.SetActive(true);
@@ -23,6 +24,7 @@ public class UIPlayManager : MonoBehaviour
 
     public void Play()
     {
+        GameManager.Instance.Pause = false;
         Time.timeScale = 1.0f;
         _play.SetActive(true);
         _pause.SetActive(false);
