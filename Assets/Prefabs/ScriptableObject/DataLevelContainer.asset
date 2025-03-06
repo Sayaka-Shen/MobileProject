@@ -211,4 +211,4 @@ MonoBehaviour:
       _highScore: 0
       _isCompleted: 0
       _bestTime: 0
-  _sceneToLoad: 0
+  _sceneToLoad: 7
