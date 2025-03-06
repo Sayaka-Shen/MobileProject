@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Animations;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private GameObject _LogoScreen;
     private float time = 0;
 
+    public void Start()
+    {
+        MusicManager.Instance.PlayMusic("MusicTitleScreen");
+    }
 
     public void ReturnSelector()
     {
