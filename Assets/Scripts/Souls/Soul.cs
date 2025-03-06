@@ -66,10 +66,11 @@ public class Soul : MonoBehaviour
         UpdateAnimator();
     }
 
-    private void UpdateAnimator()
+    public void UpdateAnimator()
     {
         int nbState = (int)_state;
         _animationRenderer.SetInteger("Life",nbState);
+        if(Application.isEditor)_animationRenderer.GetComponent<SpriteRenderer>().sprite = _spritesLife[nbState];
         int count = 0;
         foreach (SpriteRenderer spriteLifeRenderer in _spritesLifeRenderers)
         {
