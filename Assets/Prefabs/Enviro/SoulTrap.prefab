@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 5399856354963331219}
   - component: {fileID: 6040698880610867780}
   - component: {fileID: 3494122716649403107}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: DefaultCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
