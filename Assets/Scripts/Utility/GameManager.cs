@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _endUI;
     [SerializeField] private EndGameMenu _successUI;
     [SerializeField] private FailGameMenu _failedUI;
+    [SerializeField] private Animator _spawnTree;
+    [SerializeField] private Animator _spawnCam;
     public bool Pause = false;
 
     private void Awake()
@@ -147,6 +149,8 @@ public class GameManager : MonoBehaviour
         _successUI.gameObject.SetActive(false);
         GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAQ");
         MusicManager.Instance.PlayMusic("MusicInGame");
+        _spawnTree.SetTrigger("Spawn");
+        _spawnCam.SetTrigger("Spawn");
     }
 
     public void restartLevel()
