@@ -13,6 +13,6 @@ public class TransitionVideo : MonoBehaviour
 
     void OnVideoEnd(VideoPlayer _videoPlayer)
     {
-        _mainMenuManager.ReturnSelector();
+        _mainMenuManager.ReturnMenuBt();
     }
 }

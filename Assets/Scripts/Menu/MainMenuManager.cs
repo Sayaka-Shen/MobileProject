@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -6,6 +8,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private GameObject _startcontainer;
     [SerializeField] private GameObject _optionContainer;
     [SerializeField] private GameObject _TransitionContainer;
+    [SerializeField] private GameObject _LogoScreen;
     private float time = 0;
 
 
@@ -14,11 +17,12 @@ public class MainMenuManager : MonoBehaviour
         _levelSelector.SetActive(true);
         _optionContainer.SetActive(false);
         _TransitionContainer.SetActive(false);
+        _startcontainer.SetActive(false);
     }
     public void StartTransition()
     {
         _TransitionContainer.SetActive(true);
-        _startcontainer.SetActive(false);
+        _LogoScreen.SetActive(false);
     }
 
     public void ReturnMenuBt()
@@ -26,6 +30,7 @@ public class MainMenuManager : MonoBehaviour
         _levelSelector.SetActive(false);
         _startcontainer.SetActive(true);
         _optionContainer.SetActive(false);
+        _TransitionContainer.SetActive(false);
     }
 
     public void OptionMenu()
@@ -42,7 +47,8 @@ public class MainMenuManager : MonoBehaviour
         if(time<30)
         {
             _levelSelector.SetActive(false);
-            _startcontainer.SetActive(true);
+            _LogoScreen.SetActive(true);
+            _LogoScreen.GetComponent<Animation>().Play();
         }
     }
 }
