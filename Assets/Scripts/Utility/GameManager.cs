@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEditor;
 using UnityEngine;
 
@@ -25,6 +26,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _endUI;
     [SerializeField] private EndGameMenu _successUI;
     [SerializeField] private FailGameMenu _failedUI;
+    [SerializeField] private Animator _spawnTree;
+    [SerializeField] private Animator _spawnCam;
+    public bool Pause = false;
 
     private void Awake()
     {
@@ -57,25 +61,47 @@ public class GameManager : MonoBehaviour
     void Setup()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
-        SoulsManager.Instance.OnSoulChange += EndGame;
+        SoulsManager.Instance.OnSoulChange += TestEndGame;
         StartTimer();
     }
 
-
-    private void EndGame()
+    private IEnumerator EndGameVisual(int scorePercent, float time, bool wait)
     {
-        if (!SoulsManager.Instance.AllSoulsMeetEnd) return;
+        Pause = true;
+        if(!wait) yield return new WaitForSeconds(4f);
+        else yield return new WaitForSeconds(3f);
+        _endUI.SetActive(true);
+        if (scorePercent == 100)
+        {
+            _successUI.SetScore(MovementPlayer.NbCaseMouv, time, scorePercent);
+        }
+        else
+        {
+            _failedUI.SetScore(scorePercent);
+        }
+    }
+
+    public void TestEndGame()
+    {
+        EndGame();
+    }
+
+    public void EndGame(bool killed = false)
+    {
+        if (!SoulsManager.Instance.AllSoulsMeetEnd && !killed) return;
         int score = SoulsManager.Instance.CountSoulsPurify;
         int scorePercent = 0;
         float time = _timer;
         DataToSaves levelData = _levelContainer.GetCurrentLevel().DataToSaves;
         if (score != 0)
         {
-            scorePercent = score * 100 / SoulsManager.Instance.CountSouls ;
+            scorePercent = score * 100 / SoulsManager.Instance.CountSouls;
             if (!levelData.IsCompleted || levelData.BestStep > MovementPlayer.NbCaseMouv) levelData.BestStep = MovementPlayer.NbCaseMouv;
             if (!levelData.IsCompleted || levelData.BestTime > time) levelData.BestTime = time;
             if (!levelData.IsCompleted || levelData.HighScore > SoulsManager.Instance.CountSoulsPurify) levelData.HighScore = SoulsManager.Instance.CountSoulsPurify;
-            if (scorePercent >= 50)
+            if(scorePercent > levelData.PercentFinish) { levelData.PercentFinish = scorePercent; }
+
+            if (scorePercent == 100)
             {
                 levelData.IsCompleted = true;
                 GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAw");
@@ -104,15 +130,15 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        SaveManager.Instance.Save(); 
-        _endUI.SetActive(true);
-        if (scorePercent >= 50) _successUI.SetScore(MovementPlayer.NbCaseMouv, time, scorePercent);
-        else _failedUI.SetScore(scorePercent);
+        SaveManager.Instance.Save();
+        StartCoroutine(EndGameVisual(scorePercent, time, killed));
+        MusicManager.Instance.StopMusic();
     }
     
     private void loadLevel()
     {
-        if(_level != null) Destroy(_level);
+        Time.timeScale = 1f;
+        if (_level != null) Destroy(_level);
         if(_levelContainer.SceneToLoad < 0 || _levelContainer.SceneToLoad >= _levelContainer.Levels.Length) throw new ArgumentNullException("No level selected");
         _level = Instantiate(_levelContainer.GetCurrentLevel().Prefab);
         SoulsManager.Instance.Setup();
@@ -122,12 +148,16 @@ public class GameManager : MonoBehaviour
         _failedUI.gameObject.SetActive(false);
         _successUI.gameObject.SetActive(false);
         GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQAQ");
+        MusicManager.Instance.PlayMusic("MusicInGame");
+        _spawnTree.SetTrigger("Spawn");
+        _spawnCam.SetTrigger("Spawn");
     }
 
     public void restartLevel()
     {
         loadLevel();
     }
+
     public void nextLevel()
     {
         _levelContainer.NextLevel();

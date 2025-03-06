@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem.LowLevel;
 
 public class Soul : MonoBehaviour
 {
@@ -14,54 +13,65 @@ public class Soul : MonoBehaviour
     [SerializeField] State _state = State.stateOne;
     [SerializeField] UnityEvent _onHurt;
     [Header("Visual")]
-    [SerializeField] SpriteRenderer _spriteRenderer;
-    [SerializeField] Sprite[] _sprites;
-    [SerializeField] SpriteRenderer[] _spriteLifeRenderers;
+    [SerializeField] Animator _animationRenderer;
+    [SerializeField] SpriteRenderer[] _spritesLifeRenderers;
     [SerializeField] Sprite[] _spritesLife;
     private MovementPlayer _movementPlayer;
     public event Action OnCorrupt;
     [SerializeField] UnityEvent _onCorrupt;
-    private Seeker _seeker;
+    private ReverseAction _reverseAction = new ReverseAction();
 
-    void Start()
+    private void Start()
     {
         _movementPlayer = GameManager.Instance.MovementPlayer;
+        _reverseAction.Holder = gameObject;
+        _reverseAction.Type = ReverseActionType.SoulDamage;
 
         _movementPlayer.OnCaseMouvEnd += HurtSelf;
-        UpdateSprite();
-        _seeker = GetComponent<Seeker>();
+        UpdateAnimator();
     }
 
-    void HurtSelf()
+    private void HurtSelf()
     {
         int newState = (int)_state + 1;
         _state = (State)(newState);
-        if(_seeker != null && _state == State.stateThree)
-        {
-            UnFollow();
-            _seeker.Setup();
-            GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQCA");
-        }
+
         if (_state == State.stateDie)
         {
             OnCorrupt?.Invoke();
             _onCorrupt?.Invoke();
             GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBA");
-            Destroy(gameObject);
+            UpdateAnimator();
+            GameManager.Instance.EndGame(true);
         }
         else
         {
             _onHurt?.Invoke();
-            UpdateSprite();
+            UpdateAnimator();
+            SfxManager.Instance.PlaySound2D("SoulCorrupt");
         }
+        RollbackManager.Instance.AddAction(_reverseAction);
     }
 
-    private void UpdateSprite()
+    public void Heal()
+    {
+        if (_state == State.stateDie)
+        {
+            gameObject.SetActive(true);
+            _movementPlayer.OnCaseMouvEnd += HurtSelf;
+            SoulsManager.Instance.RemoveSoulsCorrupt();
+        }
+        int newState = (int)_state - 1;
+        _state = (State)(newState);
+        UpdateAnimator();
+    }
+
+    private void UpdateAnimator()
     {
         int nbState = (int)_state;
-        _spriteRenderer.sprite = _sprites[nbState];
+        _animationRenderer.SetInteger("Life",nbState);
         int count = 0;
-        foreach (SpriteRenderer spriteLifeRenderer in _spriteLifeRenderers)
+        foreach (SpriteRenderer spriteLifeRenderer in _spritesLifeRenderers)
         {
             if (count <= 2 - nbState)
             {
@@ -76,13 +86,25 @@ public class Soul : MonoBehaviour
         }
     }
 
-    public void UnFollow() 
+    public int GetCurrentColor()
     {
+        return (int)_state;
+    }
+
+    public void Desapere()
+    {
+        gameObject.SetActive(false);
         _movementPlayer.OnCaseMouvEnd -= HurtSelf;
+    }
+
+    public void Reapere()
+    {
+        gameObject.SetActive(true);
+        _movementPlayer.OnCaseMouvEnd += HurtSelf;
     }
 
     private void OnDestroy()
     {
-        UnFollow();
+        _movementPlayer.OnCaseMouvEnd -= HurtSelf;
     }
 }

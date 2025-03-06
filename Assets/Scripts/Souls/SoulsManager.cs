@@ -13,6 +13,8 @@ public class SoulsManager : MonoBehaviour
     public bool AllSoulsMeetEnd => CountSouls == CountSoulsCorrupt + CountSoulsPurify;
     public static SoulsManager Instance { get; private set; }
     public event Action OnSoulChange;
+    [SerializeField] Color[] _spritesColor;
+    public Color[] SpritesColor { get { return _spritesColor; } }
 
     private void Awake()
     {
@@ -36,9 +38,20 @@ public class SoulsManager : MonoBehaviour
         CountSoulsCorrupt++;
         OnSoulChange?.Invoke();
     }
+
+    public void RemoveSoulsCorrupt()
+    {
+        CountSoulsCorrupt--;
+    }
+
     public void AddSoulsPurify()
     {
         CountSoulsPurify++;
         OnSoulChange?.Invoke();
+    }
+
+    public void RemoveSoulsPurify()
+    {
+        CountSoulsPurify--;
     }
 }

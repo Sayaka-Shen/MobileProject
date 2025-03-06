@@ -1,47 +1,66 @@
-using Unity.VisualScripting;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class OptionManager : MonoBehaviour
 {
-    [Header("Managers/Scripts")]
-    [SerializeField] private GameObject _musicManager;
-    [SerializeField] private GameObject _soundManager;
-    [SerializeField] private GameObject _vfxManager;
-    [SerializeField] private MovementButton _movementButton;
     [Header("Options UI")]
-    [SerializeField] private GameObject _optionsUI;
-    [SerializeField] private GameObject _sliderMusic;
-    [SerializeField] private GameObject _sliderSound;
-    [SerializeField] private GameObject _sliderVFX;
-    [SerializeField] private GameObject _toggleMoveUI;
+    [SerializeField] private Slider _sliderMusic;
+    [SerializeField] private Slider _sliderSound;
+    [SerializeField] private Slider _sliderVFX;
+    [SerializeField] private Toggle _toggleMoveUI;
 
-    void Update()
+    public static event Action OptionChange;
+
+    private void Start()
     {
-        if(_optionsUI.activeSelf)
+        if (MusicManager.Instance != null)
         {
-            UpdateOptions();
+            _sliderMusic.onValueChanged.AddListener(UpdateMusic);
+            _sliderMusic.value = PlayerPrefs.GetFloat("Music", 100);
+            MusicManager.Instance.GetComponentInChildren<AudioSource>().volume = _sliderMusic.value;
         }
+        if (AtmosphereManager.Instance != null)
+        {
+            _sliderSound.onValueChanged.AddListener(UpdateSound);
+            _sliderSound.value = PlayerPrefs.GetFloat("Sound", 100);
+            AtmosphereManager.Instance.GetComponentInChildren<AudioSource>().volume = _sliderSound.value;
+        }
+        if (SfxManager.Instance != null)
+        {
+            _sliderVFX.onValueChanged.AddListener(UpdateVFX);
+            _sliderVFX.value = PlayerPrefs.GetFloat("VFX", 100);
+            SfxManager.Instance.GetComponentInChildren<AudioSource>().volume = _sliderVFX.value;
+        }
+        _toggleMoveUI.onValueChanged.AddListener(UpdateMoveUI);
+        _toggleMoveUI.isOn = (PlayerPrefs.GetInt("MoveUI", 1) == 1);
+        MovementSprite.ShowAllButton = _toggleMoveUI.isOn;
+        OptionChange?.Invoke();
     }
 
-    void UpdateOptions()
+    private void UpdateMusic(float value)
     {
-        if (_musicManager != null)
-        {
-            _musicManager.GetComponentInChildren<AudioSource>().volume = _sliderMusic.GetComponent<Slider>().value;
-        }
-        if (_soundManager != null)
-        {
-            _soundManager.GetComponentInChildren<AudioSource>().volume = _sliderSound.GetComponent<Slider>().value;
-        }
-        if (_vfxManager != null)
-        {
-            _vfxManager.GetComponentInChildren<AudioSource>().volume = _sliderVFX.GetComponent<Slider>().value;
-        }
-        if (_movementButton != null)
-        {
-            _movementButton.DoShowButton = _toggleMoveUI.GetComponent<Toggle>().isOn;
-        }
+        MusicManager.Instance.GetComponentInChildren<AudioSource>().volume = value;
+        PlayerPrefs.SetFloat("Music", value);
+    }
+    private void UpdateSound(float value)
+    {
+        AtmosphereManager.Instance.GetComponentInChildren<AudioSource>().volume = value;
+        PlayerPrefs.SetFloat("Sound", value);
+    }
+    private void UpdateVFX(float value)
+    {
+        SfxManager.Instance.GetComponentInChildren<AudioSource>().volume = value;
+        PlayerPrefs.SetFloat("VFX", value);
+    }
+    private void UpdateMoveUI(bool value)
+    {
+        MovementSprite.ShowAllButton = value;
+        if (value) PlayerPrefs.SetInt("MoveUI", 1);
+        else PlayerPrefs.SetInt("MoveUI", 0);
+        OptionChange?.Invoke();
     }
 
 }

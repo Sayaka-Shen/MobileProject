@@ -17,6 +17,7 @@ public class FailGameMenu : MonoBehaviour
         gameObject.SetActive(true);
         _score = Score;
         _isSliderAnim = true;
+        SfxManager.Instance.PlaySound2D("FailSound");
     }
 
     void FixedUpdate()

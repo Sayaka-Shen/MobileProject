@@ -11,7 +11,7 @@ public class MovementPlayer : MonoBehaviour
     private int _nbCaseMouv = 0;
     public int NbCaseMouv { get => _nbCaseMouv; }
     public int NbCaseMouvLast { get; private set; }
-    public event Action NbCaseMoveLastChage;
+    public event Action NbCaseMoveLastChange;
     [SerializeField] private List<Vector3> _pathList = new List<Vector3>();
     public List<Vector3> PathList { get => _pathList; set => _pathList = value; }
     [SerializeField] UnityEvent  _onStartMove = new UnityEvent();
@@ -24,9 +24,16 @@ public class MovementPlayer : MonoBehaviour
     private bool _isMoving = false;
     public bool IsMoving { get => _isMoving; set => _isMoving = value; }
     private Vector3 _nextPos;
+    public bool CountMove { get; set; }
+    private bool RollBack { get; set; }
+
+    private ReverseAction _reverseAction = new ReverseAction();
 
     private void Awake()
     {
+        _reverseAction.Holder = gameObject;
+        _reverseAction.Type = ReverseActionType.PlayerMove;
+        CountMove = true;
         NbCaseMouvLast = SoulsManager.Instance.CountForHurt;
     }
 
@@ -44,8 +51,9 @@ public class MovementPlayer : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, _nextPos, _speed * deltaTime);
         _animator.SetFloat("vertical", (_nextPos - transform.position).y);
         _animator.SetFloat("horizontal", (_nextPos - transform.position).x);
-        if (transform.position == _nextPos)
+        if (Vector3.Distance(transform.position, _nextPos) < 0.05f)
         {
+            transform.position = _nextPos;
             NextPos(); 
         }
     }
@@ -61,9 +69,22 @@ public class MovementPlayer : MonoBehaviour
         {
             _isMoving = false;
             _animator.SetBool("isMoving", false);
-            NbCaseMouvLast--;
-            _nbCaseMouv++;
-            NbCaseMoveLastChage?.Invoke();
+            if (RollBack)
+            {
+                NbCaseMoveLastChange?.Invoke();
+                OnEndMove?.Invoke();
+                RollBack = false;
+                RollbackManager.Instance.TryUseRollback();
+                return;
+            }
+            if (CountMove)
+            {
+                _reverseAction.ValueTarget = NbCaseMouvLast;
+                RollbackManager.Instance.AddAction(_reverseAction);
+                NbCaseMouvLast--;
+                _nbCaseMouv++;
+            }
+            NbCaseMoveLastChange?.Invoke();
             _onEndMove?.Invoke();
             OnEndMove?.Invoke();
             OnStop?.Invoke();
@@ -71,8 +92,9 @@ public class MovementPlayer : MonoBehaviour
             {
                 OnCaseMouvEnd?.Invoke();
                 NbCaseMouvLast = SoulsManager.Instance.CountForHurt;
+                SfxManager.Instance.PlaySound2D("SoundSoulNextStep");
             }
-            NbCaseMoveLastChage?.Invoke();
+            NbCaseMoveLastChange?.Invoke();
             return;
         }
     }
@@ -80,6 +102,15 @@ public class MovementPlayer : MonoBehaviour
     public void AddPos(Vector3 pos)
     {
         _pathList.Add(pos);
+    }
+    public void AddPosRollBack(Vector3 pos)
+    {
+        _isMoving = true;
+        _animator.SetBool("isMoving", true);
+        RollBack = true;
+        _pathList.Add(pos);
+        OnStartMove?.Invoke();
+        if (_pathList.Count == 0) NextPos();
     }
     public void AddPos(List<Vector3> pos)
     {
@@ -101,6 +132,7 @@ public class MovementPlayer : MonoBehaviour
     public void TPAt(Vector3 pos)
     {
         transform.position = pos;
+        _nextPos = pos;
         OnEndMove?.Invoke();
         _onTP?.Invoke();
     }
@@ -108,5 +140,15 @@ public class MovementPlayer : MonoBehaviour
     public void AddCaseMov(int nb)
     {
         NbCaseMouvLast += nb;
+    }
+    public void RemoveCaseMov(int nb)
+    {
+        NbCaseMouvLast -= nb;
+    }
+
+    public void RerollMove(int value)
+    {
+        _nbCaseMouv--;
+        NbCaseMouvLast = value;
     }
 }

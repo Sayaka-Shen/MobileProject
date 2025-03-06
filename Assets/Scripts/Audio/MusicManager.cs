@@ -8,6 +8,7 @@ public class MusicManager : MonoBehaviour
     [Header("Music Manager Settings")]
     [SerializeField] private AudioSource _musicSource;
     [SerializeField] private MusicLibrary _musicLibrary;
+    private float _musicLastCurrentTime;
 
     private void Awake()
     {
@@ -25,6 +26,19 @@ public class MusicManager : MonoBehaviour
     public void PlayMusic(string musicName, float fadeDuration = 0.1f)
     {
         StartCoroutine(AnimateMusicCrossFade(_musicLibrary.GetMusicFromName(musicName), fadeDuration));
+    }
+
+    public void ReplayMusic(string musicName)
+    {
+        _musicSource.clip = _musicLibrary.GetMusicFromName(musicName);
+        _musicSource.Play();
+        _musicSource.time = _musicLastCurrentTime;
+    }
+
+    public void StopMusic()
+    {
+        _musicLastCurrentTime = _musicSource.time;
+        _musicSource.Stop();
     }
 
     IEnumerator AnimateMusicCrossFade(AudioClip nextMusic, float fadeDuration = 0.1f)

@@ -131,9 +131,9 @@ TextureImporter:
       name: remplissage_barre_progress_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 29
         y: 78
-        width: 2000
+        width: 1942
         height: 124
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
