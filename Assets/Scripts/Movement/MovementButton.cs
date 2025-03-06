@@ -43,7 +43,7 @@ public class MovementButton : MonoBehaviour
         _timer += Time.deltaTime;
         if (_timer < _maxTimer) { return; }
 
-        if (isPlaying(GameManager.Instance.AnimPlayer, "anim_purification") || GameManager.Instance.Pause) return;
+        if (IsPlaying("anim_purification") || IsPlaying("anim_death") || GameManager.Instance.Pause) return;
 
         if (Input.touchCount == 1) // user is touching the screen with a single touch
         {
@@ -173,9 +173,9 @@ public class MovementButton : MonoBehaviour
         return results.Count > 0;
     }
 
-    private bool isPlaying(Animator anim, string stateName)
+    static public bool IsPlaying(string stateName)
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName(stateName))
+        if (GameManager.Instance.AnimPlayer.GetCurrentAnimatorStateInfo(0).IsName(stateName))
             return true;
         else
             return false;
