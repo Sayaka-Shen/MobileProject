@@ -17,7 +17,11 @@ public class MainMenuManager : MonoBehaviour
         _levelSelector.SetActive(true);
         _optionContainer.SetActive(false);
         _TransitionContainer.SetActive(false);
+<<<<<<< HEAD
+        // SfxManager.Instance.PlaySound2D("ClickMenuSound");
+=======
         _startcontainer.SetActive(false);
+>>>>>>> Menu
     }
     public void StartTransition()
     {
@@ -30,7 +34,11 @@ public class MainMenuManager : MonoBehaviour
         _levelSelector.SetActive(false);
         _startcontainer.SetActive(true);
         _optionContainer.SetActive(false);
+<<<<<<< HEAD
         SfxManager.Instance.PlaySound2D("ClickMenuSound");
+=======
+        _TransitionContainer.SetActive(false);
+>>>>>>> Menu
     }
 
     public void OptionMenu()
