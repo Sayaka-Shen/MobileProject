@@ -52,7 +52,7 @@ public class RollbackManager : MonoBehaviour
 
     public void AddRollback()
     {
-        if (MovementButton.IsPlaying("anim_purification") || MovementButton.IsPlaying("anim_death") || _rollback.Count == _reverseActions.Count) return;
+        if (MovementButton.IsPlaying("anim_purification") || MovementButton.IsPlaying("anim_death") || _rollback.Count == _reverseActions.Count || _reverseActions.Count == 0) return;
         _rollback.Add(Instance.RollBack);
         if (_rollback.Count == 1) RollBack();
     }
