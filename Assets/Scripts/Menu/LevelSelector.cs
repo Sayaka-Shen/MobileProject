@@ -132,11 +132,10 @@ public class LevelSelector : MonoBehaviour
         else
         {
             _levelButtons[_levelSelected-1].transform.GetChild(0).GetComponent<UnityEngine.UI.Button>().enabled = false;
-            Debug.Log(_levelSelected);
             _playButton.interactable = false;
             _playBtImage.sprite = _lockedSprite;
         }
-        if(_levelSelected != _levelsCount)
+        if(_levelSelected != _levelsCount-1)
         {
             _levelButtons[_levelSelected+1].transform.GetChild(0).GetComponent<UnityEngine.UI.Button>().enabled = false;
         }
