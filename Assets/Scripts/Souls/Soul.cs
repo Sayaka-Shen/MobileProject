@@ -42,7 +42,7 @@ public class Soul : MonoBehaviour
             _onCorrupt?.Invoke();
             GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBA");
             UpdateAnimator();
-            GameManager.Instance.EndGame(true);
+            GameManager.Instance.EndGame(3f, true);
         }
         else
         {
@@ -69,8 +69,10 @@ public class Soul : MonoBehaviour
     public void UpdateAnimator()
     {
         int nbState = (int)_state;
+#if UNITY_EDITOR
+        if(!Application.isPlaying)_animationRenderer.GetComponent<SpriteRenderer>().sprite = _spritesLife[nbState];
+#endif
         _animationRenderer.SetInteger("Life",nbState);
-        if(Application.isEditor && !Application.isPlaying)_animationRenderer.GetComponent<SpriteRenderer>().sprite = _spritesLife[nbState];
         int count = 0;
         foreach (SpriteRenderer spriteLifeRenderer in _spritesLifeRenderers)
         {
@@ -101,6 +103,7 @@ public class Soul : MonoBehaviour
     public void Reapere()
     {
         gameObject.SetActive(true);
+        UpdateAnimator();
         _movementPlayer.OnCaseMouvEnd += HurtSelf;
     }
 

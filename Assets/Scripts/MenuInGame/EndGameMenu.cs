@@ -15,6 +15,8 @@ public class EndGameMenu : MonoBehaviour
     [SerializeField] private float _speedSlider = 50f;
     private bool _isSliderAnim = false;
     private int _score = 0;
+
+    [SerializeField] DataLevelContainer _levelsContainer;
     
     public void SetScore(int NbStep, float Time, int Score)
     {
@@ -23,6 +25,8 @@ public class EndGameMenu : MonoBehaviour
         _timeText.text = ((int)(Time / 60)).ToString() + "min" + ((int)(Time % 60)).ToString() + "s";
         _score = Score;
         _isSliderAnim = true;
+        if (_levelsContainer.IsFinalLevel) _nextLvBt.gameObject.SetActive(false);
+        else _nextLvBt.gameObject.SetActive(true);
         SfxManager.Instance.PlaySound2D("VictorySound");
     }
 

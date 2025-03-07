@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     [Header("End Settings")]
     [SerializeField] private GameObject _endUI;
+    [SerializeField] private GameObject _playUI;
     [SerializeField] private EndGameMenu _successUI;
     [SerializeField] private FailGameMenu _failedUI;
     [SerializeField] private Animator _spawnTree;
@@ -65,12 +66,12 @@ public class GameManager : MonoBehaviour
         StartTimer();
     }
 
-    private IEnumerator EndGameVisual(int scorePercent, float time, bool wait)
+    private IEnumerator EndGameVisual(int scorePercent, float time, float waitingTime)
     {
         Pause = true;
-        if(!wait) yield return new WaitForSeconds(4f);
-        else yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(waitingTime);
         _endUI.SetActive(true);
+        _playUI.SetActive(false);
         if (scorePercent == 100)
         {
             _successUI.SetScore(MovementPlayer.NbCaseMouv, time, scorePercent);
@@ -83,10 +84,10 @@ public class GameManager : MonoBehaviour
 
     public void TestEndGame()
     {
-        EndGame();
+        EndGame(3f);
     }
 
-    public void EndGame(bool killed = false)
+    public void EndGame(float waitingTime, bool killed = false)
     {
         if (!SoulsManager.Instance.AllSoulsMeetEnd && !killed) return;
         int score = SoulsManager.Instance.CountSoulsPurify;
@@ -131,7 +132,7 @@ public class GameManager : MonoBehaviour
             }
         }
         SaveManager.Instance.Save();
-        StartCoroutine(EndGameVisual(scorePercent, time, killed));
+        StartCoroutine(EndGameVisual(scorePercent, time, waitingTime));
         MusicManager.Instance.StopMusic();
     }
     
@@ -144,6 +145,7 @@ public class GameManager : MonoBehaviour
         SoulsManager.Instance.Setup();
         Setup();
         _grid.LoadGrid();
+        _playUI.SetActive(true);
         _endUI.SetActive(false);
         _failedUI.gameObject.SetActive(false);
         _successUI.gameObject.SetActive(false);

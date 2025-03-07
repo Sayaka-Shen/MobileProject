@@ -10,6 +10,7 @@ public class DataLevelContainer : ScriptableObject
     [SerializeField] private int _sceneToLoad;
     public int SceneToLoad { get => _sceneToLoad; set => _sceneToLoad = value; }
     public DataLevel[] Levels => _levels;
+    public bool IsFinalLevel => _sceneToLoad == _levels.Length - 1;
 
     public DataLevel GetLevel(int id)
     {
