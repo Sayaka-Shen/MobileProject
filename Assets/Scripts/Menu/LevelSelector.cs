@@ -60,12 +60,12 @@ public class LevelSelector : MonoBehaviour
         if (_levelsCount % 2 == 0)
         {
             _isLevelEven = true;
-            this.transform.position += new Vector3(_levelWidth*(int)((_levelsCount / 2) -1)+(_levelWidth/2)-92, 0, 0);
+            this.transform.position += new Vector3((_levelWidth*(int)((_levelsCount / 2) -1)+(_levelWidth/2)-92)-(1200*_dataLevelContainer.SceneToLoad), 0, 0);
         }
         else
         {
             _isLevelEven = false;
-            this.transform.position += new Vector3(_levelWidth*(int)(_levelsCount / 2)-92, 0, 0);
+            this.transform.position += new Vector3((_levelWidth*(int)(_levelsCount / 2)-92)-(1200*_dataLevelContainer.SceneToLoad), 0, 0);
         }
         this.GetComponent<BoxCollider2D>().size = new Vector2((_levelsCount+2)*_levelWidth, this.GetComponent<RectTransform>().sizeDelta.y);
         int time = (int)_levels[_levelSelected].DataToSaves.BestTime;

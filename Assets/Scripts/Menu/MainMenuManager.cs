@@ -10,6 +10,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private GameObject _optionContainer;
     [SerializeField] private GameObject _TransitionContainer;
     [SerializeField] private GameObject _LogoScreen;
+    [SerializeField] private DataLevelContainer _dataLevelContainer;
     private float time = 0;
 
     public void Start()
@@ -56,6 +57,7 @@ public class MainMenuManager : MonoBehaviour
             _levelSelector.SetActive(false);
             _LogoScreen.SetActive(true);
             _LogoScreen.GetComponent<Animation>().Play();
+            _dataLevelContainer.SceneToLoad = 0;
         }
     }
 }
