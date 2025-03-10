@@ -32,6 +32,7 @@ public class MovementSprite : MonoBehaviour
 
     private void OnDestroy()
     {
+        OptionManager.OptionChange -= ShowCorrectButton;
         _mouvementPlayer.OnStartMove -= Hide;
         _mouvementPlayer.OnEndMove -= ShowCorrectButton;
     }

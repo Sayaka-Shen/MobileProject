@@ -192,3 +192,5 @@ MonoBehaviour:
   _musicLibrary:
   - musicName: MusicInGame
     musicClip: {fileID: 8300000, guid: 48637dbafb3cefc47b89104bd94617f4, type: 3}
+  - musicName: MusicTitleScreen
+    musicClip: {fileID: 8300000, guid: d00d7650fa8d7ca43aba55edc6b17f5f, type: 3}

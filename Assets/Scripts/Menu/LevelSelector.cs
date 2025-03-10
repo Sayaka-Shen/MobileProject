@@ -9,7 +9,6 @@ public class LevelSelector : MonoBehaviour
 {
     [SerializeField] private DataLevelContainer _dataLevelContainer;
     [SerializeField] private GameObject _levelButtonPrefab;
-    [SerializeField] private GameObject _levelStarter;
     [SerializeField] private SceneManager SceneManager;
     [SerializeField] private ScrollRect _scrollRect;
     [SerializeField] private TextMeshProUGUI _timeText;

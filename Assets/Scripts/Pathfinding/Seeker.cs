@@ -50,13 +50,12 @@ public class Seeker : MonoBehaviour
                     MoveTo(destination);
                 }
             }
-
-            if(Vector3.Distance(transform.position, GameManager.Instance.PlayerPosition) == 0)
-            {
-                GameManager.Instance.AnimPlayer.SetTrigger("death");
-                GameManager.Instance.EndGame(true);
-            }
             _countMove = _countDownMove;
+        }
+        if (Vector3.Distance(transform.position, GameManager.Instance.PlayerPosition) == 0)
+        {
+            GameManager.Instance.AnimPlayer.SetTrigger("death");
+            GameManager.Instance.EndGame(2f, true);
         }
     }
 

@@ -33,7 +33,7 @@ public class OneWayInteract : MonoBehaviour, IInteractable
         else if (_type == Type.River)
         {
             GooglePlayAuthentification.Instance.UnlockAchievement("CgkIp4bqwJwIEAIQBg");
-            SfxManager.Instance.PlaySound2D("RiverSound");
+            if(!SfxManager.Instance.isPlaying){ SfxManager.Instance.PlaySound2D("RiverSound"); }
         }
     }
 
