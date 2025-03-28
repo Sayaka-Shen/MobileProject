@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Soul
   - Level
+  - Tips
   layers:
   - Default
   - TransparentFX

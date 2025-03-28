@@ -1,11 +1,15 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIPlayManager : MonoBehaviour
 {
     [SerializeField] GameObject _pause;
     [SerializeField] GameObject _play;
     [SerializeField] GameObject _option;
-
+    [SerializeField] GameObject _TipsButton;
+    [SerializeField] Button[] _TipsButtonsToStop;
+    private GameObject _TipsUI;
 
     public void Rollback()
     {
@@ -43,5 +47,38 @@ public class UIPlayManager : MonoBehaviour
         _option.SetActive(false);
         _pause.SetActive(true);
         SfxManager.Instance.PlaySound2D("ClickMenuSound");
+    }
+
+    public void Tips()
+    {
+        _TipsUI.SetActive(true);
+        foreach (Button item in _TipsButtonsToStop)
+        {
+            item.interactable = false;
+        }
+        _TipsUI.GetComponent<Tips>().TipsEnd += ShowButtons;
+    }
+
+    private void ShowButtons()
+    {
+        _TipsUI.SetActive(false);
+        foreach (Button item in _TipsButtonsToStop)
+        {
+            item.interactable = true;
+        }
+    }
+
+    public void ShowTips()
+    {
+        _TipsUI = GameObject.FindGameObjectWithTag("Tips");
+        if (_TipsUI == null)
+        {
+            _TipsButton.SetActive(false);
+        }
+        else
+        {
+            _TipsButton.SetActive(true);
+            Tips();
+        }
     }
 }

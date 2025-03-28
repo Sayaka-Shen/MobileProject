@@ -1213,7 +1213,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.22173911, y: 0.22173911, z: 0}
+  m_ChunkCullingBounds: {x: 0.09285712, y: 0.09285712, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -6779,7 +6779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3727879405990179334, guid: fc4f76868cdee75449a24cda5b321901, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 6.0000005
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4556276747289125472, guid: fc4f76868cdee75449a24cda5b321901, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7487,6 +7487,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5966614654503086605, guid: 3fcb10624f2b7b14c95508ea452b14c5, type: 3}
       propertyPath: _gameObject.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966614654503086605, guid: 3fcb10624f2b7b14c95508ea452b14c5, type: 3}
+      propertyPath: '_gameObject.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4776729162948382879}
+    - target: {fileID: 5966614654503086605, guid: 3fcb10624f2b7b14c95508ea452b14c5, type: 3}
+      propertyPath: '_gameObject.Array.data[2]'
+      value: 
+      objectReference: {fileID: 4437129396061217629}
+    - target: {fileID: 6760503159684076364, guid: 3fcb10624f2b7b14c95508ea452b14c5, type: 3}
+      propertyPath: _text.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7995739463718348597, guid: 3fcb10624f2b7b14c95508ea452b14c5, type: 3}
@@ -7499,6 +7511,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fcb10624f2b7b14c95508ea452b14c5, type: 3}
+--- !u!1 &4437129396061217629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4641560257547479685, guid: 3fcb10624f2b7b14c95508ea452b14c5, type: 3}
+  m_PrefabInstance: {fileID: 9077563442228627928}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4776729162948382879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4590190594052430151, guid: 3fcb10624f2b7b14c95508ea452b14c5, type: 3}
+  m_PrefabInstance: {fileID: 9077563442228627928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4845412898878511696 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4523767449797251976, guid: 3fcb10624f2b7b14c95508ea452b14c5, type: 3}

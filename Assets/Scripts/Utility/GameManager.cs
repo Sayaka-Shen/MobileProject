@@ -146,6 +146,7 @@ public class GameManager : MonoBehaviour
         Setup();
         _grid.LoadGrid();
         _playUI.SetActive(true);
+        _playUI.GetComponent<UIPlayManager>().ShowTips();
         _endUI.SetActive(false);
         _failedUI.gameObject.SetActive(false);
         _successUI.gameObject.SetActive(false);
